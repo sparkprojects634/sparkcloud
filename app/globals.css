@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-monasans: var(--font-monasans), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-monasans);
+}
+
+/* 1. Define the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 8px;               /* Width for vertical scrollbar */
+  height: 8px;              /* Height for horizontal scrollbar */
+}
+
+/* 2. Make the background (track) transparent */
+::-webkit-scrollbar-track {
+  background: transparent;  
+}
+
+/* 3. Style the scroller (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3); /* White with 30% opacity */
+  border-radius: 10px;                         /* Makes it rounded */
+  border: 2px solid transparent;               /* Adds padding space around thumb */
+  background-clip: content-box;                /* Keeps the rounding clean */
+}
+
+/* 4. Add a hover effect for better UX */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly more visible on hover */
+}
+
+/* Standard properties for Firefox (Limited customization) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(255, 255, 255) transparent;
+}
+
+.animate-wobble {
+  animation: wobble 10s ease-in-out infinite;
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loader {
+  animation: loader 1.2s infinite linear;
+}
+
+.blur-animate {
+  animation: blurAnim 700ms ease-in-out once;
+}
+
+@keyframes blurAnim {
+  0% {
+    filter: blur(4px);
+    transform: scale(1.05);
+  }
+
+  100% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
+}
