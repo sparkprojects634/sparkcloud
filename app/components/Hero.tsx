@@ -13,6 +13,7 @@ const Hero = () => {
   const contentRef = useRef<HTMLDivElement>(null)
   const logoRef = useRef<HTMLImageElement>(null)
   const videoRef = useRef<HTMLDivElement>(null)
+  const bannerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     if (!sectionRef.current || !bgRef.current) return
@@ -23,7 +24,7 @@ const Hero = () => {
       filter: 'blur(5px)',
 
       ease: 'none',
-      
+
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
@@ -31,6 +32,7 @@ const Hero = () => {
         scrub: 1.5,
       },
     })
+
 
     gsap.to(contentRef.current, {
       scale: 4.5,
@@ -63,7 +65,7 @@ const Hero = () => {
     gsap.to(videoRef.current, {
       filter: 'blur(0px)',
       ease: 'none',
-      
+
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top top',
@@ -71,6 +73,28 @@ const Hero = () => {
         scrub: 1.5,
       },
     })
+
+    gsap.fromTo(
+      bannerRef.current,
+      {
+        opacity: 0,
+        y: 30,
+        scale: 1.02,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        ease: 'none',
+
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1.5,
+        },
+      }
+    )
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill())
@@ -116,6 +140,7 @@ const Hero = () => {
           className='z-10'
           fetchPriority='high'
           ref={logoRef}
+          loading='eager'
         />
 
         {/* Text */}
@@ -130,6 +155,26 @@ const Hero = () => {
             Not Just Beautiful, Built to Convert.
           </p>
         </div>
+
+        <div
+          ref={bannerRef}
+          className="absolute flex-col text-white gap-5 inset-0 flex items-center justify-center will-change-[filter,opacity,transform]"
+        >
+          <Image
+            src='/images/logo.svg'
+            alt='Hero-Image'
+            width={100}
+            height={100}
+            className='z-10 w-25 lg:w-45'
+            fetchPriority='high'
+            loading='eager'
+          />
+          <h2 className='text-lg md:text-3xl lg:text-9xl font-medium'>SparkCloud</h2>
+          <h3 className=" text-sm md:text-xl lg:text-3xl font-medium">
+            We Add Spark to Your Brand
+          </h3>
+        </div>
+
       </div>
     </section>
   )
