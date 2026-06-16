@@ -58,6 +58,7 @@ body {
   animation: wobble 10s ease-in-out infinite;
 }
 
+
 @keyframes wobble {
   0%, 100% {
     transform: translateX(0);
@@ -113,4 +114,13 @@ body {
   to {
     transform: translateX(-50%);
   }
+}
+
+.font-mona {
+  font-family: var(--font-mona-narrow);
+}
+
+.font-mona-bold {
+  font-family: var(--font-mona-narrow);
+  font-weight: 700;
 }

@@ -114,9 +114,9 @@ const Hero = () => {
           className='absolute inset-0 bg-[url(/images/spaceship-banner.avif)] bg-cover bg-center scale-110 will-change-transform'
         />
 
-        <div
+        {/* <div
           className='absolute inset-0 bg-linear-to-t from-[#f5f5f5] to-40% to-transparent w-full h-full -z-2'
-        />
+        /> */}
 
         {/* Overlay */}
         {/* <div className='absolute inset-0 bg-black/30 z-1 p-7 rounded-2xl' /> */}
@@ -148,8 +148,8 @@ const Hero = () => {
         />
 
         {/* Text */}
-        <div className='absolute bottom-15 lg:bottom-30 left-10 lg:left-20 z-20 flex flex-col gap-5' ref={contentRef}>
-          <h1 className='text-2xl lg:text-4xl text-white font-semibold w-68'>
+        <div className='absolute bottom-15 lg:bottom-30 left-10 lg:left-20 z-20 flex flex-col gap-5 lg:gap-8' ref={contentRef}>
+          <h1 className='text-2xl lg:text-5xl text-white font-bold w-1/2 lg:w-sm leading-14'>
             Look Premium. Attract More. Sell Better.
           </h1>
 

@@ -53,10 +53,10 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
             ref={(el) => {
               linesRef.current[index] = el
             }}
-            className="flex flex-wrap items-center gap-4"
+            className="flex flex-wrap items-center gap-4 font-mona-bold"
           >
             <h3
-              className={`text-4xl font-bold uppercase leading-none md:text-5xl ${
+              className={`text-4xl font-bold uppercase leading-none md:text-7xl ${
                 line.highlight ? 'text-[#828282]' : 'text-black'
               }`}
             >
@@ -68,12 +68,12 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
                 <Image
                   src={line.icon}
                   alt=""
-                  width={80}
-                  height={80}
+                  width={120}
+                  height={120}
                   aria-hidden="true"
                 />
 
-                <span className="text-4xl font-bold uppercase text-[#828282] md:text-5xl">
+                <span className="text-4xl font-bold uppercase text-[#828282] md:text-6xl">
                   {line.highlightedText}
                 </span>
               </>

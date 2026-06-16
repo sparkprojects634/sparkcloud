@@ -20,12 +20,12 @@ const SubHeadingMarquee = ({
         className="shrink-0"
       />
 
-      <div className="max-w-2xs overflow-hidden font-monosans [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+      <div className="max-w-2xs overflow-hidden font-mona [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
         <div className="flex w-max animate-marquee whitespace-nowrap">
           {repeatedText.map((_, index) => (
             <span
               key={index}
-              className="px-2 text-sm font-medium uppercase tracking-normal text-neutral-900 md:text-xl"
+              className="px-2 text-sm font-medium uppercase tracking-wider text-neutral-900 md:text-xl"
             >
               {text} -
             </span>
