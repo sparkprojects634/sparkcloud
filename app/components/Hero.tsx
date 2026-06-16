@@ -114,6 +114,10 @@ const Hero = () => {
           className='absolute inset-0 bg-[url(/images/spaceship-banner.avif)] bg-cover bg-center scale-110 will-change-transform'
         />
 
+        <div
+          className='absolute inset-0 bg-linear-to-t from-[#f5f5f5] to-40% to-transparent w-full h-full -z-2'
+        />
+
         {/* Overlay */}
         {/* <div className='absolute inset-0 bg-black/30 z-1 p-7 rounded-2xl' /> */}
 

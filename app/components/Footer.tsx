@@ -54,8 +54,8 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f4f4f4] pt-12">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <footer className="pt-12">
+      <div className="mx-auto w-full max-w-350 px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.5fr]">
           {/* Company Info */}
           <div className="space-y-6">
@@ -146,9 +146,9 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-12 rounded-t-4xl bg-black">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-6 py-6 text-white lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="mx-auto flex w-full max-w-350 flex-col gap-6 px-6 py-6 text-white lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p className="text-sm">
-            © 2026 All rights reserved
+           Copyright © 2026 All rights reserved
           </p>
 
           <div className="flex flex-wrap gap-6">
