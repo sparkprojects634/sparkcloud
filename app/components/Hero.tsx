@@ -130,7 +130,7 @@ const Hero = () => {
             playsInline
             className='w-full h-full object-cover'
           >
-            <source src='/videos/earth-banner.webm' type='video/webm' />
+            <source src='/videos/earth-banner.mov' type='video/mp4' />
           </video>
         </div>
 
@@ -149,7 +149,7 @@ const Hero = () => {
 
         {/* Text */}
         <div className='absolute bottom-15 lg:bottom-30 left-10 lg:left-20 z-20 flex flex-col gap-5 lg:gap-8' ref={contentRef}>
-          <h1 className='text-2xl lg:text-5xl text-white font-bold w-1/2 lg:w-sm leading-14'>
+          <h1 className='text-3xl lg:text-5xl text-white font-bold w-2/3 lg:w-sm leading-10 lg:leading-14'>
             Look Premium. Attract More. Sell Better.
           </h1>
 
@@ -173,8 +173,8 @@ const Hero = () => {
             fetchPriority='high'
             loading='eager'
           />
-          <h2 className='text-lg md:text-3xl lg:text-9xl font-medium'>SparkCloud</h2>
-          <h3 className=" text-sm md:text-xl lg:text-3xl font-medium">
+          <h2 className='text-6xl md:text-6xl lg:text-9xl font-medium'>SparkCloud</h2>
+          <h3 className=" text-lg md:text-xl lg:text-3xl font-medium">
             We Add Spark to Your Brand
           </h3>
         </div>

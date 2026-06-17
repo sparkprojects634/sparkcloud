@@ -27,15 +27,15 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
       gsap.from(linesRef.current, {
         yPercent: 100,
         opacity: 0,
-        duration: 1,
-        stagger: 0.15,
-        ease: 'power3.out',
+        stagger: 0.3,
+        ease: 'none',
 
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 70%',
-          toggleActions: 'play none none reverse',
-        },
+          start: 'top 80%',
+          end: 'bottom 80%',
+          scrub: 1.2,
+        }
       })
     }, sectionRef)
 
@@ -56,9 +56,8 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
             className="flex flex-wrap items-center gap-4 font-mona-bold"
           >
             <h3
-              className={`text-4xl font-bold uppercase leading-none md:text-7xl ${
-                line.highlight ? 'text-[#828282]' : 'text-black'
-              }`}
+              className={`text-5xl font-bold uppercase leading-none lg:leading-22 md:text-7xl lg:text-7xl ${line.highlight ? 'text-[#828282]' : 'text-black'
+                }`}
             >
               {line.text}
             </h3>
@@ -68,12 +67,13 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
                 <Image
                   src={line.icon}
                   alt=""
-                  width={120}
-                  height={120}
+                  width={80}
+                  height={80}
                   aria-hidden="true"
+                  className='-mt-4 w-15 lg:w-20'
                 />
 
-                <span className="text-4xl font-bold uppercase text-[#828282] md:text-6xl">
+                <span className="text-5xl font-bold uppercase text-[#828282] md:text-5xl lg:text-7xl">
                   {line.highlightedText}
                 </span>
               </>
