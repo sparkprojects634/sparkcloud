@@ -15,7 +15,7 @@ export default function AppWrapper({
     image.src = '/images/spaceship-banner.avif'
 
     const video = document.createElement('video')
-    video.src = '/videos/earth-banner.webm'
+    video.src = '/videos/earth-banner.mp4'
 
     Promise.all([
       new Promise((resolve) => {

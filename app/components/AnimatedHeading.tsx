@@ -56,7 +56,7 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
             className="flex flex-wrap items-center gap-4 font-mona-bold"
           >
             <h3
-              className={`text-5xl font-bold uppercase leading-none lg:leading-22 md:text-7xl lg:text-7xl ${line.highlight ? 'text-[#828282]' : 'text-black'
+              className={`text-5xl font-bold uppercase leading-none lg:leading-20 md:text-7xl lg:text-7xl ${line.highlight ? 'text-[#828282]' : 'text-black'
                 }`}
             >
               {line.text}
