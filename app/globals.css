@@ -124,3 +124,19 @@ body {
   font-family: var(--font-mona-narrow);
   font-weight: 700;
 }
+
+.image-fill-text {
+  --fill-size: 0%;
+
+  color: transparent;
+
+  background-image: url('/images/Group.png');
+  background-repeat: no-repeat;
+  background-size: var(--fill-size) 100%;
+  background-position: left center;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-stroke: 1px #0079ff;
+}

@@ -6,6 +6,8 @@ import AnimatedHeading from "../components/AnimatedHeading"
 import { headingLines } from "@/app/data/headingLines"
 import AnimatedButton from "../components/AnimatedButton"
 import AnimatedTextLink from "../components/AnimatedTextLink"
+import GrowthSection from "../components/GrowthSection"
+import FeaturedProjects from "../components/FeaturedProjects"
 
 const Home = () => {
   return (
@@ -25,6 +27,21 @@ const Home = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* <section>
+        <GrowthSection />
+      </section> */}
+
+      <section className="py-3 lg:py-10 bg-black rounded-b-4xl">
+        <div className="mx-auto w-full max-w-350 px-5 md:px-8">
+          <SubHeadingMarquee text="OUR PORTFOLIO" color="white"/>
+          <div className="flex justify-between items-end py-6">
+            <h3 className="font-mona font-bold text-white text-5xl md:text-7xl lg:text-9xl tracking-wider">SELECTED <br /> <span className="text-[#8D8D8D]">WORK</span></h3>
+            <h4 className="font-mona font-bold text-5xl md:text-7xl lg:text-9xl tracking-wide text-[#8D8D8D]">©2026</h4>
+          </div>
+          <FeaturedProjects />
         </div>
       </section>
 
