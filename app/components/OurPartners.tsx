@@ -22,7 +22,7 @@ const partners = [
         logo: '/images/partners/land-rover-logo.png',
     },
     {
-        name: 'UiUK',
+        name: 'ULUK',
         logo: '/images/partners/uluk-logo.png',
     },
     {
@@ -37,7 +37,7 @@ const partners = [
 
 const OurPartners = () => {
     return (
-        <section className="py-20 md:py-28">
+        <section className="py-6 md:py-10">
             <div className="mx-auto w-full max-w-350 px-5 md:px-8">
                 <h2 className="mb-14 text-center font-mona-bold text-5xl font-monosans font-semibold uppercase tracking-wider text-neutral-400 md:mb-20 md:text-7xl lg:text-9xl">
                     <span className="text-black">Our</span> Partners

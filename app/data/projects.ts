@@ -28,3 +28,20 @@ export const projects = [
     href: '/projects/club-de-golf',
   },
 ]
+
+export const stats = [
+  {
+    id: 1,
+    value: '+20',
+    title: 'Successful Projects Completed',
+    description:
+      "For over a decade, we've been shaping digital experiences and building strong brands. Our years of knowledge ensure every project is backed by skill, strategy, and creativity.",
+  },
+  {
+    id: 2,
+    value: '99%',
+    title: 'Customer Satisfaction Rate',
+    description:
+      'We measure success by the impact we create. With a near-perfect satisfaction rate, our clients trust us to deliver solutions that exceed expectations every time.',
+  },
+]

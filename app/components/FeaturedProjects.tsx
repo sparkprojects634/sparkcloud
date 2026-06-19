@@ -16,7 +16,7 @@ const FeaturedProjects = () => {
           />
         ))}
       </div>
-      <div className='mt-4 '>
+      <div className='mt-4'>
         <AnimatedButton text="ALL Porjects" href='#' theme='light'/>
       </div>
     </section>
