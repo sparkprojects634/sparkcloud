@@ -30,7 +30,7 @@ const partners = [
         logo: '/images/partners/tlg-logo.png',
     },
     {
-        name: 'Nautics World',
+        name: 'dNaughties World',
         logo: '/images/partners/dnaughties-logo.png',
     },
 ]

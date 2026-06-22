@@ -12,7 +12,7 @@ const GrowthSection = () => {
     <section className="relative min-h-[250vh] bg-black rounded-tl-4xl overflow-hidden">
       <AnimatedPath targetRef={textRef} />
 
-      <div className="sticky top-0 flex h-screen items-center justify-center">
+      <div className="absolute w-full bottom-0 flex h-screen items-center justify-center">
         <ImageFillText ref={textRef}>
           DIGITAL GROWTH
         </ImageFillText>

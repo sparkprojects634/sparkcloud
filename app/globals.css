@@ -51,7 +51,7 @@ body {
 /* Standard properties for Firefox (Limited customization) */
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgb(255, 255, 255) transparent;
+  scrollbar-color: rgb(0, 0, 0) transparent;
 }
 
 .animate-wobble {
@@ -138,5 +138,6 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
 
+  color: #0079ff;
   -webkit-text-stroke: 1px #0079ff;
 }

@@ -31,9 +31,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section>
+      <section>
         <GrowthSection />
-      </section> */}
+      </section>
 
       <section className="py-6 lg:py-10 bg-black rounded-b-4xl">
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
