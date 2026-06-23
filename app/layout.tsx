@@ -2,6 +2,12 @@ import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
 
+const monaSans = localFont({
+  src: './fonts/MonaSans-VariableFont_wdth,wght.ttf',
+  variable: '--font-mona',
+  display: 'swap',
+})
+
 const monaSansNarrow = localFont({
   src: [
     {
@@ -33,7 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${monaSansNarrow.variable} h-full antialiased`}
+      className={`${monaSans.variable} ${monaSansNarrow.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {children}

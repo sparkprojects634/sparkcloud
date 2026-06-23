@@ -26,7 +26,7 @@ const AnimatedButton = ({
           : 'border border-neutral-200 bg-white text-black'
       )}
     >
-      <span className="flex uppercase items-center font-medium text-xl">
+      <span className="flex uppercase items-center font-medium text-sm md:text-xl">
         {chars.map((char, index) => (
           <span
             key={`${char}-${index}`}

@@ -20,7 +20,7 @@ const AnimatedTextLink = ({
       className="group inline-flex flex-col gap-2"
     >
       <div className="flex items-center gap-2 overflow-hidden uppercase">
-        <span className="flex text-xl">
+        <span className="flex text-sm md:text-xl">
           {chars.map((char, index) => (
             <span
               key={`${char}-${index}`}

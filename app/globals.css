@@ -8,7 +8,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-monasans: var(--font-monasans), ui-sans-serif, system-ui, sans-serif;
+
+  --font-sans: var(--font-mona);
+  --font-display: var(--font-mona-narrow);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -21,7 +23,6 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-monasans);
 }
 
 /* 1. Define the width of the scrollbar */
@@ -101,7 +102,6 @@ body {
   }
 }
 
-
 .animate-marquee {
   animation: marquee 20s linear infinite;
 }
@@ -114,10 +114,6 @@ body {
   to {
     transform: translateX(-50%);
   }
-}
-
-.font-mona {
-  font-family: var(--font-mona-narrow);
 }
 
 .font-mona-bold {

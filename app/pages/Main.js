@@ -39,8 +39,8 @@ const Home = () => {
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
           <SubHeadingMarquee text="OUR PORTFOLIO" color="white" />
           <div className="flex justify-between items-end py-6">
-            <h3 className="font-mona font-bold text-white text-5xl md:text-7xl lg:text-9xl tracking-wider">SELECTED <br /> <span className="text-[#8D8D8D]">WORK</span></h3>
-            <h4 className="font-mona font-bold text-5xl md:text-7xl lg:text-9xl tracking-wide text-[#8D8D8D]">©2026</h4>
+            <h3 className="font-mona-bold font-bold text-white text-5xl md:text-7xl lg:text-9xl tracking-wider">SELECTED <br /> <span className="text-[#8D8D8D]">WORK</span></h3>
+            <h4 className="font-mona-bold font-bold text-5xl md:text-7xl lg:text-9xl tracking-wide text-[#8D8D8D]">©2026</h4>
           </div>
           <FeaturedProjects />
         </div>
@@ -50,12 +50,12 @@ const Home = () => {
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
           <SubHeadingMarquee text="WHY CHOOSE US" color="black" />
           <div className="flex justify-between items-end py-6">
-            <h3 className="font-mona font-bold text-black text-5xl md:text-7xl lg:text-9xl tracking-wider">CHOOSE <br /> <span className="text-[#8D8D8D]">EXCELLENCE</span></h3>
+            <h3 className="font-mona-bold font-bold text-black text-5xl md:text-7xl lg:text-9xl tracking-wider">CHOOSE <br /> <span className="text-[#8D8D8D]">EXCELLENCE</span></h3>
             <AnimatedButton text="Get In Touch" href='#' theme='dark' />
           </div>
           <div className="mx-auto grid gap-6 lg:grid-cols-[1.1fr_1fr]">
             {/* Left */}
-            <div className="relative overflow-hidden rounded-[32px] bg-black">
+            <div className="relative overflow-hidden rounded-4xl bg-black">
               <video
                 autoPlay
                 loop
@@ -85,10 +85,10 @@ const Home = () => {
               {stats.map((stat) => (
                 <div
                   key={stat.id}
-                  className="flex h-full flex-col rounded-[32px] bg-white p-6 md:p-8"
+                  className="flex h-full flex-col rounded-4xl bg-white p-6 md:p-8"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="font-mona-bold text-[clamp(4rem,8vw,7rem)] leading-none tracking-tight">
+                    <h3 className="font-mona-bold font-bold tracking-wide text-[clamp(4rem,8vw,7rem)] leading-none">
                       <span className="text-[#9B9B9B]">
                         {stat.value.startsWith('+') ? '+' : ''}
                       </span>
@@ -96,7 +96,7 @@ const Home = () => {
                       {stat.value.replace('+', '')}
                     </h3>
 
-                    <p className="max-w-[180px] text-right text-lg leading-tight text-[#111] md:text-[32px]">
+                    <p className="max-w-60 text-right text-sm leading-tight text-[#111] md:text-xl">
                       {stat.title}
                     </p>
                   </div>
