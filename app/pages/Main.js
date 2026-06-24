@@ -61,7 +61,7 @@ const Home = () => {
                 loop
                 muted
                 playsInline
-                className="h-full min-h-[420px] w-full object-cover"
+                className="h-full min-h-105 w-full object-cover"
               >
                 <source
                   src="/videos/choose-video.mp4"

@@ -17,7 +17,7 @@ const ImageFillText = forwardRef<
       ref={ref}
       className={clsx(
         'image-fill-text font-sans font-bold uppercase leading-none',
-        'text-[clamp(3rem,10vw,7.3rem)]',
+        'text-[clamp(3rem,10vw,7.7rem)]',
         className
       )}
     >

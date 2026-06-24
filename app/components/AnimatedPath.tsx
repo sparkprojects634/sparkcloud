@@ -55,7 +55,7 @@ const AnimatedPath = ({ targetRef }: AnimatedPathProps) => {
       className="absolute inset-0 pointer-events-none"
     >
       <svg
-        className="h-full w-full overflow-visible"
+        className="h-full w-fit overflow-visible"
         viewBox="-5 -80 1625 1778"
         preserveAspectRatio="none"
       >
