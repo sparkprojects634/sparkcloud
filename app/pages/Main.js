@@ -9,6 +9,7 @@ import AnimatedTextLink from "../components/AnimatedTextLink"
 import GrowthSection from "../components/GrowthSection"
 import FeaturedProjects from "../components/FeaturedProjects"
 import { stats } from "../data/projects"
+import FAQSection from "../components/FAQSection"
 
 const Home = () => {
   return (
@@ -121,6 +122,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="py-6 lg:py-10">
+        <FAQSection />
       </section>
 
       <OurPartners />

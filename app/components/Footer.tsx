@@ -28,11 +28,11 @@ const footerLinks = [
 
 const legalLinks = [
   {
-    label: "TERMS & CONDITION",
+    label: "Terms & Conditions",
     href: "/terms-and-condition",
   },
   {
-    label: "PRIVACY POLICY",
+    label: "Privacy Policy",
     href: "/privacy-policy",
   },
 ]
@@ -80,7 +80,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="mailto:email@example.com"
+                href="mailto:projects@sparkcloud.in"
                 className="block font-semibold transition hover:opacity-70"
               >
                 projects@sparkcloud.in
