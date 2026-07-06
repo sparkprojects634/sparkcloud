@@ -124,9 +124,9 @@ const Home = () => {
         </div>
       </section>
 
-      {/* <section className="py-6 lg:py-10">
+      <section className="py-6 lg:py-10">
         <FAQSection />
-      </section> */}
+      </section>
 
       <OurPartners />
     </div>
