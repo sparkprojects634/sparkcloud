@@ -62,17 +62,23 @@ const Hero = () => {
       },
     })
 
-    gsap.to(videoRef.current, {
-      filter: 'blur(0px)',
-      ease: 'none',
-
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: 'top top',
-        end: 'bottom top',
-        scrub: 1.5,
+    gsap.fromTo(
+      videoRef.current,
+      {
+        padding: 0,
       },
-    })
+      {
+        padding: "18px",
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1.5,
+        },
+      }
+    )
 
     gsap.fromTo(
       bannerRef.current,
@@ -122,15 +128,21 @@ const Hero = () => {
         {/* <div className='absolute inset-0 bg-black/30 z-1 p-7 rounded-2xl' /> */}
 
         {/* Video */}
-        <div className='absolute inset-0 -z-10 blur-[2px]' ref={videoRef}>
+        <div
+          ref={videoRef}
+          className="absolute inset-0 -z-10 overflow-hidden"
+        >
           <video
             autoPlay
             loop
             muted
             playsInline
-            className='w-full h-full object-cover'
+            className="h-full w-full object-cover overflow-hidden rounded-3xl"
           >
-            <source src='/videos/earth-banner.mp4' type='video/mp4' />
+            <source
+              src="/videos/earth-banner.mp4"
+              type="video/mp4"
+            />
           </video>
         </div>
 

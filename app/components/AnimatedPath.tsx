@@ -28,7 +28,7 @@ const AnimatedPath = ({ targetRef }: AnimatedPathProps) => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 50%',
+        start: 'top 70%',
         end: '+=3500',
         scrub: 1.2,
       },

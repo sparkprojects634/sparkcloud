@@ -10,6 +10,7 @@ import GrowthSection from "../components/GrowthSection"
 import FeaturedProjects from "../components/FeaturedProjects"
 import { stats } from "../data/projects"
 import FAQSection from "../components/FAQSection"
+import CreativeSolutions from "../components/CreativeSolutions"
 
 const Home = () => {
   return (
@@ -122,6 +123,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="py-6 lg:py-10">
+        <CreativeSolutions />
       </section>
 
       <section className="py-6 lg:py-10">
