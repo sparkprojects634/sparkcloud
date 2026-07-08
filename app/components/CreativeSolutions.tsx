@@ -2,6 +2,7 @@
 
 import SubHeadingMarquee from './SubHeadingMarquee'
 import { services } from '../data/services'
+import ServiceRow from './ServiceRow'
 
 const CreativeSolutions = () => {
     return (
@@ -29,26 +30,12 @@ const CreativeSolutions = () => {
                         </div>
 
                         <div className="border-t border-white/10">
-
-                            {services.map((service) => (
-                                <div
+                            {services.map(service => (
+                                <ServiceRow
                                     key={service.id}
-                                    className="grid gap-8 border-b border-white/10 py-10 transition-colors duration-300 hover:bg-white/3 md:grid-cols-[60px_1fr_320px]"
-                                >
-                                    <span className="text-xs text-[#7E7E7E]">
-                                        ({service.id})
-                                    </span>
-
-                                    <h3 className="font-mona-bold text-[clamp(2.5rem,5vw,5rem)] uppercase leading-none tracking-wide text-[#9A9A9A] transition-colors duration-300 hover:text-white">
-                                        {service.title}
-                                    </h3>
-
-                                    <p className="self-center text-sm leading-relaxed text-[#7E7E7E] md:text-base">
-                                        {service.description}
-                                    </p>
-                                </div>
+                                    service={service}
+                                />
                             ))}
-
                         </div>
                     </div>
 
