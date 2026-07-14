@@ -13,7 +13,7 @@ const NavButton = ({ text, href }: Props) => {
   return (
     <Link
       href={href}
-      className="group flex h-12 items-center justify-center overflow-hidden rounded-full bg-white/10 px-6 text-white backdrop-blur-xl"
+      className="group flex h-12 items-center justify-center overflow-hidden rounded-full bg-[#828282]/10 px-6 text-white backdrop-blur-xl"
     >
       <span className="flex text-sm font-semibold uppercase tracking-wide">
         {chars.map((char, index) => (

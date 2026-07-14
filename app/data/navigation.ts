@@ -16,6 +16,11 @@ export const navigation = [
   },
   {
     id: "04",
+    label: "About",
+    href: "/about",
+  },
+  {
+    id: "05",
     label: "Contact",
     href: "/contact",
   },

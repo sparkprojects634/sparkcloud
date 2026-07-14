@@ -12,7 +12,7 @@ const HamburgerButton = ({
   return (
     <button
       onClick={onClick}
-      className="group flex h-14 w-14 items-center justify-center rounded-full bg-white/10 backdrop-blur-xl"
+      className="group flex h-14 w-14 items-center justify-center rounded-full bg-[#828282]/10 backdrop-blur-xl"
     >
       <div className="relative h-5 w-6">
 

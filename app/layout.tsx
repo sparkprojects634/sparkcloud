@@ -1,6 +1,9 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import AppWrapper from './components/AppWrapper'
 
 const monaSans = localFont({
   src: './fonts/MonaSans-VariableFont_wdth,wght.ttf',
@@ -42,7 +45,11 @@ export default function RootLayout({
       className={`${monaSans.variable} ${monaSansNarrow.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {children}
+        <AppWrapper>
+          <Header />
+            {children}
+          <Footer />
+        </AppWrapper>
       </body>
     </html>
   )
