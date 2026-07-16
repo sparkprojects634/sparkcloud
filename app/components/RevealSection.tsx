@@ -38,7 +38,11 @@ const RevealSection = () => {
   }, [])
 
   return (
-    <section ref={stageRef} className="relative h-screen overflow-hidden bg-black">
+
+    <section ref={stageRef} className="relative h-screen overflow-hidden">
+      <div className="absolute inset-0 flex items-center justify-center">
+        <span className='font-mona-bold uppercase text-black/80 tracking-wider text-sm lg:text-xl'>Keep scrolling</span>
+      </div>
       <div
         ref={panelRef}
         className="reveal-panel absolute inset-0"
@@ -48,18 +52,27 @@ const RevealSection = () => {
         }}
       >
         {/* background image / 3D render behind the hero */}
-        <Image
-          src="/images/hero-bg.jpg"
-          alt=""
-          width={100}
-          height={100}
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <div
+          className="absolute inset-0 -z-10 overflow-hidden"
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="h-full w-full object-cover overflow-hidden rounded-3xl"
+          >
+            <source
+              src="/videos/choose-video.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
         <div className="absolute inset-0 bg-black/30" />
 
         {/* hero content */}
         <div className="relative flex h-full gap-5 flex-col items-center justify-center px-6 text-center">
-          
+
           <SubHeadingMarquee text="BRING IDEAS TO LIFE" color="white" />
 
           {/* two-tone headline */}
@@ -75,7 +88,7 @@ const RevealSection = () => {
           </h3>
 
           {/* button */}
-         <AnimatedButton text="GET IN TOUCH" theme="light" href="/contact-us" /> 
+          <AnimatedButton text="GET IN TOUCH" theme="light" href="/contact-us" />
         </div>
       </div>
     </section>
