@@ -52,24 +52,27 @@ export const pillars = [
   },
 ]
 
-export const process = [
+export const workProcess = [
   {
-    number: "01",
+    id: "01",
     title: "DISCOVERY",
+    subtitle: "PHASE",
     description:
-      "Research, workshops, competitor analysis and business understanding.",
+      "We begin by understanding your brand's vision, audience, and goals—laying the foundation for a clear creative direction and meaningful strategy.",
   },
   {
-    number: "02",
+    id: "02",
     title: "DESIGN",
+    subtitle: "CREATION",
     description:
-      "Wireframes, prototypes and beautiful interfaces.",
+      "Our team transforms insights into visual concepts, crafting bold and cohesive designs that express your identity across every digital touchpoint.",
   },
   {
-    number: "03",
+    id: "03",
     title: "BRAND",
+    subtitle: "DELIVERY",
     description:
-      "Identity systems, positioning and digital execution.",
+      "We finalize and launch your brand assets with precision, ensuring every detail communicates consistency, quality, and lasting emotional impact.",
   },
 ]
 
@@ -77,36 +80,42 @@ export const team = [
   {
     name: "GAURAV",
     role: "CEO",
-    image: "/images/team/gaurav.webp",
+    image: "/images/team/gaurav.png",
   },
   {
     name: "SAKSHI",
     role: "Project Manager",
-    image: "/images/team/sakshi.webp",
+    image: "/images/team/sakshi.png",
   },
   {
     name: "FAUWAAZ",
-    role: "Web Developer",
-    image: "/images/team/fauwaaz.webp",
+    role: "Sr. Web Developer",
+    image: "/images/team/fauwaaz.png",
   },
   {
     name: "INISH",
-    role: "Web Developer",
-    image: "/images/team/inish.webp",
+    role: "Jr. Web Developer",
+    image: "/images/team/inish.png",
   },
   {
     name: "IMRAN",
     role: "SEO",
-    image: "/images/team/imran.webp",
+    image: "/images/team/imran.png",
   },
   {
     name: "ISHANYA",
     role: "Content Writer",
-    image: "/images/team/ishanya.webp",
+    image: "/images/team/ishanya.png",
   },
   {
     name: "SARUK",
     role: "UI/UX Designer",
-    image: "/images/team/saruk.webp",
+    image: "/images/team/saruk.png",
   },
+
+  {
+    name: "RAIHAN",
+    role: "Admin",
+    image: "/images/team/raihan.png",
+  }
 ]

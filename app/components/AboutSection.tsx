@@ -7,17 +7,19 @@ import {
   aboutDescription,
 } from '../data/about'
 import AnimatedTextLink from './AnimatedTextLink'
+import SubHeadingMarquee from './SubHeadingMarquee'
 
 const AboutSection = () => {
   return (
     <section className="py-10 lg:py-20">
       <div className="mx-auto max-w-350 px-5 md:px-8">
 
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center gap-5">
+          <SubHeadingMarquee text="OUR STORY" color="dark" />
 
-          <AnimatedHeading lines={aboutHeading} />
+          <AnimatedHeading lines={aboutHeading} />    
 
-          <div className="mt-12 max-w-5xl">
+          <div className="max-w-5xl">
             <p className="font-sans text-center text-lg leading-relaxed text-[#1B1B1B] md:text-2xl">
               {aboutDescription}
             </p>

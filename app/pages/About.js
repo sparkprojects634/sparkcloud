@@ -2,7 +2,8 @@ import Image from 'next/image'
 import React from 'react'
 import SubHeadingMarquee from '../components/SubHeadingMarquee'
 import AboutSection from '../components/AboutSection'
-import { pillars } from '../data/about'
+import { pillars, workProcess, team } from '../data/about'
+import RevealSection from '../components/RevealSection'
 
 const About = () => {
   return (
@@ -52,7 +53,6 @@ const About = () => {
       </section>
 
       <section className='mx-auto w-full max-w-350 px-5 md:px-8 flex flex-col items-center'>
-        <SubHeadingMarquee text="OUR STORY" />
         <AboutSection />
       </section>
 
@@ -126,6 +126,128 @@ const About = () => {
         </div>
 
       </section>
+
+      <section className='mx-auto w-full max-w-350 px-5 md:px-8 flex flex-col items-center'>
+      </section>
+
+      <section className="mx-auto w-full max-w-350 px-5 py-8 md:px-8 lg:py-12">
+
+        <div className="overflow-hidden rounded-[36px] bg-[#101010] px-6 py-8 text-white md:px-10 md:py-12 lg:px-14 lg:py-16">
+
+          <SubHeadingMarquee
+            text="HOW WE WORK"
+            color="white"
+          />
+
+          <div className="mt-6 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+
+            <h2 className="font-mona-bold text-[clamp(4rem,10vw,9rem)] uppercase leading-[0.9]">
+              WORK <br />
+              <span className="text-[#8D8D8D]">
+                PROCESS
+              </span>
+            </h2>
+
+            <span className="font-mona-bold text-[clamp(4rem,9vw,6rem)] leading-none text-[#8D8D8D]">
+              (03)
+            </span>
+
+          </div>
+
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+
+            {workProcess.map((item) => (
+              <div
+                key={item.id}
+                className="rounded-[22px] border border-white/5 bg-[#1F1F1F] p-6 transition-all duration-300 hover:-translate-y-2 hover:border-white/15 hover:bg-[#262626]"
+              >
+
+                <span className="font-mona-bold text-5xl leading-none text-[#6D6D6D]">
+                  {item.id}
+                </span>
+
+                <div className="mt-6">
+
+                  <h3 className="font-mona-bold text-4xl uppercase leading-none text-white">
+                    {item.title}
+                  </h3>
+
+                  <span className="mt-1 block font-mona-bold text-4xl uppercase leading-none text-[#6D6D6D]">
+                    {item.subtitle}
+                  </span>
+
+                </div>
+
+                <p className="mt-6 text-sm leading-relaxed text-[#7A7A7A]">
+                  {item.description}
+                </p>
+
+              </div>
+            ))}
+
+          </div>
+
+        </div>
+
+      </section>
+
+      <section className="mx-auto w-full max-w-350 px-5 py-8 md:px-8 lg:py-12">
+
+        <div className="flex flex-col items-center">
+
+          <SubHeadingMarquee
+            text="OUR TEAM"
+            color="black"
+          />
+
+          <div className="mt-5">
+            <h2 className="font-mona-bold text-center text-[clamp(4rem,9vw,9rem)] uppercase leading-[0.9]">
+              CORE <span className="text-[#9A9A9A]">SQUAD</span>
+            </h2>
+          </div>
+
+        </div>
+
+        <div className="mt-10 grid gap-4 md:grid-cols-2 lg:gap-5">
+
+          {team.map((member) => (
+            <div
+              key={member.name}
+              className="group flex overflow-hidden rounded-[22px] bg-[#ECECEC] transition-all duration-300 hover:-translate-y-1 hover:shadow-xl p-4"
+            >
+              {/* Image */}
+
+              <div className="relative aspect-square w-[110px] bg-[#363632] shrink-0 overflow-hidden md:w-[250px] rounded-2xl">
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  unoptimized
+                />
+              </div>
+
+              {/* Content */}
+
+              <div className="flex flex-1 flex-col justify-start p-4 md:p-5">
+
+                <h3 className="font-mona-bold text-xl uppercase leading-none text-black md:text-3xl">
+                  {member.name}
+                </h3>
+
+                <p className="mt-1 font-sans text-sm text-[#5C5C5C] md:text-base">
+                  {member.role}
+                </p>
+
+              </div>
+            </div>
+          ))}
+
+        </div>
+
+      </section>
+
+      <RevealSection />
     </>
   )
 }

@@ -1,0 +1,85 @@
+'use client'
+
+import { useLayoutEffect, useRef } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Image from 'next/image'
+import AnimatedButton from './AnimatedButton'
+import SubHeadingMarquee from './SubHeadingMarquee'
+
+gsap.registerPlugin(ScrollTrigger)
+
+const RevealSection = () => {
+  const stageRef = useRef<HTMLElement>(null)
+  const panelRef = useRef<HTMLDivElement>(null)
+
+  useLayoutEffect(() => {
+    const stage = stageRef.current
+    const panel = panelRef.current
+    if (!stage || !panel) return
+
+    const ctx = gsap.context(() => {
+      gsap.set(panel, { '--edge': '56%' }) // thin center slit to start
+
+      gsap.to(panel, {
+        '--edge': '0%',
+        ease: 'none',
+        scrollTrigger: {
+          trigger: stage,
+          start: 'top top',
+          end: '+=1600',
+          scrub: 1,
+          pin: true,
+        },
+      })
+    }, stage)
+
+    return () => ctx.revert()
+  }, [])
+
+  return (
+    <section ref={stageRef} className="relative h-screen overflow-hidden bg-black">
+      <div
+        ref={panelRef}
+        className="reveal-panel absolute inset-0"
+        style={{
+          clipPath: 'inset(var(--edge) 0% var(--edge) 0%)',
+          WebkitClipPath: 'inset(var(--edge) 0% var(--edge) 0%)',
+        }}
+      >
+        {/* background image / 3D render behind the hero */}
+        <Image
+          src="/images/hero-bg.jpg"
+          alt=""
+          width={100}
+          height={100}
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* hero content */}
+        <div className="relative flex h-full gap-5 flex-col items-center justify-center px-6 text-center">
+          
+          <SubHeadingMarquee text="BRING IDEAS TO LIFE" color="white" />
+
+          {/* two-tone headline */}
+          <h3 className="font-mona-bold uppercase leading-[0.9] tracking-tight text-[clamp(2.5rem,10vw,8rem)]">
+            <span className="block">
+              <span className="text-white">Let’s </span>
+              <span className="text-neutral-500">Build</span>
+            </span>
+            <span className="block">
+              <span className="text-neutral-500">Your </span>
+              <span className="text-white">Brand</span>
+            </span>
+          </h3>
+
+          {/* button */}
+         <AnimatedButton text="GET IN TOUCH" theme="light" href="/contact-us" /> 
+        </div>
+      </div>
+    </section>
+  )
+}
+
+export default RevealSection
