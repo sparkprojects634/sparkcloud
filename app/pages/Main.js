@@ -37,7 +37,6 @@ const Home = () => {
         <GrowthSection />
       </section>
 
-
       <section className="py-6 lg:py-10 bg-black rounded-b-4xl">
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
           <SubHeadingMarquee text="OUR PORTFOLIO" color="white" />
@@ -58,7 +57,7 @@ const Home = () => {
           </div>
           <div className="mx-auto grid gap-6 lg:grid-cols-[1.1fr_1fr]">
             {/* Left */}
-            <div className="relative overflow-hidden rounded-4xl bg-black">
+            <div className="relative overflow-hidden rounded-4xl">
               <video
                 autoPlay
                 loop

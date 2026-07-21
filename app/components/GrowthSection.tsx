@@ -5,6 +5,7 @@ import { useRef } from 'react'
 import AnimatedPath from './AnimatedPath'
 import ImageFillText from './ImageFillText'
 import BrushHighlight from './BrushHighlight'
+import RubicModel from './RubikModel'
 
 const GrowthSection = () => {
   const textRef = useRef<HTMLDivElement>(null)
@@ -45,6 +46,9 @@ const GrowthSection = () => {
         <span className='font-bold text-xl md:text-6xl lg:text-8xl'>Agency.</span>
         <p className='text-lg md:text-2xl lg:text-3xl tracking-wide'>We bridge the gap between your brand and your customers.</p>
       </div>
+
+      <RubicModel />
+
     </section>
   )
 }

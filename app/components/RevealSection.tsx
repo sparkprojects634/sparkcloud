@@ -3,7 +3,6 @@
 import { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import Image from 'next/image'
 import AnimatedButton from './AnimatedButton'
 import SubHeadingMarquee from './SubHeadingMarquee'
 
@@ -20,7 +19,6 @@ const RevealSection = () => {
 
     const ctx = gsap.context(() => {
       gsap.set(panel, { '--edge': '56%' }) // thin center slit to start
-
       gsap.to(panel, {
         '--edge': '0%',
         ease: 'none',
