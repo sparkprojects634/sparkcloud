@@ -11,6 +11,7 @@ import FeaturedProjects from "../components/FeaturedProjects"
 import { stats } from "../data/projects"
 import FAQSection from "../components/FAQSection"
 import CreativeSolutions from "../components/CreativeSolutions"
+import RevealSection from "../components/RevealSection"
 
 const Home = () => {
   return (
@@ -134,6 +135,8 @@ const Home = () => {
       </section>
 
       <OurPartners />
+
+      <RevealSection />
     </div>
   )
 }

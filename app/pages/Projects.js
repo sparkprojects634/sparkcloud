@@ -1,4 +1,5 @@
 import AnimatedButton from "../components/AnimatedButton"
+import RevealSection from "../components/RevealSection"
 import SubHeadingMarquee from "../components/SubHeadingMarquee"
 
 const Projects = () => {
@@ -32,6 +33,8 @@ const Projects = () => {
                     </div>
                 </div>
             </section>
+
+            <RevealSection />
         </>
     )
 }
