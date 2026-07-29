@@ -9,7 +9,7 @@ const handle = app.getRequestHandler();
 app.prepare().then(() => {
   const server = express();
   server.use((req, res) => handle(req, res));
-
+  
   server.listen(port, (err) => {
     if (err) throw err;
     console.log(`> Ready on http://localhost:${port} (${dev ? "dev" : "prod"})`);

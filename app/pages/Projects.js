@@ -1,11 +1,13 @@
 import AnimatedButton from "../components/AnimatedButton"
+import ProjectCard from "../components/ProjectCard"
 import RevealSection from "../components/RevealSection"
 import SubHeadingMarquee from "../components/SubHeadingMarquee"
+import { projects } from "../data/projects"
 
 const Projects = () => {
     return (
         <>
-            <section className="mx-auto w-full max-w-350 px-5 py-8 md:px-8 lg:py-12">
+            <section className="mx-auto w-full max-w-350 px-5 py-8 md:px-8 lg:py-12 mt-20">
                 <SubHeadingMarquee
                     text="OUR PORTFOLIO"
                     color="black"
@@ -34,6 +36,15 @@ const Projects = () => {
                 </div>
             </section>
 
+            <section className="mx-auto max-w-350 px-5 py-6 lg:py-10">
+                {projects.map((project, index) => (
+                    <ProjectCard
+                        key={project.id}
+                        project={project}
+                        index={index}
+                    />
+                ))}
+            </section>
             <RevealSection />
         </>
     )

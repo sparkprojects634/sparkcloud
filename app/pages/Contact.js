@@ -1,4 +1,5 @@
 import RevealSection from "../components/RevealSection"
+import ContactForm from "../components/ContactForm"
 
 const Contact = () => {
     return (
@@ -42,6 +43,10 @@ const Contact = () => {
                     </div>
 
                 </div>
+            </section>
+
+            <section className='mx-auto w-full max-w-200 py-7 px-5 md:px-8'>
+                <ContactForm />
             </section>
 
             <RevealSection />
