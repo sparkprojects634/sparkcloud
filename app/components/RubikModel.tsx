@@ -1,38 +1,67 @@
 'use client'
 
-import { useRef, useLayoutEffect } from 'react'
+import { useLayoutEffect, useRef } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import * as THREE from 'three'
 
 gsap.registerPlugin(ScrollTrigger)
 
-function Model() {
-  const group = useRef<THREE.Group>(null)
-  const { scene } = useGLTF('/glb/rubic_1.glb')
+function Cube() {
+  const master = useRef<THREE.Group>(null)
+  const outer = useRef<THREE.Group>(null)
+  const middle = useRef<THREE.Group>(null)
+
+  const outerModel = useGLTF('/glb/rubic_1.glb')
+  const middleModel = useGLTF('/glb/rubic_2.glb')
 
   useLayoutEffect(() => {
-    if (!group.current) return
+    if (!outer.current || !middle.current) return
 
-    gsap.to(group.current.rotation, {
-      x: Math.PI * 2,
-      y: Math.PI * 4,
-      z: Math.PI * 1.5,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: '#growth-section',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: true,
+    ScrollTrigger.create({
+      trigger: '#growth-section',
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: true,
+
+      onUpdate: (self) => {
+        const p = self.progress
+
+        // Rotate whole cube
+        outer.current!.rotation.x = p * Math.PI * 4
+        outer.current!.rotation.y = p * Math.PI * 4
+
+        // Rotate middle slice independently
+        middle.current!.rotation.y = p * Math.PI * 2
+        middle.current!.rotation.x = p * Math.PI * 4
       },
     })
   }, [])
 
   return (
-    <group ref={group} scale={1.6}>
-      <primitive object={scene} />
+    <group
+      ref={master}
+      position={[0, 0, 0]}
+      rotation={[0, 0, 0]}
+      scale={1.55}
+    >
+      {/* Outer Cube */}
+      <group
+        ref={outer}
+        position={[0, 0, 0]}
+      >
+        <primitive object={outerModel.scene.clone()} />
+      </group>
+
+      {/* Middle Layer */}
+      <group
+        ref={middle}
+        position={[0, 0, 0]} // adjust if required
+      >
+        <primitive object={middleModel.scene.clone()} />
+      </group>
     </group>
   )
 }
@@ -40,29 +69,44 @@ function Model() {
 export default function RubicModel() {
   return (
     <div className="pointer-events-none absolute inset-0 z-20">
-      <Canvas camera={{ position: [0, -100, 6], fov: 40 }}>
-        <ambientLight intensity={2} />
+      <Canvas
+        camera={{
+          position: [0, 0, 100],
+          fov: 35,
+        }}
+      >
+        {/* Ambient */}
+        <ambientLight intensity={2.5} />
+
+        {/* Main */}
         <directionalLight
-          position={[5, 0, 5]}
+          position={[6, 8, 8]}
           intensity={5}
         />
 
-        <pointLight position={[-10, 0, -20]} intensity={105} />
-        <pointLight position={[0, -10, 0]} intensity={105} />
-
-        <OrbitControls
-          enableZoom={false}
-          enablePan={false}
-          enableRotate
-          makeDefault
-          minPolarAngle={Math.PI / 2}
-          maxPolarAngle={Math.PI / 2}
+        {/* Fill */}
+        <directionalLight
+          position={[-6, -4, 5]}
+          intensity={3}
         />
 
-        <Model />
+        {/* Rim */}
+        <pointLight
+          position={[0, 5, 10]}
+          intensity={10}
+        />
+
+        {/* Bottom */}
+        <pointLight
+          position={[0, -5, 6]}
+          intensity={5}
+        />
+
+        <Cube />
       </Canvas>
     </div>
   )
 }
 
-useGLTF.preload('/glb/rubic.glb')
+useGLTF.preload('/glb/rubic_1.glb')
+useGLTF.preload('/glb/rubic_2.glb')
