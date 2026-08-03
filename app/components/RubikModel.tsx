@@ -30,12 +30,12 @@ function Cube() {
         const p = self.progress
 
         // Rotate whole cube
-        outer.current!.rotation.x = p * Math.PI * 4
+        outer.current!.rotation.x = p * Math.PI * -4
         outer.current!.rotation.y = p * Math.PI * 4
 
         // Rotate middle slice independently
         middle.current!.rotation.y = p * Math.PI * 2
-        middle.current!.rotation.x = p * Math.PI * 4
+        middle.current!.rotation.x = p * Math.PI * -4
       },
     })
   }, [])
@@ -101,6 +101,7 @@ export default function RubicModel() {
           position={[0, -5, 6]}
           intensity={5}
         />
+
 
         <Cube />
       </Canvas>
