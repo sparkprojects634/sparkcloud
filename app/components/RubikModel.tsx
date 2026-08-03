@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 function Model() {
   const group = useRef<THREE.Group>(null)
-  const { scene } = useGLTF('/glb/rubic.glb')
+  const { scene } = useGLTF('/glb/rubic_1.glb')
 
   useLayoutEffect(() => {
     if (!group.current) return

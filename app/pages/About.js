@@ -239,6 +239,9 @@ const About = () => {
                   {member.role}
                 </p>
 
+                <p className="mt-2 font-sans text-base text-[#666]">
+                  {member.description}
+                </p>
               </div>
             </div>
           ))}

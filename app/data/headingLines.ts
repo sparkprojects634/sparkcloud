@@ -1,20 +1,20 @@
 export const headingLines = [
   {
-    text: "WE DESIGN DIGITAL EXPERIENCES",
-    highlight: false,
-  },
-  {
-    text: "THAT EMPOWER",
-    highlight: false,
+    text: "We empower",
     icon: "/images/empower.png",
-    highlightedText: "BRANDS TO",
+    highlightedText: "BRANDS with",
+    highlight: false,
   },
   {
-    text: "STANDOUT AND ENGAGE THEIR",
+    text: "digital marketing solutions",
+    highlight: false,
+  },
+  {
+    text: "attracting the right audience",
     highlight: true,
   },
   {
-    text: "AUDIENCES.",
+    text: "& delivering real impact.",
     highlight: true,
   },
 ]

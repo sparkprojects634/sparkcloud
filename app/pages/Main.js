@@ -24,7 +24,7 @@ const Home = () => {
             <SubHeadingMarquee text="DRIVEN BY DESIGN" />
             <div className="space-y-6">
               <AnimatedHeading lines={headingLines} />
-              <p className="w-full lg:w-3/4 text-black text-xl lg:text-2xl font-normal">By combining strategy, design, and technology, we transform ideas into meaningful digital experiences. Our work blends imagination with precision to create bold outcomes that drive growth.</p>
+              <p className="w-full lg:w-3/4 text-black text-xl lg:text-2xl font-normal">Our integrated approach to digital marketing brings together branding, content, social media, SEO, paid advertising, and web solutions to help businesses grow, engage, and succeed in an ever-evolving digital landscape.</p>
               <div className="flex items-center gap-3 lg:gap-6">
                 <AnimatedButton text="our story" theme="dark" href="/about-us" />
                 <AnimatedTextLink text="contact us" href="/contact-us" />

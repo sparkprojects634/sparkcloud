@@ -19,21 +19,20 @@ const GrowthSection = () => {
           ref={textRef}
           className="flex flex-col items-center gap-10 md:gap-16 lg:gap-20 px-5 text-center font-medium tracking-wide text-white"
         >
-          <p className="max-w-3xl text-xl leading-[1.5] md:text-3xl lg:text-4xl">
-            SparkCloud builds high-performance, responsive platforms and{' '}
-            <BrushHighlight>custom-engineered</BrushHighlight> systems.
+          <p className="max-w-3xl text-xl leading-normal md:text-3xl lg:text-4xl">
+            SparkCloud helps brands build visibility and achieve {' '}
+            <BrushHighlight>sustainable digital</BrushHighlight> growth.
           </p>
 
-          <p className="max-w-4xl text-xl leading-[1.5] md:text-3xl lg:text-4xl">
-            We leverage cutting-edge technology to deliver robust,{' '}
-            <BrushHighlight>future-proof</BrushHighlight> digital
-            infrastructure.
+          <p className="max-w-4xl text-xl leading-normal md:text-3xl lg:text-4xl">
+            We combine strategic planning and performance analytics to,{' '}
+            <BrushHighlight>generate qualified leads</BrushHighlight> and
+            maximize ROI.
           </p>
 
-          <p className="max-w-4xl text-xl leading-[1.5] md:text-3xl lg:text-4xl">
-            Through continuous maintenance and advanced security protocols, we
-            ensure stable uptime and peak performance for your{' '}
-            <BrushHighlight>guaranteed business continuity.</BrushHighlight>
+          <p className="max-w-4xl text-xl leading-normal md:text-3xl lg:text-4xl">
+            through continuous optimization, and data-backed decision-making, we ensure every campaign delivers maximum impact, and{' '}
+            <BrushHighlight>measurable results for your business.</BrushHighlight>
           </p>
         </div>
       </div>
