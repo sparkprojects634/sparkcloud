@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import React from 'react'
 import SubHeadingMarquee from '../components/SubHeadingMarquee'
 import AboutSection from '../components/AboutSection'
 import { pillars, workProcess, team } from '../data/about'
@@ -217,7 +216,7 @@ const About = () => {
             >
               {/* Image */}
 
-              <div className="relative aspect-square w-[110px] bg-[#363632] shrink-0 overflow-hidden md:w-[250px] rounded-2xl">
+              <div className="relative aspect-square w-27.5 bg-[#363632] shrink-0 overflow-hidden md:w-62.5 rounded-2xl">
                 <Image
                   src={member.image}
                   alt={member.name}

@@ -20,6 +20,11 @@ export const navigation = [
   //   href: "/about",
   // },
   {
+    id: "04",
+    label: "Blogs",
+    href: "/blogs",
+  },
+  {
     id: "05",
     label: "Contact",
     href: "/contact",

@@ -16,12 +16,9 @@ const Projects = () => {
                 <div className="mt-6 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
                     {/* Heading */}
                     <div>
-                        <h2 className="font-mona-bold text-[clamp(4rem,10vw,9rem)] leading-[0.88] uppercase tracking-wide text-black">
-                            CREATIVE
-                        </h2>
-
-                        <h2 className="font-mona-bold text-[clamp(4rem,10vw,9rem)] leading-[0.88] uppercase tracking-wide text-[#9A9A9A]">
-                            SHOWCASE
+                        <h2 className="font-mona-bold text-[clamp(4rem,10vw,9rem)] uppercase leading-[0.88]">
+                            CREATIVE <br/> <span className="font-mona-bold text-[clamp(4rem,10vw,9rem)] uppercase leading-[0.88] text-[#8F8F8F]"> SHOWCASE
+                        </span>
                         </h2>
                     </div>
 
