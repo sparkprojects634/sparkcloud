@@ -1,11 +1,13 @@
 import Blogs from "../pages/Blogs";
 
-const page = () => {
-  return (
-    <>
-     <Blogs searchParams={undefined} />
-    </>
-  )
+interface PageProps {
+  searchParams: any;
 }
 
-export default page
+export default async function Page({
+  searchParams,
+}: PageProps) {
+  const params = await searchParams;
+
+  return <Blogs searchParams={params} />;
+}
