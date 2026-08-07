@@ -19,7 +19,7 @@ export default function BlogsSingle({ post }) {
 
       {/* Heading */}
 
-      <h1 className="mt-6 font-mona-bold text-[clamp(3rem,6vw,2rem)] uppercase leading-[1] tracking-wide text-black">
+      <h1 className="mt-6 font-mona-bold text-[clamp(3rem,6vw,2rem)] uppercase leading-none tracking-wide text-black">
         <span
           dangerouslySetInnerHTML={{
             __html: post.title,
@@ -30,7 +30,7 @@ export default function BlogsSingle({ post }) {
       {/* Featured Image */}
 
       {post.featuredImage?.node?.sourceUrl && (
-        <div className="mt-10 overflow-hidden rounded-[32px]">
+        <div className="mt-10 overflow-hidden rounded-4xl">
           <Image
             src={post.featuredImage.node.sourceUrl}
             alt={
@@ -94,17 +94,12 @@ export default function BlogsSingle({ post }) {
           lg:prose-xl
           mt-10
           max-w-none
-
           prose-headings:font-mona-bold
           prose-headings:uppercase
-
           prose-p:text-neutral-700
           prose-p:leading-8
-
           prose-a:text-blue-600
-
           prose-img:rounded-3xl
-
           prose-ul:list-disc
           prose-ol:list-decimal
         "
