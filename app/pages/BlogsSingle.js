@@ -19,7 +19,7 @@ export default function BlogsSingle({ post }) {
 
       {/* Heading */}
 
-      <h1 className="mt-6 font-mona-bold text-[clamp(3rem,6vw,6rem)] uppercase leading-[0.9] tracking-tight text-black">
+      <h1 className="mt-6 font-mona-bold text-[clamp(3rem,6vw,2rem)] uppercase leading-[1] tracking-wide text-black">
         <span
           dangerouslySetInnerHTML={{
             __html: post.title,
@@ -76,13 +76,13 @@ export default function BlogsSingle({ post }) {
 
       {/* Title Again */}
 
-      <h2 className="mt-10 font-mona-bold text-[clamp(2rem,4vw,3rem)] uppercase leading-tight">
+      {/* <h2 className="mt-10 font-mona-bold text-[clamp(2rem,4vw,3rem)] uppercase leading-tight">
         <span
           dangerouslySetInnerHTML={{
             __html: post.title,
           }}
         />
-      </h2>
+      </h2> */}
 
       {/* Content */}
 

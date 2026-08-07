@@ -25,7 +25,7 @@ const Blogs = async ({ searchParams }) => {
   const bottom = pageBlogs.slice(2, 13);
 
   return (
-    <section className="mx-auto mt-20 w-full max-w-[1700px] px-5 py-6 lg:px-8 lg:py-10">
+    <section className="mx-auto mt-20 w-full max-w-425 px-5 py-6 lg:px-8 lg:py-10">
       <SubHeadingMarquee
         text="OUR BLOGS"
         color="black"
