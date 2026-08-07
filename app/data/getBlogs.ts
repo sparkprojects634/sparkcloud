@@ -1,6 +1,6 @@
 const GRAPHQL_URL =
   process.env.WP_GRAPHQL_API ||
-  'https://dashboard.thepawfectstory.com/graphql'
+  'https://sparkcloud.in/graphql'
 
 export async function getBlogs() {
   const query = `

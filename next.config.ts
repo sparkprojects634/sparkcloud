@@ -2,7 +2,7 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ['dashboard.thepawfectstory.com'],
+    domains: ['sparkcloud.in', 'admin.sparkcloud.in'],
   },
 }
 
