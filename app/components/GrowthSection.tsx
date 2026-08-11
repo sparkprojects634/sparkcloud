@@ -11,7 +11,7 @@ const GrowthSection = () => {
   const textRef = useRef<HTMLDivElement>(null)
 
   return (
-    <section className="relative min-h-[250vh] bg-black rounded-t-4xl overflow-hidden">
+    <section id="growth-section" className="relative min-h-[250vh] bg-black rounded-t-4xl overflow-hidden">
       <AnimatedPath targetRef={textRef} />
 
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center">
