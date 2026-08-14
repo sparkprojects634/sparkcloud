@@ -16,20 +16,45 @@ export default function AppWrapper({
 
     const video = document.createElement('video')
     video.src = '/videos/earth-banner.mp4'
+    video.preload = 'auto'
 
-    Promise.all([
-      new Promise((resolve) => {
-        image.onload = resolve
-      }),
+    let imageLoaded = false
+    let videoLoaded = false
 
-      new Promise((resolve) => {
-        video.onloadeddata = resolve
-      }),
-    ]).then(() => {
+    const finish = () => {
+      if (!imageLoaded || !videoLoaded) return
+
       setTimeout(() => {
         setLoading(false)
       }, 800)
-    })
+    }
+
+    image.onload = () => {
+      imageLoaded = true
+      finish()
+    }
+
+    image.onerror = () => {
+      imageLoaded = true
+      finish()
+    }
+
+    video.onloadeddata = () => {
+      videoLoaded = true
+      finish()
+    }
+
+    video.onerror = () => {
+      videoLoaded = true
+      finish()
+    }
+
+    return () => {
+      image.onload = null
+      image.onerror = null
+      video.onloadeddata = null
+      video.onerror = null
+    }
   }, [])
 
   return (
@@ -38,7 +63,9 @@ export default function AppWrapper({
 
       <div
         className={`transition-opacity duration-700 ${
-          loading ? 'opacity-0' : 'opacity-100'
+          loading
+            ? 'pointer-events-none opacity-0'
+            : 'opacity-100'
         }`}
       >
         {children}

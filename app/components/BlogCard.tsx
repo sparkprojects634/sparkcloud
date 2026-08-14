@@ -34,10 +34,10 @@ export default function BlogCard({
             width={900}
             height={600}
             unoptimized
-            className={`w-full object-cover transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110 ${
+            className={`w-full object-cover object-top transition-transform duration-700 ease-[cubic-bezier(.22,1,.36,1)] group-hover:scale-110 ${
               large
-                ? 'aspect-[4/3]'
-                : 'aspect-square'
+                ? 'aspect-video'
+                : 'aspect-video'
             }`}
           />
         </div>
@@ -45,7 +45,7 @@ export default function BlogCard({
         <div className="mt-6 flex justify-between gap-4">
           <div>
             <h3
-              className={`font-mona-bold uppercase leading-tight transition-colors duration-300 group-hover:text-[#0079FF] ${
+              className={`font-mona-bold uppercase leading-tight transition-colors duration-300 group-hover:text-[#0079FF] line-clamp-2 ${
                 large
                   ? 'text-[clamp(2rem,3vw,3rem)]'
                   : 'text-[clamp(1.2rem,1.6vw,2rem)]'
