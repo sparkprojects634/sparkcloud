@@ -29,7 +29,7 @@ export default function BlogsSingle({ post }) {
 
       {/* Featured Image */}
 
-      {post.featuredImage?.node?.sourceUrl && (
+      {/* {post.featuredImage?.node?.sourceUrl && (
         <div className="mt-10 overflow-hidden rounded-4xl">
           <Image
             src={post.featuredImage.node.sourceUrl}
@@ -43,7 +43,7 @@ export default function BlogsSingle({ post }) {
             className="h-full w-full object-cover"
           />
         </div>
-      )}
+      )} */}
 
       {/* Meta */}
 
