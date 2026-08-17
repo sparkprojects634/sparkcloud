@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" fill="none" role="img" aria-label="An AI answer panel citing brand sources">
+  <defs>
+    <linearGradient id="aeoGlow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0079ff" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0079ff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="aeoChip" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0079ff" />
+      <stop offset="100%" stop-color="#3f9bff" />
+    </linearGradient>
+  </defs>
+
+  <rect x="18" y="18" width="484" height="324" rx="26" fill="#141414" stroke="#ffffff" stroke-opacity="0.08" />
+  <ellipse cx="150" cy="70" rx="150" ry="90" fill="url(#aeoGlow)" />
+
+  <!-- question -->
+  <rect x="46" y="46" width="250" height="36" rx="18" fill="#1d1d1d" stroke="#ffffff" stroke-opacity="0.1" />
+  <rect x="66" y="60" width="120" height="8" rx="4" fill="#ffffff" fill-opacity="0.4" />
+  <rect x="196" y="60" width="60" height="8" rx="4" fill="#ffffff" fill-opacity="0.18" />
+
+  <!-- answer panel -->
+  <rect x="46" y="102" width="428" height="150" rx="20" fill="#0079ff" fill-opacity="0.1" stroke="#0079ff" stroke-opacity="0.45" />
+
+  <!-- sparkle mark -->
+  <path d="M76 128l4.5 11.5L92 144l-11.5 4.5L76 160l-4.5-11.5L60 144l11.5-4.5L76 128z" fill="url(#aeoChip)" />
+  <path d="M104 133l2.2 5.6 5.8 2.4-5.8 2.4-2.2 5.6-2.2-5.6-5.8-2.4 5.8-2.4 2.2-5.6z" fill="#66b4ff" fill-opacity="0.7" />
+
+  <text x="126" y="147" font-family="system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="1.4" fill="#ffffff" fill-opacity="0.75">ANSWER</text>
+
+  <rect x="60" y="176" width="400" height="8" rx="4" fill="#ffffff" fill-opacity="0.6" />
+  <rect x="60" y="196" width="368" height="8" rx="4" fill="#ffffff" fill-opacity="0.36" />
+  <rect x="60" y="216" width="250" height="8" rx="4" fill="#ffffff" fill-opacity="0.2" />
+
+  <!-- citations -->
+  <text x="46" y="286" font-family="system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#ffffff" fill-opacity="0.35">SOURCES</text>
+
+  <rect x="46" y="298" width="132" height="34" rx="17" fill="url(#aeoChip)" />
+  <circle cx="68" cy="315" r="7" fill="#ffffff" fill-opacity="0.9" />
+  <rect x="84" y="311" width="76" height="8" rx="4" fill="#ffffff" fill-opacity="0.85" />
+
+  <rect x="190" y="298" width="118" height="34" rx="17" fill="#1d1d1d" stroke="#ffffff" stroke-opacity="0.12" />
+  <circle cx="212" cy="315" r="7" fill="#ffffff" fill-opacity="0.25" />
+  <rect x="228" y="311" width="62" height="8" rx="4" fill="#ffffff" fill-opacity="0.25" />
+
+  <rect x="320" y="298" width="118" height="34" rx="17" fill="#1d1d1d" stroke="#ffffff" stroke-opacity="0.12" />
+  <circle cx="342" cy="315" r="7" fill="#ffffff" fill-opacity="0.18" />
+  <rect x="358" y="311" width="62" height="8" rx="4" fill="#ffffff" fill-opacity="0.18" />
+</svg>

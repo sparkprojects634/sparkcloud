@@ -1,3 +1,7 @@
+/**
+ * Homepage service rows. Add `href` once a service has a single page
+ * published under `/services/[slug]` — the row then becomes a link.
+ */
 export const services = [
   {
     id: "01",
@@ -25,6 +29,7 @@ export const services = [
     title: "SEO/AEO/GEO",
     description:
       "Improve your online visibility through search optimization, AI search optimization, and geo-targeted digital strategies.",
-      image: "/images/services/design.png",
+      image: "/images/services/seo/seo-serp.svg",
+      href: "/services/seo",
   },
 ]

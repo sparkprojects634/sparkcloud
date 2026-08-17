@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" fill="none" role="img" aria-label="Organic visibility growth curve">
+  <defs>
+    <linearGradient id="curveFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0079ff" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#0079ff" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="curveLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0079ff" />
+      <stop offset="100%" stop-color="#8ec8ff" />
+    </linearGradient>
+  </defs>
+
+  <!-- grid -->
+  <g stroke="#ffffff" stroke-opacity="0.07">
+    <path d="M40 60h560M40 120h560M40 180h560M40 240h560M40 280h560" />
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.05">
+    <path d="M140 40v240M240 40v240M340 40v240M440 40v240M540 40v240" />
+  </g>
+
+  <!-- area -->
+  <path d="M40 262c60 4 90-10 130-30s70-8 110-42 78-42 120-72 78-40 140-58v220H40z" fill="url(#curveFill)" />
+
+  <!-- line -->
+  <path d="M40 262c60 4 90-10 130-30s70-8 110-42 78-42 120-72 78-40 140-58" stroke="url(#curveLine)" stroke-width="3.5" stroke-linecap="round" />
+
+  <!-- points -->
+  <g fill="#0079ff" stroke="#0b0b0b" stroke-width="3">
+    <circle cx="170" cy="232" r="6" />
+    <circle cx="280" cy="190" r="6" />
+    <circle cx="400" cy="118" r="6" />
+    <circle cx="540" cy="60" r="7" />
+  </g>
+
+  <!-- baseline -->
+  <path d="M40 280h560" stroke="#ffffff" stroke-opacity="0.18" />
+</svg>

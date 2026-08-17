@@ -1,10 +1,20 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useRef } from 'react'
 import gsap from 'gsap'
+import { ArrowUpRight } from 'lucide-react'
 
-export default function ServiceRow({ service }: { service: any }) {
+interface Service {
+  id: string
+  title: string
+  description: string
+  image: string
+  href?: string
+}
+
+export default function ServiceRow({ service }: { service: Service }) {
   const imageRef = useRef<HTMLDivElement>(null)
 
   const enter = () => {
@@ -52,9 +62,25 @@ export default function ServiceRow({ service }: { service: any }) {
         ({service.id})
       </span>
 
-      <h3 className="relative z-20 font-mona-bold text-[clamp(3rem,6vw,7rem)] uppercase text-zinc-400 transition-colors duration-300 hover:text-white">
-        {service.title}
-      </h3>
+      {service.href ? (
+        <Link
+          href={service.href}
+          className="group/title relative z-20 flex items-start gap-4"
+        >
+          <h3 className="font-mona-bold text-[clamp(3rem,6vw,7rem)] uppercase leading-none text-zinc-400 transition-colors duration-300 group-hover/title:text-white">
+            {service.title}
+          </h3>
+
+          <ArrowUpRight
+            size={32}
+            className="mt-2 shrink-0 text-zinc-500 transition-all duration-300 group-hover/title:translate-x-1 group-hover/title:-translate-y-1 group-hover/title:text-[#0079ff]"
+          />
+        </Link>
+      ) : (
+        <h3 className="relative z-20 font-mona-bold text-[clamp(3rem,6vw,7rem)] uppercase text-zinc-400 transition-colors duration-300 hover:text-white">
+          {service.title}
+        </h3>
+      )}
 
       <p className="self-center text-zinc-500">
         {service.description}
