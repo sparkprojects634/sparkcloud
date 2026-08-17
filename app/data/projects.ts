@@ -51,7 +51,7 @@ export const projectsSingle = [
     id: '01',
     slug: 'the-lyadh-ganj',
 
-    title: 'THE LYADH GANJ',
+    title: 'The Lyadh Ganj',
 
     subtitle: 'RESTAURANT & BRAND EXPERIENCE',
 

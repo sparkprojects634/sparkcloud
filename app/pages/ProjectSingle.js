@@ -128,7 +128,7 @@ const ProjectSingle = ({
 
 
                     {/* HERO */}
-                    <div className="group relative aspect-video overflow-hidden rounded-3xl bg-[#DDD] md:rounded-[30px]">
+                    <div className="group relative lg:aspect-16/10 overflow-hidden rounded-3xl bg-[#DDD] md:rounded-[30px]">
                         <Media
                             media={project.hero}
                             className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
@@ -143,7 +143,7 @@ const ProjectSingle = ({
 
                     {/* SERVICE */}
 
-                    <div className="rounded-full bg-[#E8E8E8] px-4 py-2 text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
                         <span className="text-[#999]">
                             Service:
                         </span>{' '}
@@ -153,7 +153,7 @@ const ProjectSingle = ({
 
                     {/* INDUSTRY */}
 
-                    <div className="rounded-full bg-[#E8E8E8] px-4 py-2 text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
                         <span className="text-[#999]">
                             Industry:
                         </span>{' '}
@@ -163,7 +163,7 @@ const ProjectSingle = ({
 
                     {/* YEAR */}
 
-                    <div className="rounded-full bg-[#E8E8E8] px-4 py-2 text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
                         <span className="text-[#999]">
                             Year:
                         </span>{' '}
@@ -173,8 +173,7 @@ const ProjectSingle = ({
 
                     {/* LIVE PROJECT */}
 
-                    <div className="rounded-full bg-[#E8E8E8] px-4 py-2 text-sm uppercase md:px-5">
-
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
                         {project.liveUrl ? (
                             <Link
                                 href={project.liveUrl}
@@ -246,10 +245,8 @@ const ProjectSingle = ({
                         {/* TEXT */}
                         <div className='flex flex-col justify-between h-full'>
                             <div>
-                                <p className="mb-4 text-sm uppercase text-[#777]">
-                                    {project.projectPurpose.title}
-                                </p>
-                                <p className="max-w-lg text-sm leading-relaxed text-[#555] md:text-base">
+                                <SubHeadingMarquee text={`${project.projectPurpose.title}`} />
+                                <p className="mt-3 lg:mt-7 max-w-lg text-sm leading-relaxed text-[#555] md:text-base">
                                     {project.projectPurpose.description}
                                 </p>
                             </div>
@@ -295,15 +292,10 @@ const ProjectSingle = ({
                         {/* TITLE */}
 
                         <div>
-
-                            <p className="mb-4 text-sm uppercase text-[#777]">
-                                PROJECT / OUTCOME
-                            </p>
-
-                            <h2 className="font-mona-bold text-[clamp(3rem,6vw,6rem)] uppercase leading-[0.82]">
+                            <SubHeadingMarquee text="PROJECT / OUTCOME" />
+                            <h2 className="mt-3 lg:mt-7 font-mona-bold text-[clamp(3rem,6vw,6rem)] uppercase leading-none">
                                 {project.achievedGoals.title}
                             </h2>
-
                         </div>
 
 
