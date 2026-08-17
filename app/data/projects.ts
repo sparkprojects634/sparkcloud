@@ -15,10 +15,10 @@ export const projects = [
   },
   {
     id: 3,
-    title: 'HOUSE OF R-MARTIN',
-    category: 'E-COMMERCE',
-    image: '/images/projects/house-of-r-martin.webp',
-    href: '/projects/house-of-r-martin',
+    title: 'THE LYADH GANJ',
+    category: 'RESTAURANT',
+    image: '/images/projects/lyadh-ganj/hero.webp',
+    href: '/projects/the-lyadh-ganj',
   },
   {
     id: 4,
@@ -48,147 +48,175 @@ export const stats = [
 
 export const projectsSingle = [
   {
-    "id": "01",
-    "slug": "the-lyadh-ganj",
-    "title": "THE LYADH GANJ",
-    "subtitle": "RESTAURANT & BRAND EXPERIENCE",
+    id: '01',
+    slug: 'the-lyadh-ganj',
 
-    "hero": {
-      "type": "image",
-      "src": "/images/projects/lyadh-ganj/hero.webp",
-      "alt": "The Lyadh Ganj restaurant"
+    title: 'THE LYADH GANJ',
+
+    subtitle: 'RESTAURANT & BRAND EXPERIENCE',
+
+    service: 'Design & Development',
+    industry: 'Restaurant',
+    year: '2026',
+
+    liveUrl: 'https://thelyadhganj.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/lyadh-ganj/hero.webp',
+      alt: 'The Lyadh Ganj restaurant',
     },
 
-    "intro": {
-      "label": "PROJECT OVERVIEW",
-      "description": "The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality."
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality.',
     },
 
-    "media": [
+    media: [
       {
-        "type": "image",
-        "src": "/images/projects/lyadh-ganj/media-01.webp",
-        "alt": "The Lyadh Ganj interior"
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/media-01.webp',
+        alt: 'The Lyadh Ganj interior',
       },
       {
-        "type": "video",
-        "src": "/videos/projects/lyadh-ganj/video-01.mp4",
-        "poster": "/images/projects/lyadh-ganj/video-poster.webp",
-        "alt": "The Lyadh Ganj brand experience"
-      }
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
+        poster: '/images/projects/lyadh-ganj/video-poster.webp',
+        alt: 'The Lyadh Ganj brand experience',
+      },
     ],
 
-    "projectPurpose": {
-      "title": "PROJECT PURPOSE",
-      "description": "The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.",
-      "media": [
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.',
+
+      media: [
         {
-          "type": "image",
-          "src": "/images/projects/lyadh-ganj/purpose-01.webp",
-          "alt": "The Lyadh Ganj apron branding"
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj apron branding',
         },
         {
-          "type": "image",
-          "src": "/images/projects/lyadh-ganj/purpose-02.webp",
-          "alt": "The Lyadh Ganj team"
-        }
-      ]
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj team',
+        },
+      ],
     },
 
-    "achievedGoals": {
-      "title": "ACHIEVED GOALS",
-      "description": "The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.",
-      "points": [
-        "Created a distinctive visual identity.",
-        "Built a consistent digital brand experience.",
-        "Improved the presentation of the brand story.",
-        "Created a responsive and engaging experience.",
-        "Connected the physical and digital brand presence."
-      ]
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.',
+
+      points: [
+        'Created a distinctive visual identity.',
+        'Built a consistent digital brand experience.',
+        'Improved the presentation of the brand story.',
+        'Created a responsive and engaging experience.',
+        'Connected the physical and digital brand presence.',
+      ],
     },
 
-    "additionalMedia": [
+    additionalMedia: [
       {
-        "type": "image",
-        "src": "/images/projects/lyadh-ganj/gallery-01.webp",
-        "alt": "The Lyadh Ganj gallery"
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-01.webp',
+        alt: 'The Lyadh Ganj gallery',
       },
       {
-        "type": "image",
-        "src": "/images/projects/lyadh-ganj/gallery-02.webp",
-        "alt": "The Lyadh Ganj branding"
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-02.webp',
+        alt: 'The Lyadh Ganj branding',
       },
       {
-        "type": "video",
-        "src": "/videos/projects/lyadh-ganj/gallery-01.mp4",
-        "poster": "/images/projects/lyadh-ganj/gallery-video.webp",
-        "alt": "The Lyadh Ganj project video"
-      }
-    ]
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/gallery-01.mp4',
+        poster: '/images/projects/lyadh-ganj/gallery-video.webp',
+        alt: 'The Lyadh Ganj project video',
+      },
+    ],
   },
 
   {
-    "id": "02",
-    "slug": "sparkcloud",
-    "title": "SPARKCLOUD",
-    "subtitle": "DIGITAL EXPERIENCE",
+    id: '02',
+    slug: 'sparkcloud',
 
-    "hero": {
-      "type": "video",
-      "src": "/videos/projects/sparkcloud/hero.mp4",
-      "poster": "/images/projects/sparkcloud/hero.webp",
-      "alt": "SparkCloud digital experience"
+    title: 'SPARKCLOUD',
+
+    subtitle: 'DIGITAL EXPERIENCE',
+
+    service: 'Strategy & Development',
+    industry: 'Digital Agency',
+    year: '2026',
+
+    liveUrl: 'https://sparkcloud.us',
+
+    hero: {
+      type: 'video',
+      src: '/videos/projects/sparkcloud/hero.mp4',
+      poster: '/images/projects/sparkcloud/hero.webp',
+      alt: 'SparkCloud digital experience',
     },
 
-    "intro": {
-      "label": "PROJECT OVERVIEW",
-      "description": "A highly interactive digital experience designed to communicate SparkCloud's approach to creativity, technology, strategy, and digital growth."
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        "A highly interactive digital experience designed to communicate SparkCloud's approach to creativity, technology, strategy, and digital growth.",
     },
 
-    "media": [
+    media: [
       {
-        "type": "image",
-        "src": "/images/projects/sparkcloud/media-01.webp",
-        "alt": "SparkCloud website"
+        type: 'image',
+        src: '/images/projects/sparkcloud/media-01.webp',
+        alt: 'SparkCloud website',
       },
       {
-        "type": "video",
-        "src": "/videos/projects/sparkcloud/media-01.mp4",
-        "poster": "/images/projects/sparkcloud/media-poster.webp",
-        "alt": "SparkCloud interactive experience"
-      }
+        type: 'video',
+        src: '/videos/projects/sparkcloud/media-01.mp4',
+        poster: '/images/projects/sparkcloud/media-poster.webp',
+        alt: 'SparkCloud interactive experience',
+      },
     ],
 
-    "projectPurpose": {
-      "title": "PROJECT PURPOSE",
-      "description": "The goal was to create a digital platform that combines strong visual communication with immersive interaction and a modern technology-driven experience.",
-      "media": [
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+
+      description:
+        'The goal was to create a digital platform that combines strong visual communication with immersive interaction and a modern technology-driven experience.',
+
+      media: [
         {
-          "type": "image",
-          "src": "/images/projects/sparkcloud/purpose-01.webp",
-          "alt": "SparkCloud digital interface"
+          type: 'image',
+          src: '/images/projects/sparkcloud/purpose-01.webp',
+          alt: 'SparkCloud digital interface',
         },
         {
-          "type": "video",
-          "src": "/videos/projects/sparkcloud/purpose-01.mp4",
-          "poster": "/images/projects/sparkcloud/purpose-poster.webp",
-          "alt": "SparkCloud interaction"
-        }
-      ]
+          type: 'video',
+          src: '/videos/projects/sparkcloud/purpose-01.mp4',
+          poster: '/images/projects/sparkcloud/purpose-poster.webp',
+          alt: 'SparkCloud interaction',
+        },
+      ],
     },
 
-    "achievedGoals": {
-      "title": "ACHIEVED GOALS",
-      "description": "The project established a strong digital identity while creating an interactive experience that communicates the agency's capabilities.",
-      "points": [
-        "Created a distinctive digital identity.",
-        "Introduced interactive visual storytelling.",
-        "Improved user engagement.",
-        "Built a responsive experience.",
-        "Combined strategy, design and technology."
-      ]
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+
+      description:
+        "The project established a strong digital identity while creating an interactive experience that communicates the agency's capabilities.",
+
+      points: [
+        'Created a distinctive digital identity.',
+        'Introduced interactive visual storytelling.',
+        'Improved user engagement.',
+        'Built a responsive experience.',
+        'Combined strategy, design and technology.',
+      ],
     },
 
-    "additionalMedia": []
-  }
+    additionalMedia: [],
+  },
 ]

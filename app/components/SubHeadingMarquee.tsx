@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 interface SubHeadingMarqueeProps {
-  text: string
+  text: any
   color: string
 }
 
