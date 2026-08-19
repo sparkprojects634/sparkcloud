@@ -143,7 +143,7 @@ const ProjectSingle = ({
 
                     {/* SERVICE */}
 
-                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm md:px-5">
                         <span className="text-[#999]">
                             Service:
                         </span>{' '}
@@ -153,7 +153,7 @@ const ProjectSingle = ({
 
                     {/* INDUSTRY */}
 
-                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm md:px-5">
                         <span className="text-[#999]">
                             Industry:
                         </span>{' '}
@@ -163,7 +163,7 @@ const ProjectSingle = ({
 
                     {/* YEAR */}
 
-                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm md:px-5">
                         <span className="text-[#999]">
                             Year:
                         </span>{' '}
@@ -173,7 +173,7 @@ const ProjectSingle = ({
 
                     {/* LIVE PROJECT */}
 
-                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm uppercase md:px-5">
+                    <div className="rounded-xl bg-[#E8E8E8] px-4 py-3 text-center font-semibold text-sm md:px-5">
                         {project.liveUrl ? (
                             <Link
                                 href={project.liveUrl}
