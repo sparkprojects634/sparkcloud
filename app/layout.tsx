@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
 import './globals.css'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import SiteChrome from './components/SiteChrome'
 import AppWrapper from './components/AppWrapper'
 
 const monaSans = localFont({
@@ -46,9 +45,9 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <AppWrapper>
-          <Header />
+          <SiteChrome>
             {children}
-          <Footer />
+          </SiteChrome>
         </AppWrapper>
       </body>
     </html>
