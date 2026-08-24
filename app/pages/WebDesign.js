@@ -1,9 +1,9 @@
 'use client'
 
-import gsap from 'gsap'
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useRef } from 'react'
+import AnimatedBorderCard from '../components/AnimateBorder'
+import { useRef } from 'react'
 
 const navigation = [
     {
@@ -104,149 +104,203 @@ const servicesData = [
 ]
 
 const WhyChooseData = [
-  {
-    id: '01',
-    icon: '◈',
-    title: 'Immersive Visuals,\nIntentional Conversions',
-    description:
-      'We blend high-impact aesthetics with human-centric UX architecture to turn casual visitors into loyal brand advocates.',
-  },
-  {
-    id: '02',
-    icon: '⚙',
-    title: 'Flawless Engineering,\nUnmatched Speed',
-    description:
-      'Our robust, mobile-first development delivers lightning-fast load times and seamless performance across every device.',
-  },
-  {
-    id: '03',
-    icon: '✦',
-    title: 'Optimized for Modern Search\n& AI Discovery',
-    description:
-      'Built with clean, semantic markup engineered to rank high on traditional search engines and stand out in generative AI discovery.',
-  },
-  {
-    id: '04',
-    icon: '⚙',
-    title: 'Seamless Ecosystem\nIntegration',
-    description:
-      'We effortlessly connect your website with advanced e-commerce platforms, custom CMS workflows, and powerful marketing tools.',
-  },
+    {
+        id: '01',
+        icon: '◈',
+        title: 'Immersive Visuals,\nIntentional Conversions',
+        description:
+            'We blend high-impact aesthetics with human-centric UX architecture to turn casual visitors into loyal brand advocates.',
+    },
+    {
+        id: '02',
+        icon: '⚙',
+        title: 'Flawless Engineering,\nUnmatched Speed',
+        description:
+            'Our robust, mobile-first development delivers lightning-fast load times and seamless performance across every device.',
+    },
+    {
+        id: '03',
+        icon: '✦',
+        title: 'Optimized for Modern Search\n& AI Discovery',
+        description:
+            'Built with clean, semantic markup engineered to rank high on traditional search engines and stand out in generative AI discovery.',
+    },
+    {
+        id: '04',
+        icon: '⚙',
+        title: 'Seamless Ecosystem\nIntegration',
+        description:
+            'We effortlessly connect your website with advanced e-commerce platforms, custom CMS workflows, and powerful marketing tools.',
+    },
 ]
 
+const BetterWebsiteData = [
+    {
+        id: '01',
+        title: 'Designed for Your\nBrand',
+        description:
+            'We create designs that reflect your business and personality.',
+    },
+    {
+        id: '02',
+        title: 'Built for Results',
+        description:
+            'Creating websites that bring enquiries, leads and sales is better.',
+    },
+    {
+        id: '03',
+        title: 'Fast & Mobile-\nResponsive',
+        description:
+            'Your customers are browsing on their phones. We make sure your website looks great and works smoothly everywhere.',
+    },
+    {
+        id: '04',
+        title: 'Simple for You.\nEasy for Your\nCustomers.',
+        description:
+            "No confusing layouts or complicated navigation. Just a website that's easy to understand and easy to use.",
+    },
+]
 
 const WhyChoose = () => {
-  const cardsRef = useRef([])
 
-  useEffect(() => {
-    const cards = cardsRef.current
+    const cardsRef = useRef([])
 
-    cards.forEach((card, index) => {
-      if (!card) return
+    return (
+        <section className="py-20 text-white md:py-28 lg:py-36">
 
-      const gradient = card.querySelector(
-        '.card-gradient'
-      )
+            <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-5 md:px-8 lg:flex-row lg:gap-16 lg:px-10">
 
-      if (!gradient) return
+                {/* LEFT */}
 
-      gsap.to(gradient, {
-        rotate: 360,
-        duration: 5 + index * 5.5,
-        repeat: -1,
-        ease: 'none',
-      })
-    })
+                <div className="lg:w-[30%]">
 
-    return () => {
-      gsap.killTweensOf('.card-gradient')
-    }
-  }, [])
+                    <span className="text-sm text-[#0088FF]">
+                        Career Support
+                    </span>
 
-  return (
-    <section className="py-20 text-white md:py-28 lg:py-36">
+                    <h2 className="mt-3 max-w-sm text-[clamp(2.5rem,4vw,4rem)] font-medium leading-[1.05] tracking-tight">
+                        Why Choose
+                        <br />
+                        SparkCloud?
+                    </h2>
 
-      <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-5 md:px-8 lg:flex-row lg:gap-16 lg:px-10">
-
-        {/* LEFT */}
-
-        <div className="lg:w-[30%]">
-
-          <span className="text-sm text-[#0088FF]">
-            Career Support
-          </span>
-
-          <h2 className="mt-3 max-w-sm text-[clamp(2.5rem,4vw,4rem)] font-medium leading-[1.05] tracking-tight">
-            Why Choose
-            <br />
-            SparkCloud?
-          </h2>
-
-        </div>
-
-
-        {/* RIGHT */}
-
-        <div className="grid flex-1 gap-3 md:grid-cols-2">
-
-          {WhyChooseData.map((item, index) => (
-            <div
-              key={item.id}
-              ref={(el) => {
-                if (el) {
-                  cardsRef.current[index] = el
-                }
-              }}
-              className="relative overflow-hidden rounded-2xl p-px"
-            >
-
-              {/* Animated border */}
-
-              <div
-                className="card-gradient pointer-events-none absolute inset-[-150%]"
-                style={{
-                  background:
-                    'conic-gradient(from 0deg, transparent 0deg, transparent 250deg, #0088ff 285deg, #0066ff 315deg, transparent 350deg)',
-                }}
-              />
-
-              {/* Card */}
-
-              <div className="relative flex h-full min-h-47.5 flex-col rounded-[15px] bg-[#040404] px-5 py-5 md:min-h-65 lg:px-5 lg:py-5">
-
-                {/* Icon */}
-
-                <div className="mb-4 flex h-10 w-9 items-center justify-center text-4xl text-white">
-                  {item.icon}
                 </div>
 
 
-                {/* Title */}
+                {/* RIGHT */}
 
-                <h3 className="whitespace-pre-line text-xl font-medium leading-[1.05] tracking-tight md:text-[21px]">
-                  {item.title}
-                </h3>
+                <div className="grid flex-1 gap-3 md:grid-cols-2">
+
+                    {WhyChooseData.map((item, index) => (
+
+                        <AnimatedBorderCard
+                            key={item.id}
+                            duration={7 + index * 1.2}
+                        >
+                            <div
+                                key={item.id}
+                                ref={(el) => {
+                                    if (el) {
+                                        cardsRef.current[index] = el
+                                    }
+                                }}
+                                className="relative overflow-hidden rounded-2xl p-px"
+                            >
+
+                                {/* Animated border */}
+
+                                <div
+                                    className="card-gradient pointer-events-none absolute inset-[-150%]"
+                                    style={{
+                                        background:
+                                            'conic-gradient(from 0deg, transparent 0deg, transparent 250deg, #0088ff 285deg, #0066ff 315deg, transparent 350deg)',
+                                    }}
+                                />
+
+                                {/* Card */}
+
+                                <div className="relative flex h-full min-h-47.5 flex-col rounded-[15px] bg-[#040404] px-5 py-5 md:min-h-65 lg:px-5 lg:py-5">
+
+                                    {/* Icon */}
+
+                                    <div className="mb-4 flex h-10 w-9 items-center justify-center text-4xl text-white">
+                                        {item.icon}
+                                    </div>
 
 
-                {/* Description */}
+                                    {/* Title */}
 
-                <p className="mt-auto pt-5 text-[11px] leading-[1.45] text-white/60 md:max-w-[95%]">
-                  {item.description}
-                </p>
+                                    <h3 className="whitespace-pre-line text-xl font-medium leading-[1.05] tracking-tight md:text-[21px]">
+                                        {item.title}
+                                    </h3>
 
-              </div>
+
+                                    {/* Description */}
+
+                                    <p className="mt-auto pt-5 text-[11px] leading-[1.45] text-white/60 md:max-w-[95%]">
+                                        {item.description}
+                                    </p>
+
+                                </div>
+
+                            </div>
+                        </AnimatedBorderCard>
+                    ))}
+
+                </div>
 
             </div>
-          ))}
 
-        </div>
-
-      </div>
-
-    </section>
-  )
+        </section>
+    )
 }
 
+const BetterWebsite = () => {
+    return (
+        <section className="bg-[#040404] py-5 text-white md:py-10 lg:py-10">
+
+            <div className="mx-auto w-full max-w-350 px-5 md:px-8 lg:px-10">
+
+                {/* Heading */}
+
+                <div className="mx-auto max-w-5xl text-center">
+
+                    <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium leading-none tracking-tight">
+                        A Better Website. A Better First Impression.
+                    </h2>
+
+                    <p className="mt-5 text-[clamp(1rem,1.5vw,1.35rem)] text-[#0079FF]">
+                        Your website is often the first place people meet your
+                        business. Make that first impression count.
+                    </p>
+
+                </div>
+
+
+                {/* Cards */}
+
+                <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                    {BetterWebsiteData.map((item, index) => (
+                        <AnimatedBorderCard
+                            key={item.id}
+                            duration={7 + index * 1.2}
+                            className="min-h-60"
+                        >
+                            <div className="flex h-full flex-col items-center justify-center px-6 py-10 text-center md:px-7">
+                                <h3 className="whitespace-pre-line text-[clamp(1.4rem,2vw,1.5rem)] font-medium leading-[1.08] tracking-tight">
+                                    {item.title}
+                                </h3>
+                                <p className="mt-7 max-w-70 text-sm leading-[1.55] text-white/75">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </AnimatedBorderCard>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
 
 const WebDesign = () => {
     return (
@@ -376,6 +430,8 @@ const WebDesign = () => {
 
             </section>
 
+            <BetterWebsite />
+
             <section className="mx-auto w-full max-w-350 px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16 lg:px-10 lg:pt-20" id="services">
 
                 {/* Heading */}
@@ -433,8 +489,8 @@ const WebDesign = () => {
                             <div
                                 key={service.id}
                                 className={`flex flex-col gap-3 md:flex-row md:gap-6 ${service.imagePosition === 'right'
-                                        ? 'md:flex-row-reverse'
-                                        : ''
+                                    ? 'md:flex-row-reverse'
+                                    : ''
                                     }`}
                             >
 
