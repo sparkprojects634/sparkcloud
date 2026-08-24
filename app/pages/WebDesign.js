@@ -1,7 +1,9 @@
 'use client'
 
+import gsap from 'gsap'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 const navigation = [
     {
@@ -9,8 +11,8 @@ const navigation = [
         href: '#',
     },
     {
-        label: 'About',
-        href: '#about',
+        label: 'Services',
+        href: '#services',
     },
     {
         label: 'Bootcamp',
@@ -34,11 +36,221 @@ const navigation = [
     },
 ]
 
+const servicesData = [
+    {
+        id: '01',
+        title: 'Website Design',
+        description:
+            'Modern, clean and engaging website designs that make your brand stand out and communicate clearly.',
+        image: '/images/web-design/services/website-design.webp',
+        imagePosition: 'left',
+    },
+    {
+        id: '02',
+        title: 'Website Development',
+        description:
+            'Fast, responsive and technically strong websites built using modern web technologies.',
+        image: '/images/web-design/services/website-development.webp',
+        imagePosition: 'right',
+    },
+    {
+        id: '03',
+        title: 'Business Websites',
+        description:
+            'Professional websites for companies, startups and businesses designed to generate trust and enquiries.',
+        image: '/images/web-design/services/business-websites.webp',
+        imagePosition: 'left',
+    },
+    {
+        id: '04',
+        title: 'Landing Pages',
+        description:
+            'High-converting landing pages designed to turn visitors into leads, customers and enquiries.',
+        image: '/images/web-design/services/landing-pages.webp',
+        imagePosition: 'right',
+    },
+    {
+        id: '05',
+        title: 'E-Commerce Websites',
+        description:
+            'Powerful online stores designed to showcase products and create a smooth shopping experience.',
+        image: '/images/web-design/services/ecommerce.webp',
+        imagePosition: 'left',
+    },
+    {
+        id: '06',
+        title: 'Website Redesign',
+        description:
+            'Transforming outdated websites into modern, responsive and conversion-focused digital experiences.',
+        image: '/images/web-design/services/website-redesign.webp',
+        imagePosition: 'right',
+    },
+    {
+        id: '07',
+        title: 'UI/UX Design',
+        description:
+            'Thoughtful user interfaces and experiences created to make websites intuitive, useful and easy to navigate.',
+        image: '/images/web-design/services/uiux.webp',
+        imagePosition: 'left',
+    },
+    {
+        id: '08',
+        title: 'Website Maintenance',
+        description:
+            'Reliable ongoing website maintenance, updates, improvements and technical support.',
+        image: '/images/web-design/services/website-maintenance.webp',
+        imagePosition: 'right',
+    },
+]
+
+const WhyChooseData = [
+  {
+    id: '01',
+    icon: '◈',
+    title: 'Immersive Visuals,\nIntentional Conversions',
+    description:
+      'We blend high-impact aesthetics with human-centric UX architecture to turn casual visitors into loyal brand advocates.',
+  },
+  {
+    id: '02',
+    icon: '⚙',
+    title: 'Flawless Engineering,\nUnmatched Speed',
+    description:
+      'Our robust, mobile-first development delivers lightning-fast load times and seamless performance across every device.',
+  },
+  {
+    id: '03',
+    icon: '✦',
+    title: 'Optimized for Modern Search\n& AI Discovery',
+    description:
+      'Built with clean, semantic markup engineered to rank high on traditional search engines and stand out in generative AI discovery.',
+  },
+  {
+    id: '04',
+    icon: '⚙',
+    title: 'Seamless Ecosystem\nIntegration',
+    description:
+      'We effortlessly connect your website with advanced e-commerce platforms, custom CMS workflows, and powerful marketing tools.',
+  },
+]
+
+
+const WhyChoose = () => {
+  const cardsRef = useRef([])
+
+  useEffect(() => {
+    const cards = cardsRef.current
+
+    cards.forEach((card, index) => {
+      if (!card) return
+
+      const gradient = card.querySelector(
+        '.card-gradient'
+      )
+
+      if (!gradient) return
+
+      gsap.to(gradient, {
+        rotate: 360,
+        duration: 5 + index * 5.5,
+        repeat: -1,
+        ease: 'none',
+      })
+    })
+
+    return () => {
+      gsap.killTweensOf('.card-gradient')
+    }
+  }, [])
+
+  return (
+    <section className="py-20 text-white md:py-28 lg:py-36">
+
+      <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-5 md:px-8 lg:flex-row lg:gap-16 lg:px-10">
+
+        {/* LEFT */}
+
+        <div className="lg:w-[30%]">
+
+          <span className="text-sm text-[#0088FF]">
+            Career Support
+          </span>
+
+          <h2 className="mt-3 max-w-sm text-[clamp(2.5rem,4vw,4rem)] font-medium leading-[1.05] tracking-tight">
+            Why Choose
+            <br />
+            SparkCloud?
+          </h2>
+
+        </div>
+
+
+        {/* RIGHT */}
+
+        <div className="grid flex-1 gap-3 md:grid-cols-2">
+
+          {WhyChooseData.map((item, index) => (
+            <div
+              key={item.id}
+              ref={(el) => {
+                if (el) {
+                  cardsRef.current[index] = el
+                }
+              }}
+              className="relative overflow-hidden rounded-2xl p-px"
+            >
+
+              {/* Animated border */}
+
+              <div
+                className="card-gradient pointer-events-none absolute inset-[-150%]"
+                style={{
+                  background:
+                    'conic-gradient(from 0deg, transparent 0deg, transparent 250deg, #0088ff 285deg, #0066ff 315deg, transparent 350deg)',
+                }}
+              />
+
+              {/* Card */}
+
+              <div className="relative flex h-full min-h-47.5 flex-col rounded-[15px] bg-[#040404] px-5 py-5 md:min-h-65 lg:px-5 lg:py-5">
+
+                {/* Icon */}
+
+                <div className="mb-4 flex h-10 w-9 items-center justify-center text-4xl text-white">
+                  {item.icon}
+                </div>
+
+
+                {/* Title */}
+
+                <h3 className="whitespace-pre-line text-xl font-medium leading-[1.05] tracking-tight md:text-[21px]">
+                  {item.title}
+                </h3>
+
+
+                {/* Description */}
+
+                <p className="mt-auto pt-5 text-[11px] leading-[1.45] text-white/60 md:max-w-[95%]">
+                  {item.description}
+                </p>
+
+              </div>
+
+            </div>
+          ))}
+
+        </div>
+
+      </div>
+
+    </section>
+  )
+}
+
+
 const WebDesign = () => {
     return (
         <main className="bg-[#040404]">
-
-            {/* Navigation */}
 
             <header className="w-full">
                 <div className="mx-auto flex h-25 w-full max-w-350 items-center justify-between px-6 lg:px-10">
@@ -68,8 +280,8 @@ const WebDesign = () => {
                                 key={item.label}
                                 href={item.href}
                                 className={`text-[15px] font-semibold transition-colors duration-300 ${item.label === 'Home'
-                                        ? 'text-[#0088FF]'
-                                        : 'text-white/80 hover:text-white'
+                                    ? 'text-[#0088FF]'
+                                    : 'text-white/80 hover:text-white'
                                     }`}
                             >
                                 {item.label}
@@ -104,7 +316,7 @@ const WebDesign = () => {
 
                     <div className="flex flex-col items-start">
 
-                        <h1 className="max-w-175 text-white text-[clamp(2rem,5vw,3.5rem)] font-medium leading-[1.08] tracking-[-0.04em]">
+                        <h1 className="max-w-175 text-white text-[clamp(2rem,5vw,3.2rem)] font-medium leading-[1.2] tracking-[-0.04em]">
                             Your Business deserves a Website that works.
                         </h1>
 
@@ -124,7 +336,7 @@ const WebDesign = () => {
                                 CALL NOW
                             </span>
 
-                        <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-linear-to-r from-[#087FF5] to-[#003366] text-white">
+                            <span className="flex h-13 w-13 items-center justify-center rounded-2xl bg-linear-to-r from-[#087FF5] to-[#003366] text-white">
                                 <svg
                                     width="22"
                                     height="22"
@@ -163,6 +375,82 @@ const WebDesign = () => {
                 </div>
 
             </section>
+
+            <section className="mx-auto w-full max-w-350 px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16 lg:px-10 lg:pt-20" id="services">
+
+                {/* Heading */}
+
+                <div className="mb-10 flex flex-col items-center text-center md:mb-14">
+
+                    <h2 className="font-semibold text-[clamp(2rem,6vw,3.5rem)] text-white leading-[0.9] tracking-wide">
+                        Services
+                    </h2>
+
+                    <p className="mt-4 text-[10px] leading-widest text-white/70 lg:text-sm">
+                        From your first idea to your final launch, we have got you covered.
+                    </p>
+
+                </div>
+
+
+                {/* Services */}
+
+                <div className="flex flex-col gap-3 md:gap-4">
+
+                    {servicesData.map((service) => {
+
+                        const image = (
+                            <div className="group relative min-h-60 overflow-hidden rounded-[20px] md:min-h-70 lg:min-h-88.75 md:w-[45%]">
+
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
+                                    sizes="(max-width: 767px) 100vw, 40vw"
+                                    className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                                    unoptimized
+                                    quality={100}
+                                />
+
+                            </div>
+                        )
+
+                        const content = (
+                            <div className="flex min-h-60 flex-1 flex-col justify-center rounded-[20px] border border-white/15 px-8 py-10 transition-colors duration-500 hover:border-white/30 md:min-h-70 lg:min-h-88.75 lg:px-10">
+
+                                <h3 className="font-semibold text-2xl leading-none tracking-wide text-white md:text-3xl lg:text-[30px]">
+                                    {service.title}
+                                </h3>
+
+                                <p className="mt-6 max-w-2xl text-sm leading-relaxed text-white/60 md:text-base">
+                                    {service.description}
+                                </p>
+
+                            </div>
+                        )
+
+                        return (
+                            <div
+                                key={service.id}
+                                className={`flex flex-col gap-3 md:flex-row md:gap-6 ${service.imagePosition === 'right'
+                                        ? 'md:flex-row-reverse'
+                                        : ''
+                                    }`}
+                            >
+
+                                {image}
+
+                                {content}
+
+                            </div>
+                        )
+                    })}
+
+                </div>
+
+            </section>
+
+            <WhyChoose />
 
         </main>
     )
