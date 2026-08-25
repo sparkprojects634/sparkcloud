@@ -24,6 +24,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
+  overflow-x: hidden;
 }
 
 /* 1. Define the width of the scrollbar */
@@ -137,4 +138,24 @@ body {
 
   color: #0079ff;
   -webkit-text-stroke: 1px #0079ff;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: partners-marquee 30s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes partners-marquee {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }

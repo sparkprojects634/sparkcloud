@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import AnimatedBorderCard from '../components/AnimateBorder'
 import { useRef } from 'react'
+import Partners from '../components/Partners'
 
 const navigation = [
     {
@@ -166,7 +167,7 @@ const WhyChoose = () => {
     const cardsRef = useRef([])
 
     return (
-        <section className="py-20 text-white md:py-28 lg:py-36">
+        <section className="py-5 text-white md:py-8 lg:py-10">
 
             <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-5 md:px-8 lg:flex-row lg:gap-16 lg:px-10">
 
@@ -507,6 +508,120 @@ const WebDesign = () => {
             </section>
 
             <WhyChoose />
+
+            <Partners />
+
+            <footer className="relative overflow-hidden px-4 py-12 text-white sm:px-6 md:px-8 md:py-16">
+
+                {/* Blue glow */}
+                <div className="pointer-events-none absolute right-[-10%] top-0 h-full w-[55%] bg-[radial-gradient(circle_at_80%_50%,rgba(0,121,255,0.8),rgba(0,121,255,0.35)_35%,transparent_70%)] blur-2xl" />
+
+                <div className="relative mx-auto w-full max-w-350">
+
+                    {/* Main footer card */}
+                    <div className="rounded-[28px] bg-[#222222] px-6 py-10 text-center sm:px-10 md:rounded-[30px] md:px-16 md:py-12">
+
+                        {/* Logo */}
+                        <Link
+                            href="/"
+                            className="mx-auto flex w-fit items-center transition-opacity duration-300 hover:opacity-80"
+                        >
+                            <Image
+                                src="/images/sparkcloud-logo-white.svg"
+                                alt="SparkCloud"
+                                width={180}
+                                height={50}
+                                className="h-auto w-[150px] sm:w-[175px]"
+                            />
+                        </Link>
+
+
+                        {/* CTA */}
+                        <h2 className="mt-8 text-2xl font-semibold tracking-tight sm:text-3xl">
+                            Visit{' '}
+                            <Link
+                                href="/"
+                                className="text-[#0079FF] transition-colors duration-300 hover:text-white"
+                            >
+                                SPARKCLOUD
+                            </Link>
+                        </h2>
+
+
+                        {/* Contact */}
+                        <div className="mt-7 space-y-4 text-xs text-white/30 sm:text-sm">
+
+                            <p>
+                                Email:{' '}
+                                <a
+                                    href="mailto:info@sparkcloud.us"
+                                    className="transition-colors hover:text-white/60"
+                                >
+                                    info@sparkcloud.us
+                                </a>
+                            </p>
+
+                            <p>
+                                Phone:{' '}
+                                <a
+                                    href="tel:+917439381155"
+                                    className="transition-colors hover:text-white/60"
+                                >
+                                    +91 7439381155
+                                </a>
+                            </p>
+
+                        </div>
+
+
+                        {/* Links */}
+                        <nav className="mt-6 flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-xs text-white/30 sm:text-sm">
+
+                            <Link
+                                href="/about"
+                                className="transition-colors duration-300 hover:text-white"
+                            >
+                                About
+                            </Link>
+
+                            <Link
+                                href="/privacy-policy"
+                                className="transition-colors duration-300 hover:text-white"
+                            >
+                                Privacy & Policy
+                            </Link>
+
+                            <Link
+                                href="/disclaimer"
+                                className="transition-colors duration-300 hover:text-white"
+                            >
+                                Disclaimer
+                            </Link>
+
+                            <Link
+                                href="/terms-conditions"
+                                className="transition-colors duration-300 hover:text-white"
+                            >
+                                Terms & Conditions
+                            </Link>
+
+                        </nav>
+
+
+                        {/* Divider */}
+                        <div className="mt-6 border-t border-white/20" />
+
+
+                        {/* Copyright */}
+                        <p className="mt-5 text-[10px] text-white/30 sm:text-xs">
+                            © Copyright 2026. All Rights Reserved SparkCloud
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </footer>
 
         </main>
     )
