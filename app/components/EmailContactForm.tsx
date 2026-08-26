@@ -31,7 +31,7 @@ const EmailContactForm = () => {
         setStatus('')
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('/api/email-campaign', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ const EmailContactForm = () => {
                         value={form.email}
                         onChange={handleChange}
                         required
-                        className="h-[52px] w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-[54px] lg:flex-1"
+                        className="h-13 w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-13.5 lg:flex-1"
                     />
 
 
@@ -107,7 +107,7 @@ const EmailContactForm = () => {
                         value={form.phone}
                         onChange={handleChange}
                         required
-                        className="h-[52px] w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-[54px] lg:flex-1"
+                        className="h-13 w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-13.5 lg:flex-1"
                     />
 
 
@@ -119,7 +119,7 @@ const EmailContactForm = () => {
                         placeholder="Website Name/URL"
                         value={form.website}
                         onChange={handleChange}
-                        className="h-[52px] w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-[54px] lg:flex-[1.4]"
+                        className="h-13 w-full rounded-xl bg-white px-5 text-sm text-black outline-none placeholder:text-[#777] md:h-13.5 lg:flex-[1.4]"
                     />
 
 
@@ -128,7 +128,7 @@ const EmailContactForm = () => {
                     <button
                         type="submit"
                         disabled={loading}
-                        className="h-[52px] w-full shrink-0 rounded-xl bg-[#287CF5] px-10 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#1769dc] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 md:h-[54px] lg:w-auto"
+                        className="h-13 w-full shrink-0 rounded-xl bg-[#287CF5] px-10 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#1769dc] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60 md:h-13.5 lg:w-auto"
                     >
                         {loading ? 'SENDING...' : 'SUBMIT'}
                     </button>

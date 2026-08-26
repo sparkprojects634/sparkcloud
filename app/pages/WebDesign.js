@@ -6,6 +6,36 @@ import AnimatedBorderCard from '../components/AnimateBorder'
 import { useRef } from 'react'
 import Partners from '../components/Partners'
 import EmailContactForm from '../components/EmailContactForm'
+const WorkProcessData = [
+    {
+        id: '01',
+        title: 'Tell Us Your Idea',
+        description:
+            'Share your business, goals, audience and what you want your website to achieve.',
+        icon: "/images/web-design/work-process/idea.svg",
+    },
+    {
+        id: '02',
+        title: 'Plan & Strategise',
+        description:
+            'We map out your website structure, content and user journey before we start building.',
+        icon: "/images/web-design/work-process/plan.svg",
+    },
+    {
+        id: '03',
+        title: 'Design',
+        description:
+            'Our designers create a visual direction that fits your brand and speaks to your audience.',
+        icon: "/images/web-design/work-process/design.svg",
+    },
+    {
+        id: '04',
+        title: 'Develop',
+        description:
+            'Once you approve the design, our developers bring it to life with responsive and functional development.',
+        icon: "/images/web-design/work-process/develop.svg",
+    },
+]
 
 const navigation = [
     {
@@ -17,24 +47,16 @@ const navigation = [
         href: '#services',
     },
     {
-        label: 'Bootcamp',
-        href: '#bootcamp',
+        label: 'Why Choose',
+        href: '#why-choose',
     },
     {
-        label: 'Mentors',
-        href: '#mentors',
-    },
-    {
-        label: 'Pricing',
-        href: '#pricing',
+        label: 'Partners',
+        href: '#partners',
     },
     {
         label: 'Blog',
-        href: '#blog',
-    },
-    {
-        label: 'Contact',
-        href: '#contact',
+        href: '/blogs',
     },
 ]
 
@@ -168,7 +190,7 @@ const WhyChoose = () => {
     const cardsRef = useRef([])
 
     return (
-        <section className="py-5 text-white md:py-8 lg:py-10">
+        <section className="py-5 text-white md:py-8 lg:py-10" id='why-choose'>
 
             <div className="mx-auto flex w-full max-w-350 flex-col gap-10 px-5 md:px-8 lg:flex-row lg:gap-16 lg:px-10">
 
@@ -335,7 +357,7 @@ const WebDesign = () => {
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className={`text-[15px] font-semibold transition-colors duration-300 ${item.label === 'Home'
+                                className={`text-[15px] font-semibold transition-colors duration-300 ${item.label === ''
                                     ? 'text-[#0088FF]'
                                     : 'text-white/80 hover:text-white'
                                     }`}
@@ -514,6 +536,122 @@ const WebDesign = () => {
 
             <Partners />
 
+            <section className="w-full px-4 py-12 text-white sm:px-6 md:px-8 lg:px-10 lg:py-20">
+
+                <div className="mx-auto flex w-full max-w-330 flex-col gap-10 lg:grid lg:grid-cols-[1fr_1.15fr] lg:items-center lg:gap-10">
+
+                    {/* =====================================================
+                    LEFT IMAGE
+                ===================================================== */}
+
+                    <div className="relative overflow-hidden rounded-[14px] bg-[#0B0D13]">
+
+                        {/* Blue ambient glow */}
+
+                        <div className="pointer-events-none absolute left-[30%] top-[10%] z-10 h-32 w-32 rounded-full bg-[#536BFF]/30 blur-[70px]" />
+
+                        <Image
+                            src="/images/web-design/work-process/work-process.webp"
+                            alt="SparkCloud website development process"
+                            width={900}
+                            height={900}
+                            priority
+                            unoptimized
+                            className="relative z-1 h-auto w-full object-cover"
+                        />
+
+                    </div>
+
+
+                    {/* =====================================================
+                    RIGHT CONTENT
+                ===================================================== */}
+
+                    <div className="flex flex-col">
+
+                        {/* Heading */}
+
+                        <div>
+
+                            <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-semibold leading-none tracking-tight">
+                                Work Process
+                            </h2>
+
+                            <p className="mt-3 max-w-180 text-sm leading-[1.55] text-white/60">
+                                Follow our structured learning process from selecting
+                                your course to landing your dream job with expert
+                                guidance and hands-on experience.
+                            </p>
+
+                        </div>
+
+
+                        {/* Process */}
+
+                        <div className="mt-8 flex flex-col">
+
+                            {WorkProcessData.map((item, index) => {
+
+                                const Icon = item.icon
+
+                                return (
+                                    <div
+                                        key={item.id}
+                                        className="relative flex gap-8 pb-7 last:pb-0 group"
+                                    >
+
+                                        {/* Vertical line */}
+
+                                        {index !== WorkProcessData.length - 1 && (
+                                            <div className="absolute left-7 top-14 h-[calc(100%-25px)] w-px bg-white/15" />
+                                        )}
+
+
+                                        {/* Icon */}
+
+                                        <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-lg border bg-[#040404] border-white/70 group-hover:bg-linear-to-r group-hover:from-[#087FF5] group-hover:border-none group-hover:to-[#003366] transition-colors duration-500">
+                                            <Image
+                                                src={item.icon}
+                                                width={30}
+                                                height={30}
+                                                alt={item.title}
+                                            />
+
+                                            {/* Number bubble */}
+
+                                            <span className="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-white text-[10px] font-medium tracking-wider text-black">
+                                                {item.id}
+                                            </span>
+
+                                        </div>
+
+
+                                        {/* Content */}
+
+                                        <div className="pt-0.5">
+
+                                            <h3 className="font-medium leading-none text-lg lg:text-2xl">
+                                                {item.title}
+                                            </h3>
+
+                                            <p className="mt-2 max-w-80 text-[12px] leading-5 text-white/40">
+                                                {item.description}
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+                                )
+                            })}
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
             <footer className="relative overflow-hidden px-4 py-12 text-white sm:px-6 md:px-8 md:py-16">
 
                 {/* Blue glow */}
@@ -527,7 +665,7 @@ const WebDesign = () => {
                         key={1}
                         duration={1.2 * 10}
                     >
-                        <div className="rounded-[28px] bg-[#040404] px-6 py-10 text-center sm:px-10 md:rounded-[30px] md:px-16 md:py-12">
+                        <div className="rounded-[28px] bg-[#040404] px-6 py-10 text-center sm:px-10 md:rounded-2xl md:px-16 md:py-12">
 
                             {/* Logo */}
                             <Link
