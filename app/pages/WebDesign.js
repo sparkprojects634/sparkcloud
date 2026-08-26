@@ -6,6 +6,7 @@ import AnimatedBorderCard from '../components/AnimateBorder'
 import { useRef } from 'react'
 import Partners from '../components/Partners'
 import EmailContactForm from '../components/EmailContactForm'
+
 const WorkProcessData = [
     {
         id: '01',

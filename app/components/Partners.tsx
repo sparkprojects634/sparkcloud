@@ -16,7 +16,7 @@ const PARTNERS = [
 ];
 
 const LogoRow = () => (
-  <div className="marquee-track grid-a4">
+  <div className="marquee-track">
     {[...PARTNERS, ...PARTNERS].map((logo, i) => (
       <div
         key={i}
@@ -37,7 +37,7 @@ const LogoRow = () => (
 
 const Partners = () => {
   return (
-    <section className="py-10" id="partners">
+    <section className="w-full overflow-hidden py-10" id="partners">
       <div className="">
         <h2 className="community-title text-white roboto-condensed mb-4 text-center font-semibold text-[clamp(2rem,6vw,3.5rem)] tracking-wider">
           Portfolio
