@@ -3,188 +3,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import AnimatedBorderCard from '../components/AnimateBorder'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Partners from '../components/Partners'
 import EmailContactForm from '../components/EmailContactForm'
-
-const WorkProcessData = [
-    {
-        id: '01',
-        title: 'Tell Us Your Idea',
-        description:
-            'Share your business, goals, audience and what you want your website to achieve.',
-        icon: "/images/web-design/work-process/idea.svg",
-    },
-    {
-        id: '02',
-        title: 'Plan & Strategise',
-        description:
-            'We map out your website structure, content and user journey before we start building.',
-        icon: "/images/web-design/work-process/plan.svg",
-    },
-    {
-        id: '03',
-        title: 'Design',
-        description:
-            'Our designers create a visual direction that fits your brand and speaks to your audience.',
-        icon: "/images/web-design/work-process/design.svg",
-    },
-    {
-        id: '04',
-        title: 'Develop',
-        description:
-            'Once you approve the design, our developers bring it to life with responsive and functional development.',
-        icon: "/images/web-design/work-process/develop.svg",
-    },
-]
-
-const navigation = [
-    {
-        label: 'Home',
-        href: '#',
-    },
-    {
-        label: 'Services',
-        href: '#services',
-    },
-    {
-        label: 'Why Choose',
-        href: '#why-choose',
-    },
-    {
-        label: 'Partners',
-        href: '#partners',
-    },
-    {
-        label: 'Blog',
-        href: '/blogs',
-    },
-]
-
-const servicesData = [
-    {
-        id: '01',
-        title: 'Website Design',
-        description:
-            'Modern, clean and engaging website designs that make your brand stand out and communicate clearly.',
-        image: '/images/web-design/services/website-design.webp',
-        imagePosition: 'left',
-    },
-    {
-        id: '02',
-        title: 'Website Development',
-        description:
-            'Fast, responsive and technically strong websites built using modern web technologies.',
-        image: '/images/web-design/services/website-development.webp',
-        imagePosition: 'right',
-    },
-    {
-        id: '03',
-        title: 'Business Websites',
-        description:
-            'Professional websites for companies, startups and businesses designed to generate trust and enquiries.',
-        image: '/images/web-design/services/business-websites.webp',
-        imagePosition: 'left',
-    },
-    {
-        id: '04',
-        title: 'Landing Pages',
-        description:
-            'High-converting landing pages designed to turn visitors into leads, customers and enquiries.',
-        image: '/images/web-design/services/landing-pages.webp',
-        imagePosition: 'right',
-    },
-    {
-        id: '05',
-        title: 'E-Commerce Websites',
-        description:
-            'Powerful online stores designed to showcase products and create a smooth shopping experience.',
-        image: '/images/web-design/services/ecommerce.webp',
-        imagePosition: 'left',
-    },
-    {
-        id: '06',
-        title: 'Website Redesign',
-        description:
-            'Transforming outdated websites into modern, responsive and conversion-focused digital experiences.',
-        image: '/images/web-design/services/website-redesign.webp',
-        imagePosition: 'right',
-    },
-    {
-        id: '07',
-        title: 'UI/UX Design',
-        description:
-            'Thoughtful user interfaces and experiences created to make websites intuitive, useful and easy to navigate.',
-        image: '/images/web-design/services/uiux.webp',
-        imagePosition: 'left',
-    },
-    {
-        id: '08',
-        title: 'Website Maintenance',
-        description:
-            'Reliable ongoing website maintenance, updates, improvements and technical support.',
-        image: '/images/web-design/services/website-maintenance.webp',
-        imagePosition: 'right',
-    },
-]
-
-const WhyChooseData = [
-    {
-        id: '01',
-        icon: '◈',
-        title: 'Immersive Visuals,\nIntentional Conversions',
-        description:
-            'We blend high-impact aesthetics with human-centric UX architecture to turn casual visitors into loyal brand advocates.',
-    },
-    {
-        id: '02',
-        icon: '⚙',
-        title: 'Flawless Engineering,\nUnmatched Speed',
-        description:
-            'Our robust, mobile-first development delivers lightning-fast load times and seamless performance across every device.',
-    },
-    {
-        id: '03',
-        icon: '✦',
-        title: 'Optimized for Modern Search\n& AI Discovery',
-        description:
-            'Built with clean, semantic markup engineered to rank high on traditional search engines and stand out in generative AI discovery.',
-    },
-    {
-        id: '04',
-        icon: '⚙',
-        title: 'Seamless Ecosystem\nIntegration',
-        description:
-            'We effortlessly connect your website with advanced e-commerce platforms, custom CMS workflows, and powerful marketing tools.',
-    },
-]
-
-const BetterWebsiteData = [
-    {
-        id: '01',
-        title: 'Designed for Your\nBrand',
-        description:
-            'We create designs that reflect your business and personality.',
-    },
-    {
-        id: '02',
-        title: 'Built for Results',
-        description:
-            'Creating websites that bring enquiries, leads and sales is better.',
-    },
-    {
-        id: '03',
-        title: 'Fast & Mobile-\nResponsive',
-        description:
-            'Your customers are browsing on their phones. We make sure your website looks great and works smoothly everywhere.',
-    },
-    {
-        id: '04',
-        title: 'Simple for You.\nEasy for Your\nCustomers.',
-        description:
-            "No confusing layouts or complicated navigation. Just a website that's easy to understand and easy to use.",
-    },
-]
+import { WorkProcessData, webDesignNavigation, servicesData, WhyChooseData, BetterWebsiteData, TestimonialsData, FAQData } from "../data/webDesign"
 
 const WhyChoose = () => {
 
@@ -328,6 +150,8 @@ const BetterWebsite = () => {
 }
 
 const WebDesign = () => {
+    const [active, setActive] = useState(1)
+
     return (
         <main className="bg-[#040404]">
 
@@ -354,7 +178,7 @@ const WebDesign = () => {
 
                     <nav className="hidden items-center gap-9 lg:flex">
 
-                        {navigation.map((item) => (
+                        {webDesignNavigation.map((item) => (
                             <Link
                                 key={item.label}
                                 href={item.href}
@@ -535,7 +359,9 @@ const WebDesign = () => {
 
             <WhyChoose />
 
-            <Partners />
+            <section className='flex flex-col items-center w-full'>
+                <Partners />
+            </section>
 
             <section className="w-full px-4 py-12 text-white sm:px-6 md:px-8 lg:px-10 lg:py-20">
 
@@ -646,6 +472,179 @@ const WebDesign = () => {
                             })}
 
                         </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section className="w-full bg-[#040404] py-20 text-white md:py-28 lg:py-32">
+
+                <div className="mx-auto w-full max-w-350 px-5 md:px-8 lg:px-10">
+
+                    {/* HEADER */}
+
+                    <div className="mb-12 text-center md:mb-14">
+
+                        <span className="text-sm font-medium text-[#0088FF]">
+                            Testimonials
+                        </span>
+
+                        <h2 className="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-medium leading-[1] tracking-tight">
+                            Don't Just Take Our Word For It.
+                        </h2>
+
+                    </div>
+
+
+                    {/* TESTIMONIALS */}
+
+                    <div className="grid gap-4 md:grid-cols-3">
+
+                        {TestimonialsData.map((item) => (
+
+                            <article
+                                key={item.id}
+                                className="group relative"
+                            >
+
+                                <div className="relative min-h-55 overflow-visible rounded-2xl border border-white/10 bg-[#040404] px-5 pb-7 pt-8 transition-colors duration-500 hover:border-white/20 md:min-h-56 md:px-5 md:pt-8 lg:px-5">
+
+                                    {/* QUOTE ICON */}
+
+                                    <div className="absolute -left-3 -top-3 z-10 flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-linear-to-r from-[#087FF5] to-[#003366] shadow-[0_0_20px_rgba(0,136,255,0.15)]">
+
+                                        <Image
+                                            src="/images/web-design/testimonials/quotes.svg"
+                                            alt="Quote"
+                                            width={28}
+                                            height={28}
+                                            className="h-7 w-7 object-contain"
+                                            unoptimized
+                                        />
+
+                                    </div>
+
+
+                                    {/* QUOTE */}
+
+                                    <p className="max-w-md text-[11px] font-normal italic leading-[1.5] text-white/70 md:text-[11px] lg:text-sm">
+                                        {item.quote}
+                                    </p>
+
+
+                                    {/* PERSON */}
+
+                                    <div className="mt-6 border-l border-white/20 pl-3">
+
+                                        <h3 className="text-base font-medium leading-none text-[#0088FF] md:text-sm lg:text-lg">
+                                            {item.name}
+                                        </h3>
+
+                                        <p className="mt-1 text-xs text-white/40 md:text-sm">
+                                            {item.role}
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </article>
+
+                        ))}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section className="w-full py-5 text-white md:py-28 lg:py-10">
+
+                <div className="mx-auto grid w-full max-w-350 gap-12 px-5 md:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20 lg:px-10">
+
+                    {/* LEFT */}
+
+                    <div>
+                        <span className="text-sm font-medium text-[#0088FF]">
+                            FAQs
+                        </span>
+
+                        <h2 className="mt-3 max-w-lg text-[clamp(2.5rem,4vw,3.8rem)] font-medium leading-[1.05] tracking-tight">
+                            Got Questions? We Have
+                            <br className="hidden lg:block" />
+                            {' '}Answers!
+                        </h2>
+
+                        <p className="mt-3 max-w-xl text-[11px] leading-relaxed text-white/70 md:text-xs">
+                            Get answers to common questions before starting your
+                            learning journey.
+                        </p>
+                    </div>
+
+
+                    {/* RIGHT */}
+
+                    <div className="flex flex-col gap-4">
+
+                        {FAQData.map((item) => {
+                            const isActive = active === item.id
+
+                            return (
+                                <div
+                                    key={item.id}
+                                    className="overflow-hidden rounded-2xl border border-white/10 transition-colors duration-300 hover:border-white/20"
+                                >
+                                    <button
+                                        type="button"
+                                        onClick={() =>
+                                            setActive(
+                                                isActive ? null : item.id
+                                            )
+                                        }
+                                        className="flex w-full items-center justify-between px-5 py-5 text-left md:px-5 md:py-5"
+                                    >
+                                        <span
+                                            className={`text-base font-normal leading-tight transition-colors duration-300 md:text-[17px] ${isActive
+                                                    ? 'text-[#0088FF]'
+                                                    : 'text-white'
+                                                }`}
+                                        >
+                                            {item.question}
+                                        </span>
+
+                                        <span
+                                            className={`ml-5 text-xl font-light text-white/60 transition-transform duration-300 ${isActive
+                                                    ? 'rotate-45'
+                                                    : 'rotate-0'
+                                                }`}
+                                        >
+                                            +
+                                        </span>
+                                    </button>
+
+
+                                    {/* ANSWER */}
+
+                                    <div
+                                        className={`grid transition-all duration-500 ease-out ${isActive
+                                                ? 'grid-rows-[1fr] opacity-100'
+                                                : 'grid-rows-[0fr] opacity-0'
+                                            }`}
+                                    >
+                                        <div className="overflow-hidden">
+                                            <p className="max-w-2xl px-5 pb-6 text-[11px] leading-[1.5] text-white/70 md:px-5 md:pb-7 md:text-xs">
+                                                {item.answer}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            )
+                        })}
 
                     </div>
 
