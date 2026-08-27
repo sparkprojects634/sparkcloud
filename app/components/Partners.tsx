@@ -16,22 +16,34 @@ const PARTNERS = [
 ];
 
 const LogoRow = () => (
-  <div className="marquee-track">
-    {[...PARTNERS, ...PARTNERS].map((logo, i) => (
-      <div
-        key={i}
-        className="flex h-28 w-56 shrink-0 items-center justify-center px-8"
-      >
-        <Image
-          src={logo}
-          alt=""
-          width={160}
-          height={80}
-          className="h-18 w-auto object-contain transition-all duration-500 grayscale-100 hover:grayscale-0 hover:opacity-100"
-          unoptimized
-        />
-      </div>
-    ))}
+  <div className="relative w-full overflow-hidden">
+
+    <div
+      className="pointer-events-none absolute inset-y-0 left-0 z-10 w-24 bg-linear-to-r from-[#040404] to-transparent md:w-40 lg:w-56"
+    />
+
+    <div
+      className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-linear-to-l from-[#040404] to-transparent md:w-40 lg:w-56"
+    />
+
+    <div className="marquee-track">
+      {[...PARTNERS, ...PARTNERS].map((logo, i) => (
+        <div
+          key={i}
+          className="flex h-28 w-56 shrink-0 items-center justify-center px-8"
+        >
+          <Image
+            src={logo}
+            alt=""
+            width={160}
+            height={80}
+            className="h-18 w-auto object-contain grayscale opacity-70 transition-all duration-500 hover:grayscale-0 hover:opacity-100"
+            unoptimized
+          />
+        </div>
+      ))}
+    </div>
+
   </div>
 );
 
