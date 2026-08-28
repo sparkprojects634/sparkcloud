@@ -7,6 +7,7 @@ import { useRef, useState } from 'react'
 import Partners from '../components/Partners'
 import EmailContactForm from '../components/EmailContactForm'
 import { WorkProcessData, webDesignNavigation, servicesData, WhyChooseData, BetterWebsiteData, TestimonialsData, FAQData } from "../data/webDesign"
+import WorkShowCase from '../components/WorkShowCase'
 
 const WhyChoose = () => {
 
@@ -362,6 +363,8 @@ const WebDesign = () => {
             <section className='flex flex-col items-center w-full'>
                 <Partners />
             </section>
+
+            <WorkShowCase />
 
             <section className="w-full px-4 py-12 text-white sm:px-6 md:px-8 lg:px-10 lg:py-20">
 
