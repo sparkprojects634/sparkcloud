@@ -298,7 +298,7 @@ const WorkShowCase = () => {
 
                     <div className="grid grid-cols-1 gap-x-3 gap-y-7 sm:grid-cols-2 lg:grid-cols-6">
 
-                        {WorkData.map((project, index) => (
+                        {WorkData.slice(0, 3).map((project, index) => (
 
                             <button
                                 key={project.id}
@@ -310,20 +310,17 @@ const WorkShowCase = () => {
                                     w-full
                                     text-left
                                     outline-none
-                                    ${
-                                        index < 3
-                                            ? 'lg:col-span-2'
-                                            : 'lg:col-span-2 lg:col-start-auto'
+                                    ${index < 3
+                                        ? 'lg:col-span-2'
+                                        : 'lg:col-span-2 lg:col-start-auto'
                                     }
-                                    ${
-                                        index === 3
-                                            ? 'lg:col-start-2'
-                                            : ''
+                                    ${index === 3
+                                        ? 'lg:col-start-2'
+                                        : ''
                                     }
-                                    ${
-                                        index === 4
-                                            ? 'lg:col-start-4'
-                                            : ''
+                                    ${index === 4
+                                        ? 'lg:col-start-4'
+                                        : ''
                                     }
                                 `}
                             >
@@ -372,6 +369,80 @@ const WorkShowCase = () => {
 
                         ))}
 
+                    </div>
+
+
+                    <div className="mt-7 flex flex-col lg:flex-row items-center justify-center gap-x-3 gap-y-7 ">
+                        {WorkData.slice(3, 5).map((project, index) => (
+                            <button
+                                key={project.id}
+                                type="button"
+                                onClick={() => openProject(project)}
+                                className={`
+                                    group
+                                    block
+                                    w-full
+                                    max-w-110
+                                    text-left
+                                    outline-none
+                                    ${index < 3
+                                        ? 'lg:col-span-2'
+                                        : 'lg:col-span-2 lg:col-start-auto'
+                                    }
+                                    ${index === 3
+                                        ? 'lg:col-start-2'
+                                        : ''
+                                    }
+                                    ${index === 4
+                                        ? 'lg:col-start-4'
+                                        : ''
+                                    }
+                                `}
+                            >
+
+                                {/* IMAGE */}
+
+                                <div className="relative aspect-4/3 w-full overflow-hidden rounded-xl bg-white">
+
+                                    <Image
+                                        src={project.cover}
+                                        alt={project.title}
+                                        fill
+                                        unoptimized
+                                        sizes="
+                                            (max-width: 640px) 100vw,
+                                            (max-width: 1024px) 50vw,
+                                            280px
+                                        "
+                                        className="object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                                    />
+
+                                    {/* HOVER */}
+
+                                    <div className="absolute inset-0 bg-black/0 transition-colors duration-500 group-hover:bg-black/5" />
+
+                                    {/* ARROW */}
+
+                                    <span className="absolute right-3 top-3 flex h-8 w-8 translate-y-2 items-center justify-center rounded-full bg-black text-white opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                                        <ArrowUpRight size={14} />
+                                    </span>
+
+                                </div>
+
+
+                                {/* CAPTION */}
+
+                                <div className="mt-4 text-center">
+
+                                    <p className="text-xs leading-none text-white md:text-sm">
+                                        {project.title}
+                                    </p>
+
+                                </div>
+
+                            </button>
+
+                        ))}
                     </div>
 
                 </div>
@@ -454,7 +525,7 @@ const WorkShowCase = () => {
                                         ref={imageRef}
                                         src={
                                             activeProject.images[
-                                                activeImage
+                                            activeImage
                                             ]
                                         }
                                         alt={activeProject.title}
@@ -544,11 +615,10 @@ const WorkShowCase = () => {
                                                 onClick={() =>
                                                     changeImage(index)
                                                 }
-                                                className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-lg border transition-all duration-300 ${
-                                                    index === activeImage
-                                                        ? 'border-[#0088FF] opacity-100'
-                                                        : 'border-white/10 opacity-40 hover:opacity-100'
-                                                }`}
+                                                className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-lg border transition-all duration-300 ${index === activeImage
+                                                    ? 'border-[#0088FF] opacity-100'
+                                                    : 'border-white/10 opacity-40 hover:opacity-100'
+                                                    }`}
                                             >
 
                                                 <Image
@@ -615,7 +685,7 @@ const WorkShowCase = () => {
                                 <Image
                                     src={
                                         activeProject.images[
-                                            activeImage
+                                        activeImage
                                         ]
                                     }
                                     alt={activeProject.title}
