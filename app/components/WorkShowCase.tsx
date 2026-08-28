@@ -448,17 +448,16 @@ const WorkShowCase = () => {
                 </div>
 
             </section>
-
-
+            
             {/* =============================================================
                 PROJECT POPUP
             ============================================================= */}
-
+            
             {activeProject && (
 
                 <div
                     ref={popupRef}
-                    className="fixed inset-0 z-[100] bg-black/80 opacity-0"
+                    className="fixed inset-0 z-100 bg-black/80 opacity-0"
                 >
 
                     <div
@@ -704,7 +703,6 @@ const WorkShowCase = () => {
                 </div>
 
             )}
-
         </>
     )
 }

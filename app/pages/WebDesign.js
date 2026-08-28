@@ -418,7 +418,7 @@ const WebDesign = () => {
 
                         {/* Process */}
 
-                        <div className="mt-8 flex flex-col">
+                        <div className="mt-6 flex flex-col overflow-scroll max-h-105 pt-4">
 
                             {WorkProcessData.map((item, index) => {
 

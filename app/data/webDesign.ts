@@ -27,6 +27,27 @@ export const WorkProcessData = [
             'Once you approve the design, our developers bring it to life with responsive and functional development.',
         icon: "/images/web-design/work-process/develop.svg",
     },
+        {
+        id: '05',
+        title: 'Review & Refine',
+        description:
+            'You review the website, share your feedback and we fine-tune the details.',
+        icon: "/images/web-design/work-process/review.svg",
+    },
+        {
+        id: '06',
+        title: 'Launch',
+        description:
+            'Everything is tested, polished and ready to go live.',
+        icon: "/images/web-design/work-process/launch.svg",
+    },
+        {
+        id: '07',
+        title: 'Grow',
+        description:
+            'Need updates or improvements after launch? We are just a message away.',
+        icon: "/images/web-design/work-process/grow.svg",
+    },
 ]
 
 export const webDesignNavigation = [
