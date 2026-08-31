@@ -49,7 +49,7 @@ const LogoRow = () => (
 
 const Partners = () => {
   return (
-    <div className="w-full max-w-330 overflow-hidden py-10" id="partners">
+    <div className="w-full max-w-330 overflow-hidden py-20" id="partners">
       <div className="">
         <h2 className="community-title text-white roboto-condensed mb-4 text-center font-semibold text-[clamp(2rem,6vw,3.5rem)] tracking-wider">
           Portfolio

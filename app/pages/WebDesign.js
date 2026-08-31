@@ -495,7 +495,7 @@ const WebDesign = () => {
                             Testimonials
                         </span>
 
-                        <h2 className="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-medium leading-[1] tracking-tight">
+                        <h2 className="mt-3 text-[clamp(2rem,5vw,3.5rem)] font-medium leading-none tracking-tight">
                             Don't Just Take Our Word For It.
                         </h2>
 
@@ -533,7 +533,7 @@ const WebDesign = () => {
 
                                     {/* QUOTE */}
 
-                                    <p className="max-w-md text-[11px] font-normal italic leading-[1.5] text-white/70 md:text-[11px] lg:text-sm">
+                                    <p className="max-w-md text-[11px] font-normal italic leading-normal text-white/70 md:text-[11px] lg:text-sm">
                                         {item.quote}
                                     </p>
 
@@ -639,7 +639,7 @@ const WebDesign = () => {
                                             }`}
                                     >
                                         <div className="overflow-hidden">
-                                            <p className="max-w-2xl px-5 pb-6 text-[11px] leading-[1.5] text-white/70 md:px-5 md:pb-7 md:text-xs">
+                                            <p className="max-w-2xl px-5 pb-6 text-[11px] leading-normal text-white/70 md:px-5 md:pb-7 md:text-xs">
                                                 {item.answer}
                                             </p>
                                         </div>

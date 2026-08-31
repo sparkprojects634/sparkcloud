@@ -1,7 +1,7 @@
 'use client'
 
 import { useLayoutEffect, useRef } from 'react'
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useThree } from '@react-three/fiber'
 import { useGLTF } from '@react-three/drei'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
@@ -14,54 +14,93 @@ function Cube() {
   const outer = useRef<THREE.Group>(null)
   const middle = useRef<THREE.Group>(null)
 
+  const { viewport } = useThree()
+
   const outerModel = useGLTF('/glb/rubic_1.glb')
   const middleModel = useGLTF('/glb/rubic_2.glb')
 
   useLayoutEffect(() => {
     if (!outer.current || !middle.current) return
 
-    ScrollTrigger.create({
-      trigger: '#growth-section',
-      start: 'top top',
-      end: 'bottom bottom',
-      scrub: true,
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: '#growth-section',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
 
-      onUpdate: (self) => {
-        const p = self.progress
+        onUpdate: (self) => {
+          const p = self.progress
 
-        // Rotate whole cube
-        outer.current!.rotation.x = p * Math.PI * -4
-        outer.current!.rotation.y = p * Math.PI * 4
+          // Whole cube
+          outer.current!.rotation.x =
+            p * Math.PI * -4
 
-        // Rotate middle slice independently
-        middle.current!.rotation.y = p * Math.PI * 2
-        middle.current!.rotation.x = p * Math.PI * -4
-      },
+          outer.current!.rotation.y =
+            p * Math.PI * 4
+
+          // Middle layer
+          middle.current!.rotation.y =
+            p * Math.PI * 2
+
+          middle.current!.rotation.x =
+            p * Math.PI * -4
+        },
+      })
     })
+
+    return () => {
+      ctx.revert()
+    }
   }, [])
+
+  /*
+  |--------------------------------------------------------------------------
+  | RESPONSIVE SCALE
+  |--------------------------------------------------------------------------
+  */
+  const { size } = useThree()
+
+  const scale =
+    size.width < 640   // sm
+      ? 1
+      : size.width < 1024  // lg
+        ? 0.85
+        : size.width < 1536 // 2xl
+          ? 1.15
+          : 1.55
 
   return (
     <group
       ref={master}
       position={[0, 0, 0]}
       rotation={[0, 0, 0]}
-      scale={1.55}
+      scale={scale}
     >
-      {/* Outer Cube */}
+
+      {/* OUTER CUBE */}
+
       <group
         ref={outer}
         position={[0, 0, 0]}
       >
-        <primitive object={outerModel.scene.clone()} />
+        <primitive
+          object={outerModel.scene.clone()}
+        />
       </group>
 
-      {/* Middle Layer */}
+
+      {/* MIDDLE LAYER */}
+
       <group
         ref={middle}
-        position={[0, 0, 0]} // adjust if required
+        position={[0, 0, 0]}
       >
-        <primitive object={middleModel.scene.clone()} />
+        <primitive
+          object={middleModel.scene.clone()}
+        />
       </group>
+
     </group>
   )
 }
@@ -69,42 +108,40 @@ function Cube() {
 export default function RubicModel() {
   return (
     <div className="pointer-events-none absolute inset-0 z-20">
+
       <Canvas
         camera={{
-          position: [0, 0, 100],
+          position: [0, -50, 100],
           fov: 35,
         }}
       >
-        {/* Ambient */}
+
         <ambientLight intensity={2.5} />
 
-        {/* Main */}
         <directionalLight
           position={[6, 8, 8]}
           intensity={5}
         />
 
-        {/* Fill */}
         <directionalLight
           position={[-6, -4, 5]}
           intensity={3}
         />
 
-        {/* Rim */}
         <pointLight
           position={[0, 5, 10]}
           intensity={10}
         />
 
-        {/* Bottom */}
         <pointLight
           position={[0, -5, 6]}
           intensity={5}
         />
 
-
         <Cube />
+
       </Canvas>
+
     </div>
   )
 }

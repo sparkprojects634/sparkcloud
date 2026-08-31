@@ -661,7 +661,7 @@ const WorkShowCase = () => {
 
                         <div
                             ref={zoomRef}
-                            className="fixed inset-0 z-[120] flex items-center justify-center bg-black/95 p-5 opacity-0 md:p-10"
+                            className="fixed inset-0 z-120 flex items-center justify-center bg-black/95 p-5 opacity-0 md:p-10"
                             onClick={closeZoom}
                         >
 
