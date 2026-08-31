@@ -501,13 +501,13 @@ const WorkShowCase = () => {
 
                             {/* TITLE */}
 
-                            <div className="px-5 pb-5 pt-7 md:px-8 md:pt-8 lg:px-10">
+                            <div className="px-5 pb-5 pt-7 md:px-8 md:pt-8 lg:px-10 text-white">
 
                                 <h2 className="max-w-5xl font-mona-bold text-[clamp(2.5rem,6vw,6rem)] uppercase leading-[0.85]">
                                     {activeProject.title}
                                 </h2>
 
-                                <p className="mt-4 max-w-xl text-xs leading-relaxed text-white/50 md:text-sm">
+                                <p className="mt-4 max-w-xl text-xs leading-relaxed md:text-sm">
                                     {activeProject.description}
                                 </p>
 
@@ -690,6 +690,7 @@ const WorkShowCase = () => {
                                     alt={activeProject.title}
                                     fill
                                     sizes="100vw"
+                                    quality={100}
                                     className="object-contain"
                                     unoptimized
                                 />

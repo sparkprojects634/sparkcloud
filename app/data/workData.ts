@@ -10,9 +10,10 @@ export const WorkData = [
 
         images: [
             '/images/web-design/work/corporate.webp',
-            '/images/web-design/work/corporate-01.webp',
-            '/images/web-design/work/corporate-02.webp',
-            '/images/web-design/work/corporate-03.webp',
+            '/images/web-design/work/corporate-01.png',
+            '/images/web-design/work/corporate-02.png',
+            '/images/web-design/work/corporate-03.png',
+            '/images/web-design/work/corporate-04.png',
         ],
     },
 
@@ -27,10 +28,10 @@ export const WorkData = [
 
         images: [
             '/images/web-design/work/restaurant.webp',
-            '/images/web-design/work/restaurant-01.webp',
-            '/images/web-design/work/restaurant-02.webp',
-            '/images/web-design/work/restaurant-03.webp',
-            '/images/web-design/work/restaurant-04.webp',
+            '/images/web-design/work/restaurant-01.png',
+            '/images/web-design/work/restaurant-02.png',
+            '/images/web-design/work/restaurant-03.png',
+            '/images/web-design/work/restaurant-04.png',
         ],
     },
 
@@ -45,8 +46,10 @@ export const WorkData = [
 
         images: [
             '/images/web-design/work/agency.webp',
-            '/images/web-design/work/agency-01.webp',
-            '/images/web-design/work/agency-02.webp',
+            '/images/web-design/work/agency-01.png',
+            '/images/web-design/work/agency-02.png',
+            '/images/web-design/work/agency-03.png',
+            '/images/web-design/work/agency-04.png',
         ],
     },
 
@@ -61,9 +64,9 @@ export const WorkData = [
 
         images: [
             '/images/web-design/work/ecommerce.webp',
-            '/images/web-design/work/ecommerce-01.webp',
-            '/images/web-design/work/ecommerce-02.webp',
-            '/images/web-design/work/ecommerce-03.webp',
+            '/images/web-design/work/ecommerce-01.png',
+            '/images/web-design/work/ecommerce-02.png',
+            '/images/web-design/work/ecommerce-03.png',
         ],
     },
 
@@ -78,10 +81,10 @@ export const WorkData = [
 
         images: [
             '/images/web-design/work/portfolio.webp',
-            '/images/web-design/work/portfolio-01.webp',
-            '/images/web-design/work/portfolio-02.webp',
-            '/images/web-design/work/portfolio-03.webp',
-            '/images/web-design/work/portfolio-04.webp',
+            '/images/web-design/work/portfolio-01.png',
+            '/images/web-design/work/portfolio-02.png',
+            '/images/web-design/work/portfolio-03.png',
+            '/images/web-design/work/portfolio-04.png',
         ],
     },
 ]

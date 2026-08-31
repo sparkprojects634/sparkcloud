@@ -234,7 +234,7 @@ const WebDesign = () => {
 
                         <Link
                             href="tel:+918363000000"
-                            className="group mt-8 flex h-17 items-center rounded-3xl border border-white px-2 pl-8 transition-all duration-300 hover:bg-white hover:text-black"
+                            className="group mt-8 flex h-17 items-center rounded-[20px] border border-white/70 px-2 pl-8 transition-all duration-300 hover:bg-white hover:text-black"
                         >
                             <span className="mr-8 text-sm font-bold tracking-wide text-white group-hover:text-black">
                                 CALL NOW
