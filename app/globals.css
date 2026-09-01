@@ -123,6 +123,11 @@ body {
   font-weight: 700;
 }
 
+.font-mona-sans {
+  font-family: var(--font-mona-narrow);
+  font-weight: 400;
+}
+
 .image-fill-text {
   --fill-size: 0%;
 

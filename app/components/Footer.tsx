@@ -5,8 +5,7 @@ const footerLinks = [
   {
     title: "Company",
     links: [
-      { label: "HOME", href: "/" },
-      { label: "STUDIO", href: "/about" },
+      { label: "ABOUT", href: "/about" },
       { label: "PROJECTS", href: "/projects" },
       { label: "SERVICES", href: "/services" },
       { label: "BLOG", href: "/blog" },
@@ -16,12 +15,10 @@ const footerLinks = [
   {
     title: "Quick Links",
     links: [
-      { label: "HOME", href: "/" },
-      { label: "ABOUT", href: "/about" },
-      { label: "PROJECTS", href: "/projects" },
-      { label: "SERVICES", href: "/services" },
-      { label: "BLOG", href: "/blog" },
-      { label: "CONTACT", href: "/contact" },
+      { label: "DESIGN", href: "/" },
+      { label: "DEVELOPMENT", href: "/about" },
+      { label: "SEO/ AEO/ GEO", href: "/projects" },
+      { label: "SEM/ SMM/ SMO", href: "/contact" },
     ],
   },
 ]
@@ -80,10 +77,10 @@ const Footer = () => {
               </a>
 
               <a
-                href="mailto:projects@sparkcloud.in"
+                href="mailto:info@sparkcloud.us"
                 className="block font-semibold transition hover:opacity-70"
               >
-                projects@sparkcloud.in
+                info@sparkcloud.us
               </a>
             </div>
 

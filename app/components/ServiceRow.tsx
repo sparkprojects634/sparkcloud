@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useRef } from 'react'
 import gsap from 'gsap'
+import Link from 'next/link'
 
 export default function ServiceRow({ service }: { service: any }) {
   const imageRef = useRef<HTMLDivElement>(null)
@@ -42,7 +43,8 @@ export default function ServiceRow({ service }: { service: any }) {
   }
 
   return (
-    <div
+    <Link
+      href={service.slug}
       onMouseEnter={enter}
       onMouseLeave={leave}
       onMouseMove={move}
@@ -59,7 +61,6 @@ export default function ServiceRow({ service }: { service: any }) {
       <p className="self-center text-zinc-500">
         {service.description}
       </p>
-
       <div
         ref={imageRef}
         className="pointer-events-none absolute left-0 top-0 z-10 opacity-0"
@@ -74,6 +75,6 @@ export default function ServiceRow({ service }: { service: any }) {
           />
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
