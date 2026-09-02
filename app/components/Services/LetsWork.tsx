@@ -304,7 +304,7 @@ const LetsWork = () => {
                     className="max-w-sm pt-1 lg:pt-2"
                 >
 
-                    <p className="text-sm font-medium leading-[1.35] text-black md:text-base lg:text-lg">
+                    <p className="text-md font-medium leading-[1.35] text-black md:text-base lg:text-lg">
                         Work with us if average isn't your thing.
                         <br />
                         Drop it, we'll build it!
@@ -312,7 +312,7 @@ const LetsWork = () => {
 
                     <a
                         href="/contact"
-                        className="mt-6 inline-flex items-center gap-2 text-[10px] uppercase tracking-wide text-black transition-opacity duration-300 hover:opacity-50"
+                        className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-wide text-black transition-opacity duration-300 hover:opacity-50"
                     >
                         Say Hello
                         <span>↗</span>

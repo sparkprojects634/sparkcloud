@@ -1,6 +1,29 @@
-import LetsWork from "@/app/components/LetsWork"
+import { notFound } from 'next/navigation'
 
-const page = () => {
+import LetsWork from "@/app/components/Services/LetsWork"
+import StrategicSection from "@/app/components/Services/StrategicSection"
+import { services } from "../../data/services"
+import CoreSkillsSection from '@/app/components/Services/CoreSkillsSection'
+
+type Props = {
+    params: Promise<{
+        slug: string
+    }>
+}
+
+const page = async ({ params }: Props) => {
+
+    const { slug } = await params
+
+    const service = services.find(
+        (item) => item.slug === `/services/${slug}`
+    )
+
+    if (!service) {
+        notFound()
+    }
+
+
     return (
         <section className="mx-auto w-full max-w-350 px-4 pt-28 md:px-8 md:pt-32 lg:pt-36">
             <div className="flex h-full flex-col gap-10 justify-between">
@@ -23,6 +46,12 @@ const page = () => {
                     </p>
                 </div>
             </div>
+
+            <StrategicSection
+                service={service}
+            />
+
+            <CoreSkillsSection service={service} />
 
             <LetsWork />
         </section>
