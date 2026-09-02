@@ -86,7 +86,7 @@ const RevealSection = () => {
           </h3>
 
           {/* button */}
-          <AnimatedButton text="GET IN TOUCH" theme="light" href="/contact-us" />
+          <AnimatedButton text="GET IN TOUCH" theme="light" href="/contact" />
         </div>
       </div>
     </section>

@@ -54,7 +54,7 @@ const Home = () => {
           <SubHeadingMarquee text="WHY CHOOSE US" color="black" />
           <div className="flex justify-between items-end py-6">
             <h3 className="font-mona-bold font-bold text-black text-5xl md:text-7xl lg:text-9xl tracking-wider">CHOOSE <br /> <span className="text-[#8D8D8D]">EXCELLENCE</span></h3>
-            <AnimatedButton text="Get In Touch" href='#' theme='dark' />
+            <AnimatedButton text="Get In Touch" href='/contact' theme='dark' />
           </div>
           <div className="mx-auto grid gap-6 lg:grid-cols-[1.1fr_1fr]">
             {/* Left */}

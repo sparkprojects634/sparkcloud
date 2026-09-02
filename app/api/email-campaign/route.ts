@@ -3,12 +3,11 @@ import nodemailer from 'nodemailer'
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT || 465),
-    secure: Number(process.env.SMTP_PORT || 465) === 465,
-
+    port: Number(process.env.SMTP_PORT),
+    secure: process.env.SMTP_SECURE === 'true',
     auth: {
         user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASSWORD,
+        pass: process.env.SMTP_PASS,
     },
 })
 
@@ -81,7 +80,7 @@ export async function POST(request: Request) {
         }
 
         .header {
-            background: #050505;
+            background: #fff;
             padding: 35px;
             text-align: center;
         }
@@ -142,7 +141,7 @@ export async function POST(request: Request) {
 
         <div class="header">
             <img
-                src="https://sparkcloud.us/images/logo-white.svg"
+                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 class="logo"
             />
@@ -234,7 +233,7 @@ export async function POST(request: Request) {
         }
 
         .header {
-            background: #050505;
+            background: #f7f7f7;
             padding: 35px;
             text-align: center;
         }
@@ -301,7 +300,7 @@ export async function POST(request: Request) {
 
         <div class="header">
             <img
-                src="https://sparkcloud.us/images/logo-white.svg"
+                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 class="logo"
             />
@@ -337,11 +336,11 @@ export async function POST(request: Request) {
             </p>
 
             <p>
-                <strong>info@sparkcloud.us</strong>
+                <strong>info@sparkcloud.in</strong>
             </p>
 
             <a
-                href="https://sparkcloud.us"
+                href="https://sparkcloud.in"
                 class="button"
             >
                 VISIT SPARKCLOUD
@@ -369,52 +368,36 @@ export async function POST(request: Request) {
         */
 
         await transporter.sendMail({
-            from: `"SparkCloud Website" <${process.env.MAIL_FROM}>`,
+            from: `"SparkCloud Website" <${process.env.SMTP_USER}>`,
             to: process.env.ADMIN_EMAIL,
             replyTo: email,
-
             subject: `New Website Enquiry — ${name}`,
-
             html: adminEmail,
         })
 
-
-        /*
-        |--------------------------------------------------------------------------
-        | SEND USER CONFIRMATION
-        |--------------------------------------------------------------------------
-        */
-
         await transporter.sendMail({
-            from: `"SparkCloud" <${process.env.MAIL_FROM}>`,
+            from: `"SparkCloud" <${process.env.SMTP_USER}>`,
             to: email,
-
             subject: 'We received your enquiry — SparkCloud',
-
             html: userEmail,
         })
-
 
         return NextResponse.json({
             success: true,
             message: 'Message sent successfully.',
         })
-
     } catch (error) {
-
-        console.error(
-            'Contact form error:',
-            error
-        )
+        console.error('Contact form error:', error)
 
         return NextResponse.json(
             {
                 success: false,
-                message: 'Unable to send message.',
+                message:
+                    error instanceof Error
+                        ? error.message
+                        : 'Unable to send message.',
             },
-            {
-                status: 500,
-            }
+            { status: 500 }
         )
     }
 }

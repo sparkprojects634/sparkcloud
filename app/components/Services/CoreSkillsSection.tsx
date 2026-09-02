@@ -23,11 +23,6 @@ const CoreSkillsSection = ({
                             key={skill.id}
                             className="grid gap-8 lg:grid-cols-[0.35fr_1fr_0.6fr] lg:items-start lg:gap-16"
                         >
-
-                            {/* =================================================
-                                LABEL
-                            ================================================= */}
-
                             <div>
                                 {index === 0 && (
                                     <p className="text-sm uppercase tracking-wide text-black/70">
@@ -35,11 +30,6 @@ const CoreSkillsSection = ({
                                     </p>
                                 )}
                             </div>
-
-
-                            {/* =================================================
-                                CONTENT
-                            ================================================= */}
 
                             <div>
 
@@ -52,11 +42,6 @@ const CoreSkillsSection = ({
                                 </p>
 
                             </div>
-
-
-                            {/* =================================================
-                                MEDIA
-                            ================================================= */}
 
                             <div className="relative aspect-1.5/1 min-h-45 overflow-hidden rounded-lg bg-[#9fc5ff]">
 
