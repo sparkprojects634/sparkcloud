@@ -75,7 +75,7 @@ export default function ContactForm() {
 
             <div className="flex items-start gap-6">
 
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#FDB515] text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-black text-white">
                 <MapPin size={24} />
               </div>
 
@@ -99,7 +99,7 @@ export default function ContactForm() {
 
             <div className="flex items-start gap-6">
 
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#FDB515] text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-black text-white">
                 <MapPin size={24} />
               </div>
 
@@ -120,7 +120,7 @@ export default function ContactForm() {
 
             <div className="flex items-start gap-6">
 
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#2EB89D] text-white">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-black text-white">
                 <Phone size={24} />
               </div>
 

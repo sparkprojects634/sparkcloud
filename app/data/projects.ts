@@ -142,81 +142,373 @@ export const projectsSingle = [
 
   {
     id: '02',
-    slug: 'sparkcloud',
+    slug: 'the-lyadh-ganj',
 
-    title: 'SPARKCLOUD',
+    title: 'The Lyadh Ganj',
 
-    subtitle: 'DIGITAL EXPERIENCE',
+    subtitle: 'RESTAURANT & BRAND EXPERIENCE',
 
-    service: 'Strategy & Development',
-    industry: 'Digital Agency',
+    service: 'Design & Development',
+    industry: 'Restaurant',
     year: '2026',
 
-    liveUrl: 'https://sparkcloud.us',
+    liveUrl: 'https://thelyadhganj.com',
 
     hero: {
-      type: 'video',
-      src: '/videos/projects/sparkcloud/hero.mp4',
-      poster: '/images/projects/sparkcloud/hero.webp',
-      alt: 'SparkCloud digital experience',
+      type: 'image',
+      src: '/images/projects/lyadh-ganj/hero.webp',
+      alt: 'The Lyadh Ganj restaurant',
     },
 
     intro: {
       label: 'PROJECT OVERVIEW',
       description:
-        "A highly interactive digital experience designed to communicate SparkCloud's approach to creativity, technology, strategy, and digital growth.",
+        'The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality.',
     },
 
     media: [
       {
         type: 'image',
-        src: '/images/projects/sparkcloud/media-01.webp',
-        alt: 'SparkCloud website',
+        src: '/images/projects/lyadh-ganj/media-01.webp',
+        alt: 'The Lyadh Ganj interior',
       },
       {
         type: 'video',
-        src: '/videos/projects/sparkcloud/media-01.mp4',
-        poster: '/images/projects/sparkcloud/media-poster.webp',
-        alt: 'SparkCloud interactive experience',
+        src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
+        poster: '/images/projects/lyadh-ganj/video-poster.webp',
+        alt: 'The Lyadh Ganj brand experience',
       },
     ],
 
     projectPurpose: {
       title: 'PROJECT PURPOSE',
-
       description:
-        'The goal was to create a digital platform that combines strong visual communication with immersive interaction and a modern technology-driven experience.',
+        'The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.',
 
       media: [
         {
           type: 'image',
-          src: '/images/projects/sparkcloud/purpose-01.webp',
-          alt: 'SparkCloud digital interface',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj apron branding',
         },
         {
-          type: 'video',
-          src: '/videos/projects/sparkcloud/purpose-01.mp4',
-          poster: '/images/projects/sparkcloud/purpose-poster.webp',
-          alt: 'SparkCloud interaction',
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj team',
         },
       ],
     },
 
     achievedGoals: {
       title: 'ACHIEVED GOALS',
-
       description:
-        "The project established a strong digital identity while creating an interactive experience that communicates the agency's capabilities.",
+        'The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.',
 
       points: [
-        'Created a distinctive digital identity.',
-        'Introduced interactive visual storytelling.',
-        'Improved user engagement.',
-        'Built a responsive experience.',
-        'Combined strategy, design and technology.',
+        'Created a distinctive visual identity.',
+        'Built a consistent digital brand experience.',
+        'Improved the presentation of the brand story.',
+        'Created a responsive and engaging experience.',
+        'Connected the physical and digital brand presence.',
       ],
     },
 
-    additionalMedia: [],
+    additionalMedia: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-01.webp',
+        alt: 'The Lyadh Ganj gallery',
+      },
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-02.webp',
+        alt: 'The Lyadh Ganj branding',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/gallery-01.mp4',
+        poster: '/images/projects/lyadh-ganj/gallery-video.webp',
+        alt: 'The Lyadh Ganj project video',
+      },
+    ],
+  },
+
+  {
+    id: '03',
+    slug: 'the-lyadh-ganj',
+
+    title: 'The Lyadh Ganj',
+
+    subtitle: 'RESTAURANT & BRAND EXPERIENCE',
+
+    service: 'Design & Development',
+    industry: 'Restaurant',
+    year: '2026',
+
+    liveUrl: 'https://thelyadhganj.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/lyadh-ganj/hero.webp',
+      alt: 'The Lyadh Ganj restaurant',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality.',
+    },
+
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/media-01.webp',
+        alt: 'The Lyadh Ganj interior',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
+        poster: '/images/projects/lyadh-ganj/video-poster.webp',
+        alt: 'The Lyadh Ganj brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj apron branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj team',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.',
+
+      points: [
+        'Created a distinctive visual identity.',
+        'Built a consistent digital brand experience.',
+        'Improved the presentation of the brand story.',
+        'Created a responsive and engaging experience.',
+        'Connected the physical and digital brand presence.',
+      ],
+    },
+
+    additionalMedia: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-01.webp',
+        alt: 'The Lyadh Ganj gallery',
+      },
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-02.webp',
+        alt: 'The Lyadh Ganj branding',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/gallery-01.mp4',
+        poster: '/images/projects/lyadh-ganj/gallery-video.webp',
+        alt: 'The Lyadh Ganj project video',
+      },
+    ],
+  },
+
+  {
+    id: '04',
+    slug: 'the-lyadh-ganj',
+
+    title: 'The Lyadh Ganj',
+
+    subtitle: 'RESTAURANT & BRAND EXPERIENCE',
+
+    service: 'Design & Development',
+    industry: 'Restaurant',
+    year: '2026',
+
+    liveUrl: 'https://thelyadhganj.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/lyadh-ganj/hero.webp',
+      alt: 'The Lyadh Ganj restaurant',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality.',
+    },
+
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/media-01.webp',
+        alt: 'The Lyadh Ganj interior',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
+        poster: '/images/projects/lyadh-ganj/video-poster.webp',
+        alt: 'The Lyadh Ganj brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj apron branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj team',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.',
+
+      points: [
+        'Created a distinctive visual identity.',
+        'Built a consistent digital brand experience.',
+        'Improved the presentation of the brand story.',
+        'Created a responsive and engaging experience.',
+        'Connected the physical and digital brand presence.',
+      ],
+    },
+
+    additionalMedia: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-01.webp',
+        alt: 'The Lyadh Ganj gallery',
+      },
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-02.webp',
+        alt: 'The Lyadh Ganj branding',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/gallery-01.mp4',
+        poster: '/images/projects/lyadh-ganj/gallery-video.webp',
+        alt: 'The Lyadh Ganj project video',
+      },
+    ],
+  },
+
+  {
+    id: '05',
+    slug: 'the-lyadh-ganj',
+
+    title: 'The Lyadh Ganj',
+
+    subtitle: 'RESTAURANT & BRAND EXPERIENCE',
+
+    service: 'Design & Development',
+    industry: 'Restaurant',
+    year: '2026',
+
+    liveUrl: 'https://thelyadhganj.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/lyadh-ganj/hero.webp',
+      alt: 'The Lyadh Ganj restaurant',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'The Lyadh Ganj is a distinctive food and hospitality brand built around a strong visual identity, memorable customer experience, and a digital presence designed to communicate its personality.',
+    },
+
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/media-01.webp',
+        alt: 'The Lyadh Ganj interior',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
+        poster: '/images/projects/lyadh-ganj/video-poster.webp',
+        alt: 'The Lyadh Ganj brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a cohesive digital experience that reflects the personality of The Lyadh Ganj while presenting its products, environment, and brand story in a clear and engaging way.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj apron branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          alt: 'The Lyadh Ganj team',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The final experience brings together visual storytelling, strong branding, intuitive digital presentation, and a consistent design language across the project.',
+
+      points: [
+        'Created a distinctive visual identity.',
+        'Built a consistent digital brand experience.',
+        'Improved the presentation of the brand story.',
+        'Created a responsive and engaging experience.',
+        'Connected the physical and digital brand presence.',
+      ],
+    },
+
+    additionalMedia: [
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-01.webp',
+        alt: 'The Lyadh Ganj gallery',
+      },
+      {
+        type: 'image',
+        src: '/images/projects/lyadh-ganj/gallery-02.webp',
+        alt: 'The Lyadh Ganj branding',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/lyadh-ganj/gallery-01.mp4',
+        poster: '/images/projects/lyadh-ganj/gallery-video.webp',
+        alt: 'The Lyadh Ganj project video',
+      },
+    ],
   },
 ]

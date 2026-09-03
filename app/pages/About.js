@@ -41,7 +41,7 @@ const About = () => {
           <div
             className="absolute flex-col text-white gap-5 inset-0 flex items-center justify-center will-change-[filter,opacity,transform]"
           >
-            <span className="uppercase text-white/80">ui/ux design</span>
+            <span className="uppercase text-white/80">About</span>
             <h2 className='text-6xl md:text-6xl lg:text-[200px] font-medium font-mona-bold uppercase text-center'>Digital <br /><span className='text-[#828282]'>Agency</span></h2>
             <h3 className=" text-lg md:text-xl lg:text-3xl font-medium">
               We Add Spark to Your Brand

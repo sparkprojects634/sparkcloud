@@ -59,8 +59,6 @@ const Contact = () => {
                     referrerPolicy="strict-origin-when-cross-origin"
                 />
             </section>
-
-            <RevealSection />
         </>
     )
 }

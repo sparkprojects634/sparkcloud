@@ -49,8 +49,8 @@ const Hero = () => {
     })
 
     gsap.to(logoRef.current, {
-      scale: 0.8,
-      y: -350,
+      scale: 0.5,
+      y: -380,
       x: -850,
       ease: 'none',
 
@@ -151,7 +151,7 @@ const Hero = () => {
         <Image
           src='/images/logo.svg'
           alt='Hero-Image'
-          width={100}
+          width={150}
           height={100}
           className='z-10'
           fetchPriority='high'
