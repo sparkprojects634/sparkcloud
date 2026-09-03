@@ -51,8 +51,9 @@ const Hero = () => {
     gsap.to(logoRef.current, {
       scale: 0.5,
       y: -380,
-      x: -850,
+      x: -900,
       ease: 'none',
+      opacity: 0,
 
       scrollTrigger: {
         trigger: logoRef.current,
