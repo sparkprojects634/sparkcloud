@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import AnimatedButton from '../components/AnimatedButton'
 
 const sections = [
     { id: 'information-we-collect', number: '01', title: 'Information We Collect' },
@@ -60,7 +61,7 @@ function BulletList({
                     key={item}
                     className="flex items-start gap-3 text-[15px] leading-7 text-black/60 md:text-base"
                 >
-                    <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#287CF5]" />
+                    <span className="mt-2.75 h-1.5 w-1.5 shrink-0 rounded-full bg-[#287CF5]" />
                     <span>{item}</span>
                 </li>
             ))}
@@ -81,15 +82,15 @@ const page = () => {
     return (
         <>
             {/* Background glow */}
-            <div className="pointer-events-none fixed inset-0 -z-0 overflow-hidden">
+            <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
                 <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-[#287CF5]/10 blur-[140px]" />
 
-                <div className="absolute right-[-10rem] top-[35rem] h-[30rem] w-[30rem] rounded-full bg-[#287CF5]/8 blur-[160px]" />
+                <div className="absolute -right-40 top-140 h-120 w-120 rounded-full bg-[#287CF5]/8 blur-[160px]" />
             </div>
 
             {/* Hero */}
             <section className="relative border-b border-white/10">
-                <div className="mx-auto w-full max-w-350 px-6 pt-28 md:px-10 md:pt-40">
+                <div className="mx-auto w-full max-w-350 px-6 pt-18 md:px-10 md:pt-25">
 
                     <div className="max-w-5xl">
 
@@ -116,7 +117,7 @@ const page = () => {
 
                         {/* Desktop navigation */}
                         <aside className="hidden lg:block">
-                            <div className="sticky top-10 rounded-3xl border border-white/10 bg-white/[0.03] p-5 backdrop-blur-xl">
+                            <div className="sticky top-10 rounded-3xl border border-white/10 bg-white/3 p-5 backdrop-blur-xl">
 
                                 <p className="mb-5 px-3 text-[10px] font-semibold uppercase tracking-[0.22em] text-black/35">
                                     Table of Contents
@@ -180,7 +181,7 @@ const page = () => {
                                 {/* 01 */}
                                 <article
                                     id="information-we-collect"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="01"
@@ -228,7 +229,7 @@ const page = () => {
                                 {/* 02 */}
                                 <article
                                     id="how-we-use"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="02"
@@ -255,7 +256,7 @@ const page = () => {
                                 {/* 03 */}
                                 <article
                                     id="cookies-analytics"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="03"
@@ -284,7 +285,7 @@ const page = () => {
                                 {/* 04 */}
                                 <article
                                     id="data-sharing"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="04"
@@ -312,7 +313,7 @@ const page = () => {
                                 {/* 05 */}
                                 <article
                                     id="data-retention"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="05"
@@ -336,7 +337,7 @@ const page = () => {
                                 {/* 06 */}
                                 <article
                                     id="data-security"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="06"
@@ -358,7 +359,7 @@ const page = () => {
                                 {/* 07 */}
                                 <article
                                     id="international-transfers"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="07"
@@ -381,7 +382,7 @@ const page = () => {
                                 {/* 08 */}
                                 <article
                                     id="your-rights"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="08"
@@ -412,7 +413,7 @@ const page = () => {
                                 {/* 09 */}
                                 <article
                                     id="childrens-privacy"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="09"
@@ -433,7 +434,7 @@ const page = () => {
                                 {/* 10 */}
                                 <article
                                     id="third-party-services"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="10"
@@ -451,7 +452,7 @@ const page = () => {
                                 {/* 11 */}
                                 <article
                                     id="changes"
-                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/[0.025] p-7 md:p-10"
+                                    className="scroll-mt-10 rounded-[28px] border border-white/10 bg-white/2.5 p-7 md:p-10"
                                 >
                                     <SectionHeading
                                         number="11"
@@ -474,7 +475,7 @@ const page = () => {
                                 <div className="flex flex-col gap-7 md:flex-row md:items-center md:justify-between">
 
                                     <div>
-                                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#287CF5]">
+                                        <p className="text-[10px] font-semibold uppercase tracking-[0.22em]">
                                             Privacy Questions?
                                         </p>
 
@@ -490,12 +491,7 @@ const page = () => {
                                         </p>
                                     </div>
 
-                                    <Link
-                                        href="/contact"
-                                        className="inline-flex shrink-0 items-center justify-center rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-black transition hover:bg-[#287CF5] hover:text-black"
-                                    >
-                                        Contact Us
-                                    </Link>
+                                    <AnimatedButton text='Contact' href='/contact' theme='dark'/>
 
                                 </div>
 

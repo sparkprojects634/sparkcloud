@@ -34,7 +34,7 @@ const Header = () => {
       <header className="fixed left-0 top-0 z-50 mx-auto w-full">
         {/* Background */}
         <div
-          className={`pointer-events-none absolute mx-5 my-2 rounded-full inset-x-0 top-2 -z-10 h-18 bg-black/80 backdrop-blur-sm transition-opacity duration-800 ease-in-out ${scrolled
+          className={`pointer-events-none absolute mx-5 my-2 rounded-full inset-x-0 top-2 -z-10 h-18 bg-black/50 backdrop-blur-sm transition-opacity duration-800 ease-in-out ${scrolled
             ? 'opacity-100'
             : 'opacity-0'
             }`}
@@ -50,7 +50,7 @@ const Header = () => {
             <Image
               src='/images/logo.svg'
               alt='Hero-Image'
-              width={60}
+              width={50}
               height={100}
               className='z-10'
               fetchPriority='high'
@@ -70,7 +70,7 @@ const Header = () => {
             <Image
               src='/images/logo.svg'
               alt='Hero-Image'
-              width={80}
+              width={60}
               height={100}
               className='z-10'
               fetchPriority='high'

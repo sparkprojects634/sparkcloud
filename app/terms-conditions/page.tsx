@@ -59,7 +59,7 @@ function BulletList({ items }: { items: string[] }) {
                     key={item}
                     className="flex items-start gap-3 text-[15px] leading-7 text-black/60 md:text-base"
                 >
-                    <span className="mt-[11px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#287CF5]" />
+                    <span className="mt-2.75 h-1.5 w-1.5 shrink-0 rounded-full bg-[#287CF5]" />
                     <span>{item}</span>
                 </li>
             ))}
@@ -83,7 +83,7 @@ const page = () => {
             </div>
 
             <section className="relative border-b border-white/10">
-                <div className="mx-auto w-full max-w-350 px-6 pt-28 md:px-10 md:pt-40">
+                <div className="mx-auto w-full max-w-350 px-6 pt-18 md:px-10 md:pt-25">
 
                     <div className="max-w-4xl">
                         <h1 className="font-mona-bold text-[clamp(3.5rem,8vw,8rem)] font-bold uppercase leading-[0.82]">

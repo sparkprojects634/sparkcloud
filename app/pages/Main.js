@@ -38,7 +38,7 @@ const Home = () => {
         <GrowthSection />
       </section>
 
-      <section className="py-6 lg:py-10 bg-black rounded-b-4xl">
+      <section className="-mt-60 md:-mt-30 lg:mt-0 py-6 lg:py-10 bg-black rounded-b-4xl">
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
           <SubHeadingMarquee text="OUR PORTFOLIO" color="white" />
           <div className="flex justify-between items-end py-6">
