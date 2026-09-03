@@ -40,7 +40,7 @@ const Media = ({
             width={1800}
             height={1200}
             unoptimized
-            className={`h-full w-full object-cover ${className}`}
+            className={`h-full w-full object-contain ${className}`}
         />
     )
 }
@@ -100,12 +100,12 @@ const ProjectSingle = ({
 
     return (
         <main className="bg-[#F5F5F5] text-black">
-            
+
             {/* =================================================
                 HERO
             ================================================= */}
 
-            <section className="mx-auto w-full max-w-425 px-4 pt-28 md:px-8 md:pt-32 lg:pt-36">
+            <section className="mx-auto w-full max-w-350 px-4 pt-20 md:px-8 md:pt-32 lg:pt-25">
                 <div className="grid items-end gap-8 lg:grid-cols-[0.8fr_1.2fr]">
                     {/* LEFT */}
                     <div className="flex h-full flex-col justify-between">
@@ -129,7 +129,7 @@ const ProjectSingle = ({
 
 
                     {/* HERO */}
-                    <div className="group relative lg:aspect-16/10 overflow-hidden rounded-3xl bg-[#DDD] md:rounded-[30px]">
+                    <div className="group relative lg:aspect-16/10 overflow-hidden rounded-3xl md:rounded-[30px]">
                         <Media
                             media={project.hero}
                             className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
@@ -215,7 +215,7 @@ const ProjectSingle = ({
             ================================================= */}
 
             {(media01 || media02) && (
-                <section className="mx-auto w-full max-w-425 px-4 py-8 md:px-8 md:py-10">
+                <section className="mx-auto w-full max-w-350 px-4 py-8 md:px-8 md:py-10">
 
                     <div className="w-auto">
                         {media01 && (
@@ -239,7 +239,7 @@ const ProjectSingle = ({
             ================================================= */}
 
             {project.projectPurpose && (
-                <section className="mx-auto w-full max-w-425 px-4 py-10 md:px-8 md:py-16 lg:py-20">
+                <section className="mx-auto w-full max-w-350 px-4 py-10 md:px-8 md:py-16 lg:py-20">
                     <div className="grid gap-8 lg:grid-cols-[1fr_1fr]">
                         {/* TEXT */}
                         <div className='flex flex-col justify-between h-full'>
@@ -251,7 +251,7 @@ const ProjectSingle = ({
                             </div>
 
                             {purpose01 && (
-                                <div className="group relative aspect-video overflow-hidden rounded-[20px] bg-[#DDD]">
+                                <div className="group relative aspect-video overflow-hidden rounded-[20px] ">
                                     <Media
                                         media={purpose01}
                                         className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
@@ -263,7 +263,7 @@ const ProjectSingle = ({
                         {/* MEDIA */}
                         <div className="">
                             {purpose02 && (
-                                <div className="group relative aspect-square overflow-hidden rounded-[20px] bg-[#DDD]">
+                                <div className="group relative aspect-square overflow-hidden rounded-[20px] ">
                                     <Media
                                         media={purpose02}
                                         className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
@@ -283,7 +283,7 @@ const ProjectSingle = ({
             ================================================= */}
 
             {project.achievedGoals && (
-                <section className="mx-auto w-full max-w-425 border-t border-black/10 px-4 py-10 md:px-8 md:py-16">
+                <section className="mx-auto w-full max-w-350 border-t border-black/10 px-4 py-10 md:px-8 md:py-16">
 
                     <div className="grid gap-8 lg:grid-cols-[0.35fr_1fr]">
 
@@ -348,7 +348,7 @@ const ProjectSingle = ({
             ================================================= */}
 
             {nextProject && (
-                <section className="mx-auto w-full max-w-425 px-0 py-6 md:px-0 md:py-10">
+                <section className="mx-auto w-full max-w-350 px-0 py-6 md:px-0 md:py-10">
 
                     <div className="relative overflow-hidden rounded-[28px] bg-[#101010] px-5 py-16 text-white md:rounded-[36px] md:px-10 md:py-24 lg:py-32">
 

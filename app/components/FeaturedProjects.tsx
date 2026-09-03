@@ -8,7 +8,7 @@ const FeaturedProjects = () => {
   return (
     <section className="relative bg-black py-10">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-        {projects.map((project, index) => (
+        {projects.slice(0, 4).map((project, index) => (
           <ProjectCard
             key={project.id}
             project={project}

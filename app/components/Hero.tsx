@@ -50,7 +50,7 @@ const Hero = () => {
 
     gsap.to(logoRef.current, {
       scale: 0.5,
-      y: -380,
+      y: -450,
       x: -900,
       ease: 'none',
       opacity: 0,
@@ -138,6 +138,7 @@ const Hero = () => {
             loop
             muted
             playsInline
+            preload="auto"
             className="h-full w-full object-cover overflow-hidden rounded-3xl"
           >
             <source
