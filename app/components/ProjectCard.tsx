@@ -50,7 +50,7 @@ const ProjectCard = ({
     return (
         <div
             ref={cardRef}
-            className="sticky top-6 px-4 md:top-8 group"
+            className="sticky top-15 px-4 md:top-25 group"
             style={{
                 zIndex: index + 1,
             }}

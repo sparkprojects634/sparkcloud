@@ -31,8 +31,29 @@ export const projects = [
     id: 5,
     title: 'THE PAWFECT STORY',
     category: 'PET STORE',
-    image: '/images/projects/the-pawfect-story.webp',
-    href: '/projects/the-pawfect-story',
+    image: '/images/projects/thepawfectstory.webp',
+    href: '/projects/thepawfectstory',
+  },
+  {
+    id: 6,
+    title: 'd Naughties World',
+    category: 'EDUCATION',
+    image: '/images/projects/dnaughtiesworld.webp',
+    href: '/projects/dnaughtiesworld',
+  },
+  {
+    id: 7,
+    title: 'USIFA',
+    category: 'Nonprofit',
+    image: '/images/projects/usifa.webp',
+    href: '/projects/usifa',
+  },
+  {
+    id: 8,
+    title: 'Career Runway by Shivani',
+    category: 'Aviation and Career Training',
+    image: '/images/projects/careerrunwaybyshivani.webp',
+    href: '/projects/careerrunwaybyshivani',
   },
 ]
 
@@ -179,6 +200,12 @@ export const projectsSingle = [
         src: '/images/projects/netcall/website.webp',
         alt: 'Netcall website',
       },
+      {
+        type: 'video',
+        src: '/videos/projects/netcall/netcall.webm',
+        poster: '/images/projects/netcall/video-poster.webp',
+        alt: 'The Netcall brand experience',
+      },
     ],
 
     projectPurpose: {
@@ -245,13 +272,13 @@ export const projectsSingle = [
     media: [
       {
         type: 'image',
-        src: '/images/projects/clubdegolf.webp',
-        alt: 'Club de Golf interior',
+        src: '/images/projects/clubdegolf/media-01.webp',
+        alt: 'The Club de Golf interior',
       },
       {
         type: 'video',
-        src: '/images/projects/clubdegolf/clubdegolf.webm',
-        poster: '/images/projects/clubdegolf.webp',
+        src: '/videos/projects/clubdegolf/clubdegolf.webm',
+        poster: '/images/projects/clubdegolf/video-poster.webp',
         alt: 'clubdegolf brand experience',
       },
     ],
@@ -322,6 +349,12 @@ export const projectsSingle = [
         src: '/images/projects/dbound/media-01.webp',
         alt: 'dbound media',
       },
+      {
+        type: 'video',
+        src: '/videos/projects/dbound/dbound.webm',
+        poster: '/images/projects/dbound/video-poster.webp',
+        alt: 'dbound brand experience',
+      },
     ],
 
     projectPurpose: {
@@ -391,8 +424,8 @@ export const projectsSingle = [
       },
       {
         type: 'video',
-        src: '/images/projects/thepawfectstory/thepawfectstory.webm',
-        poster: '/images/projects/the-pawfect-story.webp',
+        src: '/videos/projects/thepawfectstory/thepawfectstory.webm',
+        poster: '/images/projects/thepawfectstory/video-poster.webp',
         alt: 'the pawfect story mockup',
       },
     ],
@@ -406,12 +439,12 @@ export const projectsSingle = [
         {
           type: 'image',
           src: '/images/projects/thepawfectstory/website.webp',
-          alt: 'the pawfect story branding',
+          alt: 'the pawfect story website',
         },
         {
           type: 'image',
           src: '/images/projects/thepawfectstory/branding.webp',
-          alt: 'the pawfect story website',
+          alt: 'the pawfect story branding',
         },
       ],
     },
@@ -428,6 +461,226 @@ export const projectsSingle = [
         'Optimised website structure and content to support better search visibility.',
         'Integrated an informative blog section to support SEO and attract relevant organic traffic.',
         'Built a polished online storefront that reflects the brand and connects better with pet parents.',
+      ],
+    },
+  },
+  {
+    id: '06',
+    slug: 'dnaughties-world',
+
+    title: 'd Naughties World',
+
+    subtitle: 'Education',
+
+    service: 'Design & Development',
+    industry: 'Education',
+    year: '2025',
+
+    liveUrl: 'https://dnaughtiesworld.co.in',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/dnaughtiesworld/hero.webp',
+      alt: 'd Naughties World PreSchool',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'd Naughties World is a modern preschool and kids activity centre focused on creating a safe, engaging and joyful environment for early childhood learning and development.',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/dnaughtiesworld/preschool.webp',
+        alt: 'd Naughties World Preschool',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/dnaughtiesworld/dnaughtiesworld.webm',
+        poster: '/images/projects/dnaughtiesworld/video-poster.webp',
+        alt: 'd Naughties World brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project aimed at creating a bright, intuitive and responsive website that clearly presents the preschool&apos;s programs, facilities and learning approach. The website was structured for easy navigation while keeping SEO-friendly content and page architecture at its core.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/dnaughtiesworld/mobile.webp',
+          alt: 'd Naughties World Mobile Branding',
+        },
+        {
+          type: 'video',
+          src: '/videos/projects/dnaughtiesworld/website.webm',
+          poster: '/images/projects/dnaughtiesworld/video-poster.webp',
+          alt: 'd naughties world website',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'A visually engaging and user-friendly digital experience was created through thoughtful design, intuitive navigation and content that brings the D Naughties World experience to life.',
+
+      points: [
+        'Created a professional digital presence that strengthens the brand online.',
+        'Presented programs, facilities and offerings in a simple, engaging way.',
+        'Designed a seamless website experience across desktop, tablet and mobile.',
+        'Built a search-friendly content and website structure for better visibility.',
+        'Made it easier for parents to find information and get in touch.',
+      ],
+    },
+  },
+
+  {
+    id: '07',
+    slug: 'usifa',
+
+    title: 'US INDIA FRIENDSHIP ALLIANCE',
+
+    subtitle: 'Nonprofit',
+
+    service: 'Design & Development',
+    industry: 'Nonprofit',
+    year: '2026',
+
+    liveUrl: 'https://usifa.org',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/usifa/hero.webp',
+      alt: 'usifa banner',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'USIFA is a nonprofit organization that strengthens the social and economic ties between the United States and India through partnerships, community initiatives and shared opportunities.',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/usifa/website.webm',
+        alt: 'USIFA Website',
+      },
+
+      {
+        type: 'video',
+        src: '/videos/projects/usifa/clubdegolf.webm',
+        poster: '/images/projects/usifa/video-poster.webp',
+        alt: 'USIFA brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a modern, professional and easy-to-navigate digital presence for USIFA. We worked across web design, web development and SEO, structuring the website to clearly communicate USIFA’s mission, initiatives, partnerships and impact while making important information easier to discover and explore.',
+
+      media: [
+        {
+          type: 'video',
+          src: '/videos/projects/usifa/branding.webm',
+          poster: '/images/projects/usifa/video-poster.webp',
+          alt: 'usifa branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/usifa/mobile.webp',
+          alt: 'usifa mobile branding',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'USIFA&apos;s digital presence was crafted to communicate its professional identity with clarity, combining a confident visual language, well-organised information and a user-focused experience that makes its expertise easy to discover and engage with.',
+
+      points: [
+        'Created a clean, credible and contemporary website aligned with USIFA&apos;s global positioning.',
+        'Simplified navigation and content structure to help visitors discover USIFA&apos;s work quickly.',
+        'Designed key sections to bring greater visibility to initiatives, partnerships and community impact.',
+        'Implemented an SEO-friendly structure to improve content discoverability and organic reach.',
+        'Built a flexible digital platform that allows USIFA to continuously add initiatives, updates and resources.',
+      ],
+    },
+  },
+  {
+    id: '08',
+    slug: 'career-runway-by-shivani',
+
+    title: 'Career Runway by Shivani',
+
+    subtitle: 'Aviation and Career Training',
+
+    service: 'Design & Development',
+    industry: 'Aviation and Career Training',
+    year: '2026',
+
+    liveUrl: 'https://careerrunwaybyshivani.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/careerrunwaybyshivani/hero.webp',
+      alt: 'career runway by shivani logo',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'Career Runway by Shivani is an aviation career training platform designed to help aspiring cabin crew professionals build the skills, confidence, and industry readiness needed to pursue a career in aviation.',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/careerrunwaybyshivani/website.webp',
+        alt: 'career runway by shivani website',
+      },
+      {
+        type: 'video',
+        src: '/videos/projects/careerrunwaybyshivani/careerrunwaybyshivani.webm',
+        poster: '/images/projects/careerrunwaybyshivani/video-poster.webp',
+        alt: 'career runway by shivani brand experience',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'We developed a modern, engaging website that reflects the professional and aspirational nature of the aviation industry. The focus was on creating a clean user experience, intuitive navigation, clear course presentation, and strong calls-to-action to improve online visibility and make the platform easier to discover through search.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/careerrunwaybyshivani/branding.webp',
+          alt: 'career runway by shivani branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/careerrunwaybyshivani/website.webp',
+          alt: 'career runway by shivani website',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The project delivered a modern, responsive, and user-friendly website with a strong visual identity. Through intuitive web design, seamless development, and an SEO-focused structure, we improved course visibility, strengthened online presence, and created a smoother journey for prospective students.',
+
+      points: [
+        'Created a polished, aviation-focused visual experience.',
+        'Structured the website for easy access to courses, information, FAQs, and contact options.',
+        'Optimised the website for desktop, tablet, and mobile users.',
+        'Presented training programmes clearly to guide visitors towards relevant courses.',
+        'Added prominent enquiry and application touchpoints to encourage conversions.',
       ],
     },
   },
