@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa"
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa"
 const footerLinks = [
   {
     title: "Company",
@@ -15,10 +15,10 @@ const footerLinks = [
   {
     title: "Quick Links",
     links: [
-      { label: "DESIGN", href: "/" },
-      { label: "DEVELOPMENT", href: "/about" },
-      { label: "SEO/ AEO/ GEO", href: "/projects" },
-      { label: "SEM/ SMM/ SMO", href: "/contact" },
+      { label: "DESIGN", href: "/services/design" },
+      { label: "DEVELOPMENT", href: "/services/development" },
+      { label: "SEO/ AEO/ GEO", href: "/services/seo-aeo-geo" },
+      { label: "SEM/ SMM/ SMO", href: "/services/sem-smm-smo" },
     ],
   },
 ]
@@ -26,7 +26,7 @@ const footerLinks = [
 const legalLinks = [
   {
     label: "Terms & Conditions",
-    href: "/terms-and-condition",
+    href: "/terms-condition",
   },
   {
     label: "Privacy Policy",
@@ -37,17 +37,46 @@ const legalLinks = [
 const socialLinks = [
   {
     icon: FaFacebookF,
-    href: "https://facebook.com",
+    href: "https://www.facebook.com/profile.php?id=61559918630209",
   },
   {
     icon: FaLinkedinIn,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/company/sparkcloud/?viewAsMember=true",
   },
   {
     icon: FaInstagram,
-    href: "https://instagram.com",
+    href: "https://www.instagram.com/sparkcloudofficial/",
   },
 ]
+
+const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault()
+
+  const formData = new FormData(e.currentTarget)
+  const email = formData.get("email") as string
+
+  try {
+    const res = await fetch("/api/subscribe-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email }),
+    })
+
+    const data = await res.json()
+
+    if (data.success) {
+      alert("Subscribed successfully."),
+      (e.target as HTMLFormElement).reset()
+    } else {
+      alert("Something went wrong.")
+    }
+  } catch (error) {
+    console.error(error)
+    alert("Unable to subscribe.")
+  }
+}
 
 const Footer = () => {
   return (
@@ -69,24 +98,24 @@ const Footer = () => {
             </p>
 
             <div className="space-y-2">
-              <a
+              <Link
                 href="tel:+917439381155"
                 className="block font-semibold transition hover:opacity-70"
               >
                 +91 74393 81155
-              </a>
+              </Link>
 
-              <a
+              <Link
                 href="mailto:info@sparkcloud.us"
                 className="block font-semibold transition hover:opacity-70"
               >
                 info@sparkcloud.us
-              </a>
+              </Link>
             </div>
 
             <div className="flex gap-4">
               {socialLinks.map(({ icon: Icon, href }) => (
-                <a
+                <Link
                   key={href}
                   href={href}
                   target="_blank"
@@ -94,7 +123,7 @@ const Footer = () => {
                   className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 hover:scale-110"
                 >
                   <Icon size={18} />
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -123,9 +152,10 @@ const Footer = () => {
               Sign up for our newsletter today.
             </h3>
 
-            <form className="flex overflow-hidden rounded-xl border-2 border-slate-900 bg-[#01091d]">
+            <form className="flex overflow-hidden rounded-xl border-2 border-slate-900 bg-[#01091d]" onSubmit={handleSubscribe}>
               <input
                 type="email"
+                name="email"
                 placeholder="Your mail"
                 className="flex-1 bg-transparent px-4 py-3 text-white outline-none placeholder:text-gray-500"
               />
@@ -145,7 +175,7 @@ const Footer = () => {
       <div className="mt-12 rounded-t-4xl bg-black">
         <div className="mx-auto flex w-full max-w-350 flex-col gap-6 px-6 py-6 text-white lg:flex-row lg:items-center lg:justify-between lg:px-8">
           <p className="text-sm">
-           Copyright © 2026 All rights reserved
+            Copyright © 2026 All rights reserved
           </p>
 
           <div className="flex flex-wrap gap-6">

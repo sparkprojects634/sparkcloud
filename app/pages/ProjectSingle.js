@@ -5,6 +5,8 @@ import Link from 'next/link'
 
 import { projectsSingle } from '../data/projects'
 import SubHeadingMarquee from '../components/SubHeadingMarquee'
+import AnimatedTextLink from '../components/AnimatedTextLink'
+import AnimatedButton from '../components/AnimatedButton'
 
 /* =========================================================
    MEDIA
@@ -388,38 +390,10 @@ const ProjectSingle = ({
 
                         <div className="mt-12 flex flex-col items-center justify-center gap-8 sm:flex-row">
 
-                            <Link
-                                href="/projects"
-                                className="group relative text-base uppercase"
-                            >
-
-                                <span>
-                                    ALL PROJECTS ↗
-                                </span>
-
-                                <span className="absolute bottom-0 left-0 h-px w-full origin-left bg-white transition-transform duration-500 group-hover:scale-x-0" />
-
-                            </Link>
+                            <AnimatedTextLink text="All Projects" href={`/projects`} />
 
 
-                            <Link
-                                href={`/projects/${nextProject.slug}`}
-                                className="group flex min-w-55 items-center justify-center overflow-hidden rounded-full bg-white px-10 py-5 text-black"
-                            >
-
-                                <span className="relative block h-[1.2em] overflow-hidden text-base uppercase">
-
-                                    <span className="block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
-                                        NEXT
-                                    </span>
-
-                                    <span className="absolute left-0 top-full block transition-transform duration-500 ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full">
-                                        NEXT
-                                    </span>
-
-                                </span>
-
-                            </Link>
+                            <AnimatedButton text="Next" href={`/projects/${nextProject.slug}`} theme='light' />
 
                         </div>
 

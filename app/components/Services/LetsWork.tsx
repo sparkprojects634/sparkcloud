@@ -4,6 +4,7 @@ import { useLayoutEffect, useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import AnimatedTextLink from '../AnimatedTextLink'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -304,19 +305,14 @@ const LetsWork = () => {
                     className="max-w-sm pt-1 lg:pt-2"
                 >
 
-                    <p className="text-md font-medium leading-[1.35] text-black md:text-base lg:text-lg">
+                    <p className="text-md mb-4 font-medium leading-[1.35] text-black md:text-base lg:text-lg">
                         Work with us if average isn't your thing.
                         <br />
                         Drop it, we'll build it!
                     </p>
 
-                    <a
-                        href="/contact"
-                        className="mt-6 inline-flex items-center gap-2 text-sm uppercase tracking-wide text-black transition-opacity duration-300 hover:opacity-50"
-                    >
-                        Say Hello
-                        <span>↗</span>
-                    </a>
+                    <AnimatedTextLink text="Say Hello" href="/contact-us" />
+
 
                 </div>
 

@@ -3,8 +3,8 @@ import type { Service } from './serviceTypes'
 export const services = [
   {
     id: "01",
-    title: "UI/UX",
-    slug: "/services/ui-ux",
+    title: "design",
+    slug: "/services/design",
 
     description:
       "Crafting intuitive digital experiences that blend functionality with aesthetics to engage users and drive seamless interactions.",

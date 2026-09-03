@@ -152,17 +152,19 @@ const BetterWebsite = () => {
 
 const WebDesign = () => {
     const [active, setActive] = useState(1)
+    const [menuOpen, setMenuOpen] = useState(false)
 
     return (
         <main className="bg-[#040404]">
 
-            <header className="w-full">
+            <header className="relative z-50 w-full">
                 <div className="mx-auto flex h-25 w-full max-w-350 items-center justify-between px-6 lg:px-10">
 
-
+                    {/* Logo */}
                     <Link
                         href="#"
                         className="shrink-0"
+                        onClick={() => setMenuOpen(false)}
                     >
                         <Image
                             src="/images/sparkcloud-logo-white.svg"
@@ -174,41 +176,79 @@ const WebDesign = () => {
                         />
                     </Link>
 
-
-                    {/* Navigation */}
-
+                    {/* Desktop Navigation */}
                     <nav className="hidden items-center gap-9 lg:flex">
-
-                        {webDesignNavigation.map((item) => (
+                        {webDesignNavigation.map((item, index) => (
                             <Link
                                 key={item.label}
                                 href={item.href}
-                                className={`text-[15px] font-semibold transition-colors duration-300 ${item.label === ''
-                                    ? 'text-[#0088FF]'
-                                    : 'text-white/80 hover:text-white'
+                                className={`text-[15px] font-semibold transition-colors duration-300 ${index === 0
+                                        ? 'text-[#0088FF]'
+                                        : 'text-white/80 hover:text-white'
                                     }`}
                             >
                                 {item.label}
                             </Link>
                         ))}
-
                     </nav>
 
-
-                    {/* Mobile Menu */}
-
+                    {/* Mobile Menu Button */}
                     <button
                         type="button"
-                        aria-label="Open menu"
-                        className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 lg:hidden"
+                        aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+                        aria-expanded={menuOpen}
+                        onClick={() => setMenuOpen((prev) => !prev)}
+                        className="relative z-60 flex h-11 w-11 items-center justify-center rounded-full border border-white/20 lg:hidden"
                     >
-                        <span className="flex w-5 flex-col gap-1.5">
-                            <span className="h-px w-full bg-white" />
-                            <span className="h-px w-full bg-white" />
-                            <span className="h-px w-full bg-white" />
-                        </span>
-                    </button>
+                        <span
+                            className={`absolute h-px w-5 bg-white transition-all duration-300 ${menuOpen
+                                    ? 'rotate-45'
+                                    : '-translate-y-1.5'
+                                }`}
+                        />
 
+                        <span
+                            className={`absolute h-px w-5 bg-white transition-all duration-300 ${menuOpen
+                                    ? 'opacity-0'
+                                    : 'opacity-100'
+                                }`}
+                        />
+
+                        <span
+                            className={`absolute h-px w-5 bg-white transition-all duration-300 ${menuOpen
+                                    ? '-rotate-45'
+                                    : 'translate-y-1.5'
+                                }`}
+                        />
+                    </button>
+                </div>
+
+                {/* Mobile Menu */}
+                <div
+                    className={`absolute left-0 top-full w-full px-4 transition-all duration-500 lg:hidden ${menuOpen
+                            ? 'pointer-events-auto translate-y-0 opacity-100'
+                            : 'pointer-events-none -translate-y-4 opacity-0'
+                        }`}
+                >
+                    <div className="rounded-2xl border border-white/10 bg-[#050505]/95 p-5 shadow-2xl backdrop-blur-xl">
+
+                        <nav className="flex flex-col">
+                            {webDesignNavigation.map((item, index) => (
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    onClick={() => setMenuOpen(false)}
+                                    className={`border-b border-white/10 py-4 text-lg font-semibold transition-colors last:border-b-0 ${index === 0
+                                            ? 'text-[#0088FF]'
+                                            : 'text-white/80 hover:text-white'
+                                        }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
+                        </nav>
+
+                    </div>
                 </div>
             </header>
 
@@ -612,8 +652,8 @@ const WebDesign = () => {
                                     >
                                         <span
                                             className={`text-base font-normal leading-tight transition-colors duration-300 md:text-[17px] ${isActive
-                                                    ? 'text-[#0088FF]'
-                                                    : 'text-white'
+                                                ? 'text-[#0088FF]'
+                                                : 'text-white'
                                                 }`}
                                         >
                                             {item.question}
@@ -621,8 +661,8 @@ const WebDesign = () => {
 
                                         <span
                                             className={`ml-5 text-xl font-light text-white/60 transition-transform duration-300 ${isActive
-                                                    ? 'rotate-45'
-                                                    : 'rotate-0'
+                                                ? 'rotate-45'
+                                                : 'rotate-0'
                                                 }`}
                                         >
                                             +
@@ -634,8 +674,8 @@ const WebDesign = () => {
 
                                     <div
                                         className={`grid transition-all duration-500 ease-out ${isActive
-                                                ? 'grid-rows-[1fr] opacity-100'
-                                                : 'grid-rows-[0fr] opacity-0'
+                                            ? 'grid-rows-[1fr] opacity-100'
+                                            : 'grid-rows-[0fr] opacity-0'
                                             }`}
                                     >
                                         <div className="overflow-hidden">
