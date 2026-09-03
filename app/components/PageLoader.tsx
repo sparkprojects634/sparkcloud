@@ -13,6 +13,7 @@ const PageLoader = () => {
           height={120}
           priority
           className='animate-pulse blur-animate'
+          unoptimized
         />
 
         <div className='w-40 h-0.5 bg-white/10 overflow-hidden rounded-full'>

@@ -55,6 +55,7 @@ const Header = () => {
               className='z-10'
               fetchPriority='high'
               loading='eager'
+              unoptimized
             />
 
             <HamburgerButton
@@ -74,6 +75,7 @@ const Header = () => {
               className='z-10'
               fetchPriority='high'
               loading='eager'
+              unoptimized
             />
 
             <div className="ml-auto flex items-center gap-3">

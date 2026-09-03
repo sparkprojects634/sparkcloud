@@ -37,7 +37,7 @@ export const pillars = [
   {
     id: 3,
     icon: "/images/icons/collaboration.svg",
-    title: "Measurable",
+    title: "Sustainable",
     highlight: "Growth",
     description:
       "We create scalable marketing systems that drive consistent leads, sales, and long-term success.",
