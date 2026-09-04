@@ -175,9 +175,9 @@ export const services = [
             "Our web development services combine modern design, seamless functionality, and responsive technology to create fast, secure, and user-friendly websites. From business websites to custom web solutions, we build digital experiences that strengthen your online presence, engage visitors, and support your business growth.",
 
           media: {
-            type: "video",
-            src: "/services/web-design.webm",
-            alt: "Web design service",
+            type: "image",
+            src: "/services/website-development.webp",
+            alt: "Web development",
           },
         },
 
@@ -190,8 +190,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/ui-ux.webp",
-            alt: "UI UX design service",
+            src: "/services/custom-website.webp",
+            alt: "Custom website development",
           },
         },
 
@@ -203,9 +203,9 @@ export const services = [
             "Your website should be a consistent extension of your brand. We integrate your brand identity, messaging, tone, and visual language into the development process to create a cohesive digital presence. We ensure that your website communicates who you are and builds recognition and trust across every digital touchpoint.",
 
           media: {
-            type: "video",
-            src: "/services/graphics-design.webm",
-            alt: "Graphics design service",
+            type: "image",
+            src: "/services/branding-integration.webp",
+            alt: "Branding integration service",
           },
         },
 
@@ -218,8 +218,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-redesign.webp",
-            alt: "Website redesign service",
+            src: "/services/performance-functionality.webp",
+            alt: "Performance and functionality service",
           },
         },
 

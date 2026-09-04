@@ -27,6 +27,7 @@ const About = () => {
               autoPlay
               loop
               muted
+              preload="auto"
               playsInline
               className="h-full w-full object-cover overflow-hidden rounded-3xl"
             >

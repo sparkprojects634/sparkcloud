@@ -183,11 +183,11 @@ const ProjectSingle = ({
 
                     <div className="w-auto">
                         {media01 && (
-                            <div className="group relative aspect-video lg:aspect-16/7 overflow-hidden rounded-[22px] bg-black">
+                            <div className="relative aspect-video overflow-hidden rounded-[22px]">
 
                                 <Media
                                     media={media01 || media02}
-                                    className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                                    className=""
                                 />
 
                             </div>
@@ -215,10 +215,10 @@ const ProjectSingle = ({
                             </div>
 
                             {purpose01 && (
-                                <div className="group relative aspect-video overflow-hidden rounded-[20px] ">
+                                <div className="group relative aspect-square overflow-hidden rounded-[20px] ">
                                     <Media
                                         media={purpose01}
-                                        className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                                        className=""
                                     />
                                 </div>
                             )}
@@ -227,10 +227,10 @@ const ProjectSingle = ({
                         {/* MEDIA */}
                         <div className="">
                             {purpose02 && (
-                                <div className="group relative aspect-square overflow-hidden rounded-[20px] ">
+                                <div className="relative h-full overflow-hidden rounded-[20px] ">
                                     <Media
                                         media={purpose02}
-                                        className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
+                                        className=""
                                     />
                                 </div>
                             )}

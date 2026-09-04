@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'sparkcloud.in' },
-      { protocol: 'https', hostname: 'admin.sparkcloud.in' },
+      { protocol: 'https', hostname: 'console.sparkcloud.in' },
     ],
   },
 }

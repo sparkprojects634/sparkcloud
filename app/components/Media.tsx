@@ -28,7 +28,7 @@ const Media = ({
                 alt={media.alt || ''}
                 fill
                 sizes="100vw"
-                className={`object-cover  ${className}`}
+                className={`object-contain  ${className}`}
                 unoptimized
             />
         )

@@ -413,11 +413,6 @@ export const projectsSingle = [
     },
     media: [
       {
-        type: 'image',
-        src: '/images/projects/thepawfectstory/media-01.webp',
-        alt: 'The Pawfect Story interior',
-      },
-      {
         type: 'video',
         src: '/images/projects/thepawfectstory/thepawfectstory.webm',
         poster: '/images/projects/thepawfectstory/video-poster.webp',
@@ -641,9 +636,9 @@ export const projectsSingle = [
         'We developed a modern, engaging website that reflects the professional and aspirational nature of the aviation industry. The focus was on creating a clean user experience, intuitive navigation, clear course presentation, and strong calls-to-action to improve online visibility and make the platform easier to discover through search.',
 
       media: [
-                {
+        {
           type: 'image',
-          src: '/images/projects/careerrunwaybyshivani/website.webp',
+          src: '/images/projects/careerrunwaybyshivani/mobile.webp',
           alt: 'career runway by shivani website',
         },
         {

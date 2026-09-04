@@ -8,10 +8,15 @@ import NavButton from './NavButton'
 import HamburgerButton from './HamburgerButton'
 import MobileMenu from './MobileMenu'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+
+  const pathname = usePathname()
+
+  const isHomePage = pathname === '/'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,16 +39,22 @@ const Header = () => {
       <header className="fixed left-0 top-0 z-50 mx-auto w-full">
         {/* Background */}
         <div
-          className={`pointer-events-none absolute mx-5 my-2 rounded-full inset-x-0 top-2 -z-10 h-18 bg-black/50 backdrop-blur-sm transition-opacity duration-800 ease-in-out ${scrolled
-            ? 'opacity-100'
-            : 'opacity-0'
+          className={`pointer-events-none absolute mx-5 my-2 rounded-full inset-x-0 top-2 -z-10 h-18 bg-black/50 backdrop-blur-sm transition-opacity duration-800 ease-in-out ${isHomePage
+              ? scrolled
+                ? 'opacity-100'
+                : 'opacity-0'
+              : 'opacity-100'
             }`}
         />
 
-        <div className={`mx-auto flex items-center justify-between px-3 py-6 lg:px-6 transition-opacity duration-800 ease-in-out ${scrolled
-          ? 'opacity-100'
-          : 'opacity-0'
-          }`}>
+        <div
+          className={`mx-auto flex items-center justify-between px-3 py-6 lg:px-6 transition-opacity duration-800 ease-in-out ${isHomePage
+              ? scrolled
+                ? 'opacity-100'
+                : 'opacity-0'
+              : 'opacity-100'
+            }`}
+        >
 
           {/* Mobile */}
           <div className="ml-auto lg:hidden flex justify-between items-center gap-3 rounded-full px-4 w-full">
