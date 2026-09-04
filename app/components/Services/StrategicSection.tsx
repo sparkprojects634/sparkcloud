@@ -74,7 +74,7 @@ const StrategicSection = ({
 
             // Bold starts from LEFT
             gsap.set(mediaText, {
-                xPercent: -60,
+                xPercent: -25,
                 yPercent: 110,
                 opacity: 0,
             })
@@ -164,7 +164,7 @@ const StrategicSection = ({
                 mediaText,
                 {
                     x: videoWidth + gap,
-                    xPercent: -60,
+                    xPercent: -25,
                     duration: 1,
                     ease: 'power4.inOut',
                 },
@@ -210,15 +210,9 @@ const StrategicSection = ({
                 className="
                     mx-auto
                     w-full
-                    max-w-425
                 "
             >
                 <div className="flex flex-col">
-
-
-                    {/* =====================================================
-                        FIRST LINE
-                    ===================================================== */}
 
                     {service.lines[0] && (
                         <div className="flex items-baseline whitespace-nowrap">

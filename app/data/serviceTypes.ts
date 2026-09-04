@@ -26,6 +26,9 @@ export type ServiceContent = {
 export type Service = {
   id: string
   title: string
+  heading: string
+  subHeading: string
+  subHeading2: string
   slug: string
   description: string
   image: string
