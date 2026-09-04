@@ -8,7 +8,7 @@ export const projects = [
   },
   {
     id: 2,
-    title: 'NETCALL TELE-COMMUNICATION',
+    title: 'NETCALL',
     category: 'TELECOM',
     image: '/images/projects/netcall.webp',
     href: '/projects/netcall',
@@ -32,14 +32,14 @@ export const projects = [
     title: 'THE PAWFECT STORY',
     category: 'PET STORE',
     image: '/images/projects/thepawfectstory.webp',
-    href: '/projects/thepawfectstory',
+    href: '/projects/the-pawfect-story',
   },
   {
     id: 6,
     title: 'd Naughties World',
     category: 'EDUCATION',
     image: '/images/projects/dnaughtiesworld.webp',
-    href: '/projects/dnaughtiesworld',
+    href: '/projects/dnaughties-world',
   },
   {
     id: 7,
@@ -50,10 +50,10 @@ export const projects = [
   },
   {
     id: 8,
-    title: 'Career Runway by Shivani',
+    title: 'CAREER RUNWAY',
     category: 'Aviation and Career Training',
     image: '/images/projects/careerrunwaybyshivani.webp',
-    href: '/projects/careerrunwaybyshivani',
+    href: '/projects/career-runway-by-shivani',
   },
 ]
 
@@ -271,13 +271,8 @@ export const projectsSingle = [
 
     media: [
       {
-        type: 'image',
-        src: '/images/projects/clubdegolf/media-01.webp',
-        alt: 'The Club de Golf interior',
-      },
-      {
         type: 'video',
-        src: '/videos/projects/clubdegolf/clubdegolf.webm',
+        src: '/images/projects/clubdegolf/clubdegolf.webm',
         poster: '/images/projects/clubdegolf/video-poster.webp',
         alt: 'clubdegolf brand experience',
       },
@@ -351,7 +346,7 @@ export const projectsSingle = [
       },
       {
         type: 'video',
-        src: '/videos/projects/dbound/dbound.webm',
+        src: '/images/projects/dbound/dbound.webm',
         poster: '/images/projects/dbound/video-poster.webp',
         alt: 'dbound brand experience',
       },
@@ -424,7 +419,7 @@ export const projectsSingle = [
       },
       {
         type: 'video',
-        src: '/videos/projects/thepawfectstory/thepawfectstory.webm',
+        src: '/images/projects/thepawfectstory/thepawfectstory.webm',
         poster: '/images/projects/thepawfectstory/video-poster.webp',
         alt: 'the pawfect story mockup',
       },
@@ -464,6 +459,7 @@ export const projectsSingle = [
       ],
     },
   },
+
   {
     id: '06',
     slug: 'dnaughties-world',
@@ -495,12 +491,6 @@ export const projectsSingle = [
         src: '/images/projects/dnaughtiesworld/preschool.webp',
         alt: 'd Naughties World Preschool',
       },
-      {
-        type: 'video',
-        src: '/videos/projects/dnaughtiesworld/dnaughtiesworld.webm',
-        poster: '/images/projects/dnaughtiesworld/video-poster.webp',
-        alt: 'd Naughties World brand experience',
-      },
     ],
 
     projectPurpose: {
@@ -510,15 +500,15 @@ export const projectsSingle = [
 
       media: [
         {
+          type: 'video',
+          src: '/images/projects/dnaughtiesworld/website.webm',
+          poster: '/images/projects/dnaughtiesworld/video-poster.webp',
+          alt: 'd Naughties World brand experience',
+        },
+        {
           type: 'image',
           src: '/images/projects/dnaughtiesworld/mobile.webp',
           alt: 'd Naughties World Mobile Branding',
-        },
-        {
-          type: 'video',
-          src: '/videos/projects/dnaughtiesworld/website.webm',
-          poster: '/images/projects/dnaughtiesworld/video-poster.webp',
-          alt: 'd naughties world website',
         },
       ],
     },
@@ -566,15 +556,8 @@ export const projectsSingle = [
     media: [
       {
         type: 'image',
-        src: '/images/projects/usifa/website.webm',
+        src: '/images/projects/usifa/website.webp',
         alt: 'USIFA Website',
-      },
-
-      {
-        type: 'video',
-        src: '/videos/projects/usifa/clubdegolf.webm',
-        poster: '/images/projects/usifa/video-poster.webp',
-        alt: 'USIFA brand experience',
       },
     ],
 
@@ -585,15 +568,15 @@ export const projectsSingle = [
 
       media: [
         {
-          type: 'video',
-          src: '/videos/projects/usifa/branding.webm',
-          poster: '/images/projects/usifa/video-poster.webp',
-          alt: 'usifa branding',
-        },
-        {
           type: 'image',
           src: '/images/projects/usifa/mobile.webp',
           alt: 'usifa mobile branding',
+        },
+        {
+          type: 'video',
+          src: '/images/projects/usifa/branding.webm',
+          poster: '/images/projects/usifa/video-poster.webp',
+          alt: 'USIFA brand experience',
         },
       ],
     },
@@ -612,6 +595,7 @@ export const projectsSingle = [
       ],
     },
   },
+
   {
     id: '08',
     slug: 'career-runway-by-shivani',
@@ -657,15 +641,15 @@ export const projectsSingle = [
         'We developed a modern, engaging website that reflects the professional and aspirational nature of the aviation industry. The focus was on creating a clean user experience, intuitive navigation, clear course presentation, and strong calls-to-action to improve online visibility and make the platform easier to discover through search.',
 
       media: [
+                {
+          type: 'image',
+          src: '/images/projects/careerrunwaybyshivani/website.webp',
+          alt: 'career runway by shivani website',
+        },
         {
           type: 'image',
           src: '/images/projects/careerrunwaybyshivani/branding.webp',
           alt: 'career runway by shivani branding',
-        },
-        {
-          type: 'image',
-          src: '/images/projects/careerrunwaybyshivani/website.webp',
-          alt: 'career runway by shivani website',
         },
       ],
     },

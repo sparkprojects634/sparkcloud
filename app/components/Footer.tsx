@@ -5,18 +5,18 @@ const footerLinks = [
   {
     title: "Company",
     links: [
-      { label: "ABOUT", href: "/about" },
-      { label: "PROJECTS", href: "/projects" },
-      { label: "SERVICES", href: "/services" },
-      { label: "BLOG", href: "/blog" },
-      { label: "CONTACT", href: "/contact" },
+      { label: "About", href: "/about" },
+      { label: "Projects", href: "/projects" },
+      { label: "Services", href: "/services" },
+      { label: "Blog", href: "/blog" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Quick Links",
     links: [
-      { label: "DESIGN", href: "/services/design" },
-      { label: "DEVELOPMENT", href: "/services/development" },
+      { label: "Design", href: "/services/design" },
+      { label: "Development", href: "/services/development" },
       { label: "SEO/ AEO/ GEO", href: "/services/seo-aeo-geo" },
       { label: "SEM/ SMM/ SMO", href: "/services/sem-smm-smo" },
     ],
@@ -131,7 +131,7 @@ const Footer = () => {
           {/* Navigation */}
           {footerLinks.map((group) => (
             <div key={group.title}>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {group.links.map((link) => (
                   <li key={link.label}>
                     <Link

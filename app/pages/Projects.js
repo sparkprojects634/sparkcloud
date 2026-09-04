@@ -33,7 +33,7 @@ const Projects = () => {
                 </div>
             </section>
 
-            <section className="mx-auto max-w-350 grid grid-cols-1 lg:grid-cols-2 py-6 lg:py-10">
+            <section className="mx-auto max-w-350 grid grid-cols-1 gap-5 lg:grid-cols-2 py-6 lg:py-10">
                 {projects.map((project, index) => (
                     <ProjectCard
                         key={project.id}

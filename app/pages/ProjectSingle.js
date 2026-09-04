@@ -7,43 +7,7 @@ import { projectsSingle } from '../data/projects'
 import SubHeadingMarquee from '../components/SubHeadingMarquee'
 import AnimatedTextLink from '../components/AnimatedTextLink'
 import AnimatedButton from '../components/AnimatedButton'
-
-/* =========================================================
-   MEDIA
-========================================================= */
-
-const Media = ({
-    media,
-    className = '',
-}) => {
-    if (!media) return null
-
-    if (media.type === 'video') {
-        return (
-            <video
-                src={media.src}
-                poster={media.poster}
-                autoPlay
-                muted
-                loop
-                playsInline
-                controls={false}
-                className={`h-full w-full object-cover ${className}`}
-            />
-        )
-    }
-
-    return (
-        <Image
-            src={media.src}
-            alt={media.alt || ''}
-            width={1800}
-            height={1200}
-            unoptimized
-            className={`h-full w-full object-contain ${className}`}
-        />
-    )
-}
+import Media from '../components/Media'
 
 
 /* =========================================================
@@ -222,7 +186,7 @@ const ProjectSingle = ({
                             <div className="group relative aspect-video lg:aspect-16/7 overflow-hidden rounded-[22px] bg-black">
 
                                 <Media
-                                    media={media02}
+                                    media={media01 || media02}
                                     className="transition-transform duration-1000 ease-out group-hover:scale-[1.04]"
                                 />
 
@@ -322,7 +286,7 @@ const ProjectSingle = ({
                                                     ({String(index + 1).padStart(2, '0')})
                                                 </span>
 
-                                                <p className="text-xs uppercase md:text-sm">
+                                                <p className="text-xs md:text-sm">
                                                     {point}
                                                 </p>
 
