@@ -76,7 +76,7 @@ const ProjectCard = ({
                 </div>
 
                 <div className="relative aspect-16/10 overflow-hidden rounded-2xl">
-                    <div className='absolute h-full w-full bg-black/50 z-2' />
+                    <div className='absolute h-full w-full bg-black/10 z-2' />
                     <Image
                         src={project.image}
                         alt={project.title}
