@@ -90,7 +90,7 @@ const Header = () => {
             />
 
             <div className="ml-auto flex items-center gap-3">
-              {navigation.map((item) => (
+              {navigation.slice(0, 5).map((item) => (
                 <NavButton
                   key={item.id}
                   text={item.label}

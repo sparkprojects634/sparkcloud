@@ -1,8 +1,14 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import AnimatedButton from '../components/AnimatedButton'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy | SparkCloud',
+  description:
+    'Learn how SparkCloud collects, uses, stores and protects information while maintaining transparency around privacy, cookies, analytics and website usage.',
+}
 
 const sections = [
     { id: 'information-we-collect', number: '01', title: 'Information We Collect' },

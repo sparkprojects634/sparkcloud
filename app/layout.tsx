@@ -30,9 +30,9 @@ const monaSansNarrow = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Best Digital Marketing Agency in Kolkata | SparkCloud',
+  title: 'Digital Marketing & Growth Solutions | SparkCloud',
   description:
-    'SparkCloud is the best digital marketing agency in Kolkata, providing comprehensive digital marketing solutions to help your business grow.',
+    'SparkCloud brings strategy, technology and creativity together to build digital experiences, strengthen brands and create sustainable business growth.',
 
   verification: {
     google: '2WpRZWhZ6PcrYwhp4muKuURLHCEeekiARLJWQOAXIrU',

@@ -4,12 +4,49 @@ import LetsWork from "@/app/components/Services/LetsWork"
 import StrategicSection from "@/app/components/Services/StrategicSection"
 import { services } from "../../data/services"
 import CoreSkillsSection from '@/app/components/Services/CoreSkillsSection'
+import { projectsSingle } from '@/app/data/projects'
+import { Metadata } from 'next'
 
 type Props = {
-    params: Promise<{   
+    params: Promise<{
         slug: string
     }>
 }
+
+export async function generateStaticParams() {
+    return services.map((service) => ({
+        slug: service.slug.split('/').filter(Boolean).pop()!,
+    }))
+}
+
+export async function generateMetadata({
+    params,
+}: Props): Promise<Metadata> {
+    const { slug } = await params
+
+    const service = services.find((item) => {
+        const serviceSlug = item.slug
+            .split('/')
+            .filter(Boolean)
+            .pop()
+
+        return serviceSlug === slug
+    })
+
+    if (!service) {
+        return {
+            title: 'Digital Services Built for Sustainable Growth | SparkCloud',
+            description:
+                'Explore SparkCloud’s integrated digital services across design, development, SEO, AEO, GEO, paid media and social media to support lasting growth.',
+        }
+    }
+
+    return {
+        title: `${service.metaTitle} | SparkCloud`,
+        description: service.metaDescription,
+    }
+}
+
 
 const page = async ({ params }: Props) => {
 

@@ -6,6 +6,9 @@ export const services = [
     title: "design",
     slug: "/services/design",
 
+    metaTitle: "Web Design & Creative Solutions | SparkCloud",
+    metaDescription: "From UI/UX to responsive websites and creative assets, SparkCloud designs digital experiences that are intuitive, engaging and built around your brand.",
+
     heading: "MAKE FIRST",
     subHeading: "IMPRESSIONS",
     subHeading2: "MATTER",
@@ -149,6 +152,9 @@ export const services = [
     title: "DEVELOPMENT",
     slug: "/services/development",
 
+    metaTitle: "Web Development & Digital Solutions | SparkCloud",
+    metaDescription: "SparkCloud develops fast, scalable and reliable digital solutions, combining clean technology, thoughtful architecture and seamless user experiences.",
+
     heading: "TURN",
     subHeading: "IDEAS",
     subHeading2: "INTO REALITY",
@@ -276,10 +282,13 @@ export const services = [
     title: "SEM/SMM/SMO",
     slug: "/services/sem-smm-smo",
 
+    metaTitle: "SEM, SMM & SMO | SparkCloud Digital Marketing",
+    metaDescription: "Build meaningful audience connections with integrated search and social strategies designed to improve visibility, engagement and measurable digital growth.",
+
     heading: "START",
     subHeading: "CONVERSATIONS",
     subHeading2: "SPARK ACTION",
-    subHeading3: "Search. Reach. Growth.",
+    subHeading3: "Creative. Social. Effective.",
 
     description:
       "Scroll. Stop. Notice. Remember. That’s the game. Attention is currency, and most brands spend it badly. At SparkCloud, we create campaigns designed to interrupt the scroll and start something - a click, a conversation, a search, a sale. From paid campaigns to social media strategy and content, we combine sharp creative with smart targeting. No random posts. No wasted ad spend. Just ideas built to get seen, shared, and acted on.",
@@ -403,11 +412,15 @@ export const services = [
     title: "SEO/AEO/GEO",
     slug: "/services/seo-aeo-geo",
 
+
+    metaTitle: "SEO, AEO & GEO | Search Visibility That Goes Further",
+    metaDescription: "SparkCloud combines SEO, AEO and GEO to help brands become more visible across search engines, answer platforms and emerging AI-driven discovery.",
+
     heading: "GET",
     subHeading: "FOUND",
     subHeading2: "GET CHOSEN",
-    subHeading3: "Creative. Social. Effective.",
-    
+    subHeading3: "Search. Reach. Growth.",
+
     description:
       "Being online means nothing if nobody finds you. Search has changed. People ask questions differently. Algorithms think differently. Your strategy needs to keep up. At SparkCloud, we make brands easier to discover, understand, and trust. Technical SEO, content, keywords, on-page optimisation, authority - every move is backed by intent, not guesswork. We don’t chase rankings for the sake of rankings. We build visibility that puts your brand in the right place, when people are looking.",
     image: "/images/services/seo.webp",

@@ -1,8 +1,14 @@
 'use client'
 
-import Link from 'next/link'
 import { useState } from 'react'
 import AnimatedButton from '../components/AnimatedButton'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions | SparkCloud',
+  description:
+    'Review SparkCloud’s terms covering website usage, services, intellectual property, payments, responsibilities, limitations and other important conditions.',
+}
 
 const sections = [
     { id: 'eligibility', number: '01', title: 'Eligibility' },

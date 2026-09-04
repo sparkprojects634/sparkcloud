@@ -89,7 +89,7 @@ const MobileMenu = ({ open, close }: Props) => {
                 className="w-[min(92vw,700px)] rounded-[40px] bg-[#F5F5F5] p-8 md:p-12 shadow-2xl"
             >
                 <div className="space-y-2">
-                    {navigation.slice(0, 4).map((item, index) => (
+                    {navigation.slice(2, 6).map((item, index) => (
                         <Link
                             key={item.id}
                             href={item.href}

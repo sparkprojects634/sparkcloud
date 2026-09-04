@@ -87,19 +87,19 @@ export const team = [
   },
   {
     name: "FAUWAAZ",
-    role: "Sr. Web Developer",
+    role: "Senior Web Developer",
     image: "/images/team/fauwaaz.png",
     description: "Builds powerful, scalable websites that perform as well behind the scenes as they look on the screen."
   },
   {
     name: "INISH",
-    role: "Jr. Web Developer",
+    role: "Junior Web Developer",
     image: "/images/team/inish.png",
     description: "Builds clean, responsive websites and helps bring ideas to life through smooth front-end development and back-end support."
   },
   {
     name: "IMRAN",
-    role: "SEO",
+    role: "Digital Marketer",
     image: "/images/team/imran.png",
     description: "Optimises every click, keyword, and page to turn visibility into valuable traffic."
   },

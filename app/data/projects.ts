@@ -92,6 +92,10 @@ export const projectsSingle = [
     id: "01",
     slug: "the-lyadh-ganj",
 
+    metaTitle: "The Lyadh Ganj | Restaurant Website Case Study",
+    metaDescription: "Discover how SparkCloud shaped The Lyadh Ganj’s digital presence with a distinctive website experience designed around its food and hospitality identity.",
+
+
     title: "The Lyadh Ganj",
 
     subtitle: "RESTAURANT & BRAND EXPERIENCE",
@@ -180,6 +184,10 @@ export const projectsSingle = [
     id: "02",
     slug: "netcall",
 
+    metaTitle: "Netcall Digital Experience | SparkCloud Case Study",
+    metaDescription: "Discover how SparkCloud helped Netcall build a stronger digital presence through strategic design, development and a user-focused web experience.",
+
+
     title: "Netcall",
 
     subtitle: "Discover Smarter Communication Solutions",
@@ -255,6 +263,9 @@ export const projectsSingle = [
     id: "03",
     slug: "club-de-golf",
 
+    metaTitle: "Club de Golf | Hospitality Website Case Study",
+    metaDescription: "Discover how SparkCloud created a refined digital experience for Club de Golf, helping visitors explore its offerings, atmosphere and hospitality.",
+
     title: "Club de Golf",
 
     subtitle: "Bringing the Dining Experience Online. ",
@@ -324,6 +335,10 @@ export const projectsSingle = [
     id: "04",
     slug: "dbound",
 
+    metaTitle: "DBound Digital Experience | SparkCloud Case Study",
+    metaDescription: "Explore how SparkCloud created a stronger digital presence for DBound through thoughtful design, development and a user-focused online experience.",
+
+
     title: "DBound",
 
     subtitle: "Media & Marketing",
@@ -336,7 +351,7 @@ export const projectsSingle = [
 
     hero: {
       type: "image",
-      src: "/images/projects/dbound/hero.webp",
+      src: "/images/projects/dbound/hero.png",
       alt: "DBound Media & Marketing ",
     },
 
@@ -397,6 +412,10 @@ export const projectsSingle = [
   {
     id: "05",
     slug: "the-pawfect-story",
+
+    metaTitle: "The Pawfect Story | E-commerce Case Study",
+    metaDescription: "See how SparkCloud designed an engaging e-commerce experience for The Pawfect Story, combining intuitive navigation, product presentation and SEO.",
+
 
     title: "The Pawfect Story",
 
@@ -467,6 +486,10 @@ export const projectsSingle = [
     id: "06",
     slug: "dnaughties-world",
 
+    metaTitle: "d Naughties World | Preschool Website Case Study",
+    metaDescription: "See how SparkCloud created a welcoming digital experience for d Naughties World, presenting its programs, facilities and learning environment clearly.",
+
+
     title: "d Naughties World",
 
     subtitle: "Education",
@@ -535,6 +558,9 @@ export const projectsSingle = [
     id: "07",
     slug: "usifa",
 
+    metaTitle: "USIFA | Digital Experience Case Study",
+    metaDescription: "Discover how SparkCloud helped USIFA communicate its mission, initiatives and impact through a clear, professional and purpose-driven digital experience.",
+
     title: "US INDIA FRIENDSHIP ALLIANCE",
 
     subtitle: "Nonprofit",
@@ -602,6 +628,10 @@ export const projectsSingle = [
   {
     id: "08",
     slug: "career-runway-by-shivani",
+
+    metaTitle: "Career Runway | Education Website Case Study",
+    metaDescription: "See how SparkCloud developed a professional digital experience for Career Runway, making its courses, expertise and learner journey easier to explore.",
+
 
     title: "Career Runway by Shivani",
 
@@ -676,6 +706,10 @@ export const projectsSingle = [
     id: "09",
     slug: "meal-minds",
 
+    metaTitle: "Meal Minds | Nutrition Website Case Study",
+    metaDescription: "Explore how SparkCloud created a clear, engaging digital experience for Meal Minds, presenting its nutrition expertise, services and customer journey.",
+
+
     title: "Mealminds",
 
     subtitle: "Nutrition & Wellness",
@@ -742,6 +776,10 @@ export const projectsSingle = [
   {
     id: "10",
     slug: "the-wooden-ware",
+
+    metaTitle: "The Woodenware | E-commerce Case Study",
+    metaDescription: "Explore how SparkCloud built a clean and intuitive e-commerce experience for The Woodenware, making its products easier to discover and explore.",
+
 
     title: "THE WOODENWARE",
 

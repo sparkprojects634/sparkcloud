@@ -25,10 +25,9 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${project.title} | SparkCloud`,
+    title: `${project.metaTitle} | SparkCloud`,
     description:
-      project.intro?.description ||
-      `${project.title} project by SparkCloud.`,
+      `${project.metaDescription}`,
   }
 }
 

@@ -6,7 +6,7 @@ export const navigation = [
   },
   {
     id: "02",
-    label: "Studio",
+    label: "About",
     href: "/about",
   },
   {
@@ -14,19 +14,19 @@ export const navigation = [
     label: "Projects",
     href: "/projects",
   },
-  // {
-  //   id: "04",
-  //   label: "About",
-  //   href: "/about",
-  // },
   {
     id: "04",
-    label: "Blogs",
-    href: "/blogs",
+    label: "Services",
+    href: "/services",
   },
   {
     id: "05",
     label: "Contact",
     href: "/contact",
+  },
+  {
+    id: "06",
+    label: "Blogs",
+    href: "/blogs",
   },
 ]
