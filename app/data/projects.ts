@@ -55,6 +55,19 @@ export const projects = [
     image: '/images/projects/careerrunwaybyshivani.webp',
     href: '/projects/career-runway-by-shivani',
   },
+  {
+    id: 9,
+    title: 'MEALMINDS',
+    category: 'Nutrition & Wellness',
+    image: '/images/projects/mealminds.webp',
+    href: '/projects/meal-minds',
+  }, {
+    id: 10,
+    title: 'THE WOODENEWARE',
+    category: 'E-commerce',
+    image: '/images/projects/thewoodenware.webp',
+    href: '/projects/the-wooden-ware',
+  },
 ]
 
 export const stats = [
@@ -660,6 +673,140 @@ export const projectsSingle = [
         'Optimised the website for desktop, tablet, and mobile users.',
         'Presented training programmes clearly to guide visitors towards relevant courses.',
         'Added prominent enquiry and application touchpoints to encourage conversions.',
+      ],
+    },
+  },
+
+  {
+    id: '09',
+    slug: 'meal-minds',
+
+    title: 'Mealminds',
+
+    subtitle: 'Nutrition & Wellness',
+
+    service: 'Design & Development',
+    industry: 'Nutrition & Wellness',
+    year: '2025',
+
+    liveUrl: 'https://mealmindsdiet.in',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/mealminds/hero.webp',
+      alt: 'mealminds hero image',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'Mealminds is a personalized nutrition and diet consultation brand led by Shivangi Khanna, offering evidence-based nutrition solutions tailored to individual health and lifestyle needs.',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/mealminds/website.webp',
+        alt: 'mealminds website',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a modern, user-friendly website that reflects Mealminds professional approach to nutrition. We worked on the website design and development, creating a clear structure for its services, expertise and client journey, while keeping the experience simple and accessible.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/mealminds/mobile.webp',
+          alt: 'mealminds mobile',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/mealminds/branding.webp',
+          alt: 'mealminds branding',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The final experience combines clean visual design, intuitive navigation, wellness-focused content and a calming digital identity that reflects Mealminds’ approach to healthy eating, personalised nutrition and mindful living.',
+
+      points: [
+        'Created a modern website that reflects Mealminds professional approach.',
+        'Presented nutrition services in a simple, engaging and easy-to-understand format.',
+        'Improved navigation to help visitors find the right information effortlessly.',
+        'Ensured a smooth experience across desktop, tablet and mobile devices.',
+        'Optimised key pages to help Mealminds reach relevant audiences online.',
+      ],
+    },
+  },
+  
+  {
+    id: '10',
+    slug: 'the-wooden-ware',
+
+    title: 'THE WOODENWARE',
+
+    subtitle: 'E-commerce ',
+
+    service: 'Design & Development',
+    industry: 'E-commerce ',
+    year: '2025',
+
+    liveUrl: 'https://thewoodenware.com',
+
+    hero: {
+      type: 'image',
+      src: '/images/projects/thewoodenware/hero.webp',
+      alt: 'the woodenware hero image',
+    },
+
+    intro: {
+      label: 'PROJECT OVERVIEW',
+      description:
+        'The Woodenware is a sustainable home goods brand offering thoughtfully crafted wooden products for home, kitchen, organisation and decor. Its online store brings together functionality, craftsmanship and a refined aesthetic.',
+    },
+    media: [
+      {
+        type: 'image',
+        src: '/images/projects/thewoodenware/website.webp',
+        alt: 'the woodenware website',
+      },
+    ],
+
+    projectPurpose: {
+      title: 'PROJECT PURPOSE',
+      description:
+        'The project focused on creating a clean, visually engaging e-commerce experience that makes browsing and shopping effortless. We created a clean and engaging online experience that presents the products effectively, simplifies navigation and makes it easier for customers to discover and explore the brand.',
+
+      media: [
+        {
+          type: 'image',
+          src: '/images/projects/thewoodenware/branding.webp',
+          alt: 'the woodenware branding',
+        },
+        {
+          type: 'image',
+          src: '/images/projects/thewoodenware/mobile.webp',
+          alt: 'the woodenware mobile',
+        },
+      ],
+    },
+
+    achievedGoals: {
+      title: 'ACHIEVED GOALS',
+      description:
+        'The website brings together elegant visuals and intuitive navigation to highlight The Woodenware’s craftsmanship, products and distinctive brand experience.',
+
+      points: [
+        'Created a polished online identity aligned with the brands sustainable positioning.',
+        'Organised products into clear categories for easier browsing.',
+        'Built a user-friendly journey from product discovery to purchase.',
+        'Optimised the website for a consistent experience across devices.',
+        'Structured the website to support better search visibility and future growth.',
       ],
     },
   },
