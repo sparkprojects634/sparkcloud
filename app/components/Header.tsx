@@ -9,6 +9,7 @@ import HamburgerButton from './HamburgerButton'
 import MobileMenu from './MobileMenu'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import Link from 'next/link'
 
 const Header = () => {
   const [open, setOpen] = useState(false)
@@ -40,34 +41,36 @@ const Header = () => {
         {/* Background */}
         <div
           className={`pointer-events-none absolute mx-5 my-2 rounded-full inset-x-0 top-2 -z-10 h-18 bg-black/50 backdrop-blur-sm transition-opacity duration-800 ease-in-out ${isHomePage
-              ? scrolled
-                ? 'opacity-100'
-                : 'opacity-0'
-              : 'opacity-100'
+            ? scrolled
+              ? 'opacity-100'
+              : 'opacity-0'
+            : 'opacity-100'
             }`}
         />
 
         <div
           className={`mx-auto flex items-center justify-between px-3 py-6 lg:px-6 transition-opacity duration-800 ease-in-out ${isHomePage
-              ? scrolled
-                ? 'opacity-100'
-                : 'opacity-0'
-              : 'opacity-100'
+            ? scrolled
+              ? 'opacity-100'
+              : 'opacity-0'
+            : 'opacity-100'
             }`}
         >
 
           {/* Mobile */}
           <div className="ml-auto lg:hidden flex justify-between items-center gap-3 rounded-full px-4 w-full">
-            <Image
-              src='/images/logo.svg'
-              alt='Hero-Image'
-              width={50}
-              height={100}
-              className='z-10'
-              fetchPriority='high'
-              loading='eager'
-              unoptimized
-            />
+            <Link href={'/'}>
+              <Image
+                src='/images/logo.svg'
+                alt='Hero-Image'
+                width={50}
+                height={100}
+                className='z-10'
+                fetchPriority='high'
+                loading='eager'
+                unoptimized
+              />
+            </Link>
 
             <HamburgerButton
               open={open}
@@ -77,17 +80,18 @@ const Header = () => {
 
           {/* Desktop */}
           <div className="mx-auto hidden w-full items-center justify-between gap-3 rounded-full lg:flex px-2">
-
-            <Image
-              src='/images/logo.svg'
-              alt='Hero-Image'
-              width={60}
-              height={100}
-              className='z-10'
-              fetchPriority='high'
-              loading='eager'
-              unoptimized
-            />
+            <Link href={'/'}>
+              <Image
+                src='/images/logo.svg'
+                alt='Hero-Image'
+                width={60}
+                height={100}
+                className='z-10'
+                fetchPriority='high'
+                loading='eager'
+                unoptimized
+              />
+            </Link>
 
             <div className="ml-auto flex items-center gap-3">
               {navigation.slice(0, 5).map((item) => (

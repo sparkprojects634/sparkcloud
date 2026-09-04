@@ -9,9 +9,9 @@ export const metadata: Metadata = {
 
 const page = () => {
   return (
-    <>
+    <div className="mt-18">
      <Services />
-    </>
+    </div>
   )
 }
 

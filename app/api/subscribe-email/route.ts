@@ -67,7 +67,7 @@ export async function POST(req: NextRequest) {
             text-align:center;
         ">
             <img
-                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+                src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 width="180"
             />
@@ -162,7 +162,7 @@ export async function POST(req: NextRequest) {
             text-align:center;
         ">
             <img
-                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+                src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 width="180"
             />

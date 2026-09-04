@@ -311,11 +311,8 @@ const LetsWork = () => {
                         Drop it, we'll build it!
                     </p>
 
-                    <AnimatedTextLink text="Say Hello" href="/contact-us" />
-
-
+                    <AnimatedTextLink text="Say Hello" href="/contact" />
                 </div>
-
             </div>
         </section>
     )

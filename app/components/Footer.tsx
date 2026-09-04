@@ -9,7 +9,7 @@ const footerLinks = [
       { label: "About", href: "/about" },
       { label: "Projects", href: "/projects" },
       { label: "Services", href: "/services" },
-      { label: "Blog", href: "/blog" },
+      { label: "Blog", href: "/blogs" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -86,14 +86,17 @@ const Footer = () => {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_1fr_1fr_1.5fr]">
           {/* Company Info */}
           <div className="space-y-6">
-            <Image
-              src="/images/sparkcloud-dark.svg"
-              alt="SparkCloud"
-              width={180}
-              height={40}
-            />
+            <Link href={'/'}>
+              <Image
+                src="/images/sparkcloud-dark.svg"
+                alt="SparkCloud"
+                width={180}
+                height={40}
+                unoptimized
+              />
+            </Link>
 
-            <div className="space-y-2">
+            <div className="space-y-2 mt-6">
 
               <div className="flex items-start gap-4">
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-white">
@@ -195,7 +198,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-12 rounded-t-4xl bg-black">
-        <div className="mx-auto flex w-full max-w-350 flex-col gap-6 px-6 py-6 text-white lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <div className="mx-auto flex w-full max-w-350 flex-col gap-6 px-6 py-6 text-white lg:flex-row items-center lg:justify-between lg:px-8">
           <p className="text-sm">
             Copyright © 2026 All rights reserved
           </p>

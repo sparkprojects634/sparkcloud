@@ -141,7 +141,7 @@ export async function POST(request: Request) {
 
         <div class="header">
             <img
-                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+                src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 class="logo"
             />
@@ -300,7 +300,7 @@ export async function POST(request: Request) {
 
         <div class="header">
             <img
-                src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+                src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
                 alt="SparkCloud"
                 class="logo"
             />

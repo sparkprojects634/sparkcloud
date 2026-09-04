@@ -68,7 +68,7 @@ function adminTemplate(data: any) {
 <tr>
 <td align="center">
 <img
-src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
 width="180"
 />
 <h2 style="margin-top:30px">
@@ -119,7 +119,7 @@ function userTemplate(name: string) {
 <tr>
 <td align="center">
 <img
-src="https://sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
+src="https://console.sparkcloud.in/wp-content/uploads/2026/08/sparkcloud-logo-black.png"
 width="180"
 />
 <h1
