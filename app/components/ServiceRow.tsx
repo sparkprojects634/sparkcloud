@@ -58,7 +58,7 @@ export default function ServiceRow({ service }: { service: any }) {
         {service.title}
       </h3>
 
-      <p className="self-center text-zinc-500">
+      <p className="self-center text-zinc-500 line-clamp-3">
         {service.description}
       </p>
       <div

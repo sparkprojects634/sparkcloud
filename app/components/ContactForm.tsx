@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { MapPin, Phone } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
+import Link from 'next/link'
 
 export default function ContactForm() {
   const [loading, setLoading] = useState(false)
@@ -129,19 +130,34 @@ export default function ContactForm() {
                   Phone
                 </h3>
 
-                <a
+                <Link
                   href="tel:+917439381155"
                   className="mt-3 block text-xl text-[#777] hover:text-black"
                 >
                   +91 7439381155
-                </a>
+                </Link>
+              </div>
 
-                <a
+            </div>
+
+
+            <div className="flex items-start gap-6">
+
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-black text-white">
+                <Mail size={24} />
+              </div>
+
+              <div>
+                <h3 className="font-mona-bold text-3xl text-black">
+                  Email
+                </h3>
+
+                <Link
                   href="mailto:info@sparkcloud.us"
                   className="mt-2 block text-xl text-[#777] hover:text-black"
                 >
                   info@sparkcloud.us
-                </a>
+                </Link>
               </div>
 
             </div>

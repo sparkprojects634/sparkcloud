@@ -37,7 +37,7 @@ const page = async ({ params }: Props) => {
                 <hr className='text-gray-300' />
 
                 <div className="grid gap-6 md:grid-cols-2">
-                    <h2 className="uppercase tracking-widest text-sm">Define. Shape. Stand out.</h2>
+                    <h2 className="uppercase tracking-widest text-sm">{service.subHeading3}</h2>
                     <p className="text-md leading-relaxed md:text-lg tracking-wide">
                         {service.description}
                     </p>

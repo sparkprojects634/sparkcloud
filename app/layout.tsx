@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import localFont from 'next/font/local'
+
 import './globals.css'
 import SiteChrome from './components/SiteChrome'
 import AppWrapper from './components/AppWrapper'
@@ -31,6 +33,10 @@ export const metadata: Metadata = {
   title: 'Best Digital Marketing Agency in Kolkata | SparkCloud',
   description:
     'SparkCloud is the best digital marketing agency in Kolkata, providing comprehensive digital marketing solutions to help your business grow.',
+
+  verification: {
+    google: '2WpRZWhZ6PcrYwhp4muKuURLHCEeekiARLJWQOAXIrU',
+  },
 }
 
 export default function RootLayout({
@@ -43,12 +49,32 @@ export default function RootLayout({
       lang="en"
       className={`${monaSans.variable} ${monaSansNarrow.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
+
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2GRNVLH83T"
+          strategy="afterInteractive"
+        />
+
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2GRNVLH83T');
+          `}
+        </Script>
+
         <AppWrapper>
           <SiteChrome>
             {children}
           </SiteChrome>
         </AppWrapper>
+
       </body>
     </html>
   )

@@ -29,6 +29,7 @@ export type Service = {
   heading: string
   subHeading: string
   subHeading2: string
+  subHeading3: string
   slug: string
   description: string
   image: string

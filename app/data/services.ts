@@ -10,10 +10,12 @@ export const services = [
     subHeading: "IMPRESSIONS",
     subHeading2: "MATTER",
 
+    subHeading3: "Fresh. Clean. Memorable.",
+
     description:
       "People decide fast. Your website gets seconds to make an impression. A beautiful website isn’t enough - it needs to feel right, work effortlessly, and make people want to stay. At SparkCloud, we design digital experiences that turn attention into interest. Layout, interaction, typography, visuals, responsiveness - every detail has a purpose. No clutter. No templates. No design for design’s sake. Just websites that look sharp, feel intuitive, and make your brand impossible to ignore.",
 
-    image: "/images/services/design.png",
+    image: "/images/services/design.webp",
     lines: [
       {
         text: "Creative",
@@ -150,11 +152,11 @@ export const services = [
     heading: "TURN",
     subHeading: "IDEAS",
     subHeading2: "INTO REALITY",
-
+    subHeading3: "Smart. Fast. Reliable.",
 
     description:
       "Great design means nothing if the experience breaks. Slow loading? Complicated navigation? One broken button can cost a customer. At SparkCloud, we build websites that work as hard as they look good. Clean code. Smart architecture. Seamless functionality. From simple business websites to complex digital platforms, we turn ideas into reliable experiences built for real people, real devices, and real growth. Beautiful on the outside. Powerful underneath.",
-    image: "/images/services/design.png",
+    image: "/images/services/development.webp",
     lines: [
       {
         text: 'Scalable',
@@ -277,11 +279,11 @@ export const services = [
     heading: "START",
     subHeading: "CONVERSATIONS",
     subHeading2: "SPARK ACTION",
-
+    subHeading3: "Search. Reach. Growth.",
 
     description:
       "Scroll. Stop. Notice. Remember. That’s the game. Attention is currency, and most brands spend it badly. At SparkCloud, we create campaigns designed to interrupt the scroll and start something - a click, a conversation, a search, a sale. From paid campaigns to social media strategy and content, we combine sharp creative with smart targeting. No random posts. No wasted ad spend. Just ideas built to get seen, shared, and acted on.",
-    image: "/images/services/design.png",
+    image: "/images/services/smm.webp",
     lines: [
       {
         text: 'Dynamic',
@@ -295,7 +297,7 @@ export const services = [
 
     media: {
       type: 'video',
-      src: '/services/interstellar-tars.mp4',
+      src: '/services/concave.mp4',
       poster: '/images/web-design/strategic-poster.webp',
       alt: 'Strategic web design process',
     },
@@ -404,10 +406,11 @@ export const services = [
     heading: "GET",
     subHeading: "FOUND",
     subHeading2: "GET CHOSEN",
+    subHeading3: "Creative. Social. Effective.",
     
     description:
       "Being online means nothing if nobody finds you. Search has changed. People ask questions differently. Algorithms think differently. Your strategy needs to keep up. At SparkCloud, we make brands easier to discover, understand, and trust. Technical SEO, content, keywords, on-page optimisation, authority - every move is backed by intent, not guesswork. We don’t chase rankings for the sake of rankings. We build visibility that puts your brand in the right place, when people are looking.",
-    image: "/images/services/design.png",
+    image: "/images/services/seo.webp",
     lines: [
       {
         text: 'Visible',
@@ -421,7 +424,7 @@ export const services = [
 
     media: {
       type: "video",
-      src: '/services/interstellar-tars.mp4',
+      src: '/services/spinning-top.mp4',
       poster: '/images/web-design/strategic-poster.webp',
       alt: 'Strategic web design process',
     },

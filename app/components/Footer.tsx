@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa"
@@ -68,7 +69,7 @@ const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
 
     if (data.success) {
       alert("Subscribed successfully."),
-      (e.target as HTMLFormElement).reset()
+        (e.target as HTMLFormElement).reset()
     } else {
       alert("Something went wrong.")
     }
@@ -92,40 +93,46 @@ const Footer = () => {
               height={40}
             />
 
-            <p className="max-w-xs text-sm font-medium text-neutral-700">
-              3rd floor, Ps Abacus, Unit 337, Action Area IIIE,
-              Newtown, Kolkata, West Bengal 700157
-            </p>
-
             <div className="space-y-2">
-              <Link
-                href="tel:+917439381155"
-                className="block font-semibold transition hover:opacity-70"
-              >
-                +91 74393 81155
-              </Link>
 
-              <Link
-                href="mailto:info@sparkcloud.us"
-                className="block font-semibold transition hover:opacity-70"
-              >
-                info@sparkcloud.us
-              </Link>
-            </div>
+              <div className="flex items-start gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-white">
+                  <MapPin size={14} />
+                </div>
+                <p className="block font-semibold transition hover:opacity-80">
+                  3rd floor, Ps Abacus, Unit 337, Action Area IIIE,
+                  Newtown, Kolkata, West Bengal 700157
+                </p>
+              </div>
 
-            <div className="flex gap-4">
-              {socialLinks.map(({ icon: Icon, href }) => (
+              <div className="flex items-center gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-white">
+                  <Phone size={14} />
+                </div>
+
                 <Link
-                  key={href}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 hover:scale-110"
+                  href="tel:+917439381155"
+                  className="block font-semibold transition hover:opacity-80"
                 >
-                  <Icon size={18} />
+                  +91 74393 81155
                 </Link>
-              ))}
+              </div>
+
+
+              <div className="flex items-center gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-white">
+                  <Mail size={14} />
+                </div>
+
+                <Link
+                  href="mailto:info@sparkcloud.us"
+                  className="block font-semibold transition hover:opacity-80"
+                >
+                  info@sparkcloud.us
+                </Link>
+              </div>
             </div>
+
           </div>
 
           {/* Navigation */}
@@ -167,6 +174,21 @@ const Footer = () => {
                 Subscribe
               </button>
             </form>
+
+
+            <div className="flex gap-4">
+              {socialLinks.map(({ icon: Icon, href }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full bg-black text-white transition-transform duration-300 hover:scale-110"
+                >
+                  <Icon size={18} />
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
       </div>

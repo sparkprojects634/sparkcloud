@@ -21,7 +21,7 @@ const Home = () => {
       <section className="py-6 md:py-10">
         <div className="mx-auto w-full max-w-350 px-5 md:px-8">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-[400px_1fr] lg:gap-20 items-start">
-            <SubHeadingMarquee text="DRIVEN BY DESIGN" />
+            <SubHeadingMarquee text="LET'S GROW TOGETHER" />
             <div className="space-y-6">
               <AnimatedHeading lines={headingLines} />
               <p className="w-full lg:w-3/4 text-black text-xl lg:text-2xl font-normal">Our integrated approach to digital marketing brings together branding, content, social media, SEO, paid advertising, and web solutions to help businesses grow, engage, and succeed in an ever-evolving digital landscape.</p>
