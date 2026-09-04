@@ -6,7 +6,7 @@ import { services } from "../../data/services"
 import CoreSkillsSection from '@/app/components/Services/CoreSkillsSection'
 
 type Props = {
-    params: Promise<{
+    params: Promise<{   
         slug: string
     }>
 }
@@ -26,7 +26,7 @@ const page = async ({ params }: Props) => {
 
     return (
         <section className="mx-auto w-full max-w-350 px-4 pt-28 md:px-8 md:pt-32 lg:pt-36">
-            <div className="flex h-full flex-col gap-10 justify-between">
+            <div className="flex h-full flex-col gap-10 justify-between pb-10 md:pb-15 lg:pb-20">
                 <div>
                     <h1 className="font-mona-bold text-center text-[clamp(4rem,9vw,9rem)] uppercase leading-none tracking-wider mt-10">
                         BUILD <span className="text-[#8F8F8F]">BRANDS </span>

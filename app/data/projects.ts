@@ -22,17 +22,17 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'CLUB DE GOLF',
-    category: 'RESTAURANT',
-    image: '/images/projects/club-de-golf.webp',
-    href: '/projects/club-de-golf',
-  },
-  {
-    id: 5,
     title: 'THE PAWFECT STORY',
     category: 'PET STORE',
     image: '/images/projects/thepawfectstory.webp',
     href: '/projects/the-pawfect-story',
+  },
+  {
+    id: 5,
+    title: 'CLUB DE GOLF',
+    category: 'RESTAURANT',
+    image: '/images/projects/club-de-golf.webp',
+    href: '/projects/club-de-golf',
   },
   {
     id: 6,
@@ -116,11 +116,6 @@ export const projectsSingle = [
 
     media: [
       {
-        type: 'image',
-        src: '/images/projects/lyadh-ganj/media-01.webp',
-        alt: 'The Lyadh Ganj interior',
-      },
-      {
         type: 'video',
         src: '/videos/projects/lyadh-ganj/lyadh-ganj.webm',
         poster: '/images/projects/lyadh-ganj/video-poster.webp',
@@ -136,12 +131,12 @@ export const projectsSingle = [
       media: [
         {
           type: 'image',
-          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          src: '/images/projects/lyadh-ganj/media-02.webp',
           alt: 'The Lyadh Ganj apron branding',
         },
         {
           type: 'image',
-          src: '/images/projects/lyadh-ganj/lyadh-ganj-appron.webp',
+          src: '/images/projects/lyadh-ganj/media-01.webp',
           alt: 'The Lyadh Ganj team',
         },
       ],
@@ -373,13 +368,13 @@ export const projectsSingle = [
       media: [
         {
           type: 'image',
-          src: '/images/projects/dbound/mobile.webp',
-          alt: 'DBound mobile branding',
+          src: '/images/projects/dbound/notification.webp',
+          alt: 'dbound mobile notification',
         },
         {
           type: 'image',
-          src: '/images/projects/dbound/notification.webp',
-          alt: 'dbound mobile notification',
+          src: '/images/projects/dbound/mobile.webp',
+          alt: 'DBound mobile branding',
         },
       ],
     },
@@ -743,7 +738,7 @@ export const projectsSingle = [
       ],
     },
   },
-  
+
   {
     id: '10',
     slug: 'the-wooden-ware',

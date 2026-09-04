@@ -201,9 +201,9 @@ const StrategicSection = ({
             className="
                 w-full
                 overflow-hidden
-                py-20
-                md:py-28
-                lg:py-32
+                py-10
+                md:py-15
+                lg:py-20
             "
         >
             <div

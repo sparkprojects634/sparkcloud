@@ -164,7 +164,7 @@ export const services = [
     },
 
     serviceContent: {
-      label: "UI/UX",
+      label: "Development",
 
       sections: [
         {
@@ -232,8 +232,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-migration.webp",
-            alt: "Website migration service",
+            src: "/services/maintainance.webp",
+            alt: "Maintenance and optimisation service",
           },
         },
       ],
@@ -285,7 +285,7 @@ export const services = [
     },
 
     serviceContent: {
-      label: "UI/UX",
+      label: "SEO/SEM/SMM/SMO",
 
       sections: [
         {
@@ -296,9 +296,9 @@ export const services = [
             "Get your business in front of the right customers at the right time with data-driven search engine marketing. From paid search campaigns and keyword targeting to ad optimisation and performance tracking, we focus on maximising visibility, generating quality traffic, and delivering measurable returns on your advertising investment.",
 
           media: {
-            type: "video",
-            src: "/services/web-design.webm",
-            alt: "Web design service",
+            type: "image",
+            src: "/services/sem.webp",
+            alt: "Search engine marketing service",
           },
         },
 
@@ -311,8 +311,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/ui-ux.webp",
-            alt: "UI UX design service",
+            src: "/services/visual-production.webp",
+            alt: "Visual production service",
           },
         },
 
@@ -324,9 +324,9 @@ export const services = [
             "Build a stronger brand presence and connect with your audience through strategic social media marketing. We create engaging content, manage social media platforms, and run targeted campaigns designed to increase reach, engagement, leads, and brand awareness across the channels that matter most to your business.",
 
           media: {
-            type: "video",
-            src: "/services/graphics-design.webm",
-            alt: "Graphics design service",
+            type: "image",
+            src: "/services/smm.webp",
+            alt: "Social media marketing service",
           },
         },
 
@@ -339,8 +339,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-redesign.webp",
-            alt: "Website redesign service",
+            src: "/services/smo.webp",
+            alt: "Social media optimisation service",
           },
         },
 
@@ -353,8 +353,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-migration.webp",
-            alt: "Website migration service",
+            src: "/services/intergrated-digital-growth.webp",
+            alt: "Integrated digital growth service",
           },
         },
       ],
@@ -407,7 +407,7 @@ export const services = [
 
 
     serviceContent: {
-      label: "UI/UX",
+      label: "SEO/AEO/GEO",
 
       sections: [
         {
@@ -418,9 +418,9 @@ export const services = [
             "Drive organic visibility with strategic SEO content designed to attract the right audience and perform across search engines. We create keyword-focused, informative, and engaging content that aligns with search intent while naturally showcasing your brand, products, and services. From website pages and blogs to landing pages and FAQs, our content strategy helps improve rankings, build authority, and generate qualified traffic.",
 
           media: {
-            type: "video",
-            src: "/services/web-design.webm",
-            alt: "Web design service",
+            type: "image",
+            src: "/services/content.webp",
+            alt: "SEO content service",
           },
         },
 
@@ -433,8 +433,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/ui-ux.webp",
-            alt: "UI UX design service",
+            src: "/services/copywriting.webp",
+            alt: "Copywriting service",
           },
         },
 
@@ -446,9 +446,9 @@ export const services = [
             "Make your brand the answer users are looking for with our Answer Engine Optimization services. We structure and optimize your content to help search engines and AI-powered platforms understand your expertise and deliver your information in direct answers, featured snippets, FAQs, and other answer-focused results. By focusing on search intent, clear content, and authoritative information, we help your business stay relevant in the evolving search landscape.",
 
           media: {
-            type: "video",
-            src: "/services/graphics-design.webm",
-            alt: "Graphics design service",
+            type: "image",
+            src: "/services/aeo.webp",
+            alt: "Answer engine optimization service",
           },
         },
 
@@ -461,8 +461,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-redesign.webp",
-            alt: "Website redesign service",
+            src: "/services/geo.webp",
+            alt: "Generative engine optimization service",
           },
         },
 
@@ -475,8 +475,8 @@ export const services = [
 
           media: {
             type: "image",
-            src: "/services/website-migration.webp",
-            alt: "Website migration service",
+            src: "/services/ai-visiblity.webp",
+            alt: "AI visibility service",
           },
         },
       ],

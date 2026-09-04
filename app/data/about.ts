@@ -13,10 +13,6 @@ export const aboutHeading = [
   },
 ]
 
-export const aboutDescription =
-  "Welcome to SparkCloud, the powerhouse of innovative digital marketing solutions. We are a team of Web Developers, SEO Experts, PPC Specialists, Social Media Strategists, Content Creators, and Graphic Designers, bringing together technology, creativity, and strategy to shape powerful digital identities and build meaningful brand experiences. Founded with the vision to transform how brands connect with their audiences, we blend cutting-edge technology, creative storytelling, and data-driven strategies across SEO, PPC, social media, content marketing, web development, and graphic design to help businesses build lasting connections and achieve sustainable growth. With a passion for innovation and a deep understanding of diverse industries, we create digital solutions that empower brands to grow, evolve, and thrive in an ever-changing digital landscape."
-
-
 export const pillars = [
   {
     id: 1,
