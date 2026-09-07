@@ -1,49 +1,61 @@
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import type { Metadata } from 'next'
+import { notFound } from 'next/navigation'
 
-import BlogsSingle from "../../pages/BlogsSingle";
-import { getBlogBySlug } from "../../data/getBlogs";
+import BlogsSingle from '../../pages/BlogsSingle'
+import { getBlogBySlug } from '../../data/getBlogs'
 
 interface PageProps {
-  params: Promise<{
-    slug: string;
-  }>;
+    params: Promise<{
+        slug: string
+    }>
 }
 
 export default async function Page({
-  params,
+    params,
 }: PageProps) {
-  const { slug } = await params;
+    const { slug } = await params
 
-  const post = await getBlogBySlug(slug);
+    const post = await getBlogBySlug(slug)
 
-  if (!post) {
-    notFound();
-  }
+    if (!post) {
+        notFound()
+    }
 
-  return <BlogsSingle post={post} />;
+    return <BlogsSingle post={post} />
 }
 
 export async function generateMetadata({
-  params,
+    params,
 }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
+    const { slug } = await params
 
-  const post = await getBlogBySlug(slug);
+    const post = await getBlogBySlug(slug)
 
-  if (!post) {
+    if (!post) {
+        return {
+            title: 'Blog Not Found | SparkCloud',
+        }
+    }
+
+    const seo = post.yoast_head_json
+
+    const title =
+        seo?.title ||
+        post.title?.rendered.replace(/<[^>]+>/g, '')
+
+    const description =
+        seo?.description ||
+        post.excerpt?.rendered.replace(/<[^>]+>/g, '')
+
     return {
-      title: "Blog Not Found",
-    };
-  }
-
-  return {
-    title:
-      post.seo?.title ||
-      post.title.replace(/<[^>]+>/g, ""),
-
-    description:
-      post.seo?.metaDesc ||
-      post.excerpt.replace(/<[^>]+>/g, ""),
-  };
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            images: seo?.og_image?.[0]?.url
+                ? [seo.og_image[0].url]
+                : [],
+        },
+    }
 }

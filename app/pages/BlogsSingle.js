@@ -22,7 +22,7 @@ export default function BlogsSingle({ post }) {
       <h1 className="mt-6 font-mona-bold text-[clamp(3rem,6vw,2rem)] uppercase leading-none tracking-wide text-black">
         <span
           dangerouslySetInnerHTML={{
-            __html: post.title,
+            __html: post.title.rendered,
           }}
         />
       </h1>
@@ -61,15 +61,15 @@ export default function BlogsSingle({ post }) {
 
         {post.author?.node && (
           <span>
-            By {post.author.node.name}
+            By {post.author.name}
           </span>
         )}
 
-        {post.categories?.nodes?.length > 0 && (
+        {post._embedded?.['wp:term']?.[0]?.length > 0 && (
           <span>
-            {post.categories.nodes
-              .map((c) => c.name)
-              .join(", ")}
+            {post._embedded['wp:term'][0]
+              .map((category) => category.name)
+              .join(', ')}
           </span>
         )}
       </div>
@@ -104,7 +104,7 @@ export default function BlogsSingle({ post }) {
           prose-ol:list-decimal
         "
         dangerouslySetInnerHTML={{
-          __html: post.content,
+          __html: post.content.rendered,
         }}
       />
     </section>

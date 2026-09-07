@@ -7,23 +7,23 @@ const partners = [
     },
     {
         name: 'House of R-Martin',
-        logo: '/images/partners/r-martin-logo.png',
+        logo: '/images/partners/the-pawfect-story.png',
     },
     {
         name: 'Convrse AI',
-        logo: '/images/partners/convrse-logo.png',
+        logo: '/images/partners/usifa.png',
     },
     {
         name: 'BMW',
-        logo: '/images/partners/bmw-logo.png',
+        logo: '/images/partners/netcall.png',
     },
     {
         name: 'Land Rover',
-        logo: '/images/partners/land-rover-logo.png',
+        logo: '/images/partners/posh-studio.png',
     },
     {
         name: 'ULUK',
-        logo: '/images/partners/uluk-logo.png',
+        logo: '/images/partners/career-runway.png',
     },
     {
         name: 'TLG',

@@ -1,101 +1,106 @@
-const GRAPHQL_URL =
-  process.env.WP_GRAPHQL_API ||
-  'https://sparkcloud.in/graphql'
+const WORDPRESS_API =
+    process.env.WP_API_URL ||
+    'https://console.sparkcloud.in/wp-json/wp/v2'
 
-export async function getBlogs() {
-  const query = `
-    query GetBlogs {
-      posts(first: 100) {
-        nodes {
-          id
-          slug
-          title
-          date
-          excerpt
+export type BlogPost = {
+    id: number
+    slug: string
+    date: string
 
-          featuredImage {
-            node {
-              sourceUrl
-              altText
-            }
-          }
-        }
-      }
+    title: {
+        rendered: string
     }
-  `
 
-  const res = await fetch(GRAPHQL_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ query }),
-    next: {
-      revalidate: 60,
-    },
-  })
+    excerpt: {
+        rendered: string
+    }
 
-  const json = await res.json()
+    link: string
 
-  return json.data.posts.nodes
+    featured_media: number
+
+    yoast_head_json?: {
+        title?: string
+        description?: string
+        og_title?: string
+        og_description?: string
+        og_image?: {
+            url?: string
+        }[]
+    }
+
+    _embedded?: {
+        ['wp:featuredmedia']?: {
+            source_url?: string
+            alt_text?: string
+        }[]
+
+        ['author']?: {
+            name?: string
+        }[]
+
+        ['wp:term']?: {
+            name?: string
+            slug?: string
+        }[][]
+    }
 }
 
-export async function getBlogBySlug(slug: any) {
-  const query = `
-    query GetBlogBySlug($slug: ID!) {
-      post(id: $slug, idType: SLUG) {
-        id
-        slug
-        title
-        date
-        excerpt
-        content
+export async function getBlogs(): Promise<BlogPost[]> {
+    const url =
+        `${WORDPRESS_API}/posts` +
+        `?per_page=100` +
+        `&_embed`
 
-        featuredImage {
-          node {
-            sourceUrl
-            altText
-          }
-        }
+    const res = await fetch(url, {
+        next: {
+            revalidate: 60,
+        },
+    })
 
-        author {
-          node {
-            name
-          }
-        }
-
-        categories {
-          nodes {
-            name
-            slug
-          }
-        }
-
-        seo {
-          title
-          metaDesc
-        }
-      }
+    if (!res.ok) {
+        throw new Error(
+            `WordPress API failed: ${res.status}`
+        )
     }
-  `
 
-  const res = await fetch(GRAPHQL_URL, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      query,
-      variables: {
-        slug,
-      },
-    }),
-    next: {
-      revalidate: 60,
-    },
-  })
+    const posts = await res.json()
 
-  const json = await res.json()
+    return posts
+}
 
-  return json.data.post
+/*
+|--------------------------------------------------------------------------
+| GET SINGLE BLOG
+|--------------------------------------------------------------------------
+*/
+
+export async function getBlogBySlug(
+    slug: string
+): Promise<BlogPost | null> {
+    const url =
+        `${WORDPRESS_API}/posts` +
+        `?slug=${encodeURIComponent(slug)}` +
+        `&per_page=1` +
+        `&_embed`
+
+    const res = await fetch(url, {
+        next: {
+            revalidate: 60,
+        },
+    })
+
+    if (!res.ok) {
+        throw new Error(
+            `WordPress API failed: ${res.status}`
+        )
+    }
+
+    const posts = await res.json()
+
+    return posts[0] ?? null
+}
+
+function graphqlRequest<T>(query: string, arg1: { slug: string }) {
+    throw new Error("Function not implemented.")
 }

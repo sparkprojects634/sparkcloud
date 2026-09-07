@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import { usePathname } from 'next/navigation'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
@@ -15,6 +16,9 @@ export default function AppWrapper({
     children: React.ReactNode
 }) {
     const [loading, setLoading] = useState(true)
+    const lenisRef = useRef<Lenis | null>(null)
+    const pathname = usePathname()
+
 
     useEffect(() => {
         let mounted = true
@@ -23,20 +27,8 @@ export default function AppWrapper({
         const image = new window.Image()
         image.src = '/images/spaceship-banner.avif'
 
-        const video = document.createElement('video')
-        video.src = '/videos/earth-banner.mp4'
-        video.preload = 'metadata'
-        video.muted = true
-        video.playsInline = true
-
-        let imageLoaded = false
-        let videoLoaded = false
-
-        const finish = () => {
+        const finishLoading = () => {
             if (!mounted) return
-
-            // Do not block the entire website waiting for video.
-            if (!imageLoaded) return
 
             timeoutId = setTimeout(() => {
                 if (mounted) {
@@ -45,40 +37,8 @@ export default function AppWrapper({
             }, 500)
         }
 
-        image.onload = () => {
-            imageLoaded = true
-            finish()
-        }
-
-        image.onerror = () => {
-            // Don't block the website if the image fails.
-            imageLoaded = true
-            finish()
-        }
-
-        video.onloadedmetadata = () => {
-            videoLoaded = true
-            finish()
-        }
-
-        video.onerror = () => {
-            videoLoaded = true
-            finish()
-        }
-
-        // Safari fallback:
-        // never leave the entire website stuck on the loader.
-        const fallbackTimeout = setTimeout(() => {
-            if (!mounted) return
-
-            imageLoaded = true
-            videoLoaded = true
-            finish()
-        }, 4000)
-
-        /* =====================================================
-           LENIS
-        ===================================================== */
+        image.onload = finishLoading
+        image.onerror = finishLoading
 
         const lenis = new Lenis({
             autoRaf: false,
@@ -86,6 +46,9 @@ export default function AppWrapper({
             anchors: true,
             allowNestedScroll: true,
         })
+
+        // IMPORTANT
+        lenisRef.current = lenis
 
         lenis.on('scroll', ScrollTrigger.update)
 
@@ -101,19 +64,40 @@ export default function AppWrapper({
 
             image.onload = null
             image.onerror = null
-            video.onloadedmetadata = null
-            video.onerror = null
-
-            clearTimeout(fallbackTimeout)
 
             if (timeoutId) {
                 clearTimeout(timeoutId)
             }
 
             lenis.destroy()
+            lenisRef.current = null
+
             gsap.ticker.remove(update)
         }
     }, [])
+
+    useEffect(() => {
+        // Wait until Next.js has rendered the new page
+        const resetScroll = () => {
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'instant',
+            })
+
+            lenisRef.current?.scrollTo(0, {
+                immediate: true,
+            })
+
+            ScrollTrigger.clearScrollMemory()
+
+            ScrollTrigger.refresh()
+        }
+
+        requestAnimationFrame(() => {
+            requestAnimationFrame(resetScroll)
+        })
+    }, [pathname])
 
     return (
         <>
