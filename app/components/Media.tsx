@@ -63,7 +63,7 @@ const Media = ({
             preload="metadata"
             controls={false}
             onError={() => setVideoError(true)}
-            className={`h-full w-full object-cover ${className}`}
+            className={`h-full w-fit object-contain ${className}`}
         />
     )
 }

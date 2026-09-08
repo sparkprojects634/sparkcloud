@@ -7,6 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
 
 import PageLoader from './PageLoader'
+import WhatsappIcon from './WhatsappIcon'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -104,12 +105,12 @@ export default function AppWrapper({
             {loading && <PageLoader />}
 
             <div
-                className={`transition-opacity duration-700 ${
-                    loading
+                className={`transition-opacity duration-700 ${loading
                         ? 'pointer-events-none opacity-0'
                         : 'opacity-100'
-                }`}
+                    }`}
             >
+                <WhatsappIcon />
                 {children}
             </div>
         </>

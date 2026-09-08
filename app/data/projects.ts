@@ -192,7 +192,7 @@ export const projectsSingle = [
 
     subtitle: "Discover Smarter Communication Solutions",
 
-    service: "Design & Development",
+    service: "Redesign & Development",
     industry: "Telecom",
     year: "2026",
 
@@ -343,7 +343,7 @@ export const projectsSingle = [
 
     subtitle: "Media & Marketing",
 
-    service: "Design & Development",
+    service: "Redesign & Development",
     industry: "Media & Marketing",
     year: "2025",
 
@@ -565,7 +565,7 @@ export const projectsSingle = [
 
     subtitle: "Nonprofit",
 
-    service: "Design & Development",
+    service: "Redesign & Development",
     industry: "Nonprofit",
     year: "2026",
 

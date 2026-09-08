@@ -215,7 +215,7 @@ const ProjectSingle = ({
                             </div>
 
                             {purpose01 && (
-                                <div className="group relative aspect-square overflow-hidden rounded-[20px] ">
+                                <div className="group relative aspect-square overflow-hidden rounded-[20px]">
                                     <Media
                                         media={purpose01}
                                         className=""

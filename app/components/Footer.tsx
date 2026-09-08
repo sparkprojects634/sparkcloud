@@ -9,7 +9,7 @@ const footerLinks = [
       { label: "About", href: "/about" },
       { label: "Projects", href: "/projects" },
       { label: "Services", href: "/services" },
-      // { label: "Blog", href: "/blogs" },
+      { label: "Blogs", href: "/blogs" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -102,10 +102,10 @@ const Footer = () => {
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-black text-white">
                   <MapPin size={14} />
                 </div>
-                <p className="block font-semibold transition hover:opacity-80">
+                <Link href={'https://maps.app.goo.gl/WJXS6fmGNvxrvRXs8'} target="_blank" className="block font-semibold transition hover:opacity-80">
                   3rd floor, Ps Abacus, Unit 337, Action Area IIIE,
                   Newtown, Kolkata, West Bengal 700157
-                </p>
+                </Link>
               </div>
 
               <div className="flex items-center gap-4">
