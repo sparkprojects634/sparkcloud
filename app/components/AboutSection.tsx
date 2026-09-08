@@ -16,7 +16,7 @@ const AboutSection = () => {
         <div className="flex flex-col items-center gap-5">
           <SubHeadingMarquee text="OUR STORY" color="dark" />
 
-          <AnimatedHeading lines={aboutHeading} />
+          <AnimatedHeading lines={aboutHeading} className='justify-center'/>
 
           <div className="max-w-5xl">
             <p className="font-sans text-center text-lg leading-relaxed text-[#1B1B1B] md:text-2xl">

@@ -16,9 +16,10 @@ interface Line {
 
 interface AnimatedHeadingProps {
   lines: Line[]
+  className: string
 }
 
-const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
+const AnimatedHeading = ({ lines, className }: AnimatedHeadingProps) => {
   const sectionRef = useRef<HTMLDivElement>(null)
   const linesRef = useRef<(HTMLDivElement | null)[]>([])
 
@@ -53,10 +54,10 @@ const AnimatedHeading = ({ lines }: AnimatedHeadingProps) => {
             ref={(el) => {
               linesRef.current[index] = el
             }}
-            className="flex flex-wrap items-center gap-4 font-mona-bold"
+            className={`flex flex-wrap items-center ${className} gap-4 font-mona-bold`}
           >
             <h3
-              className={`text-5xl font-bold uppercase leading-none lg:leading-20 md:text-7xl lg:text-7xl ${line.highlight ? 'text-[#828282]' : 'text-black'
+              className={`text-5xl font-bold uppercase leading-none lg:leading-20 md:text-7xl lg:text-7xl  ${line.highlight ? 'text-[#828282]' : 'text-black'
                 }`}
             >
               {line.text}
