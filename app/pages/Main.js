@@ -3,15 +3,16 @@ import Hero from "../components/Hero"
 import OurPartners from "../components/OurPartners"
 import SubHeadingMarquee from "../components/SubHeadingMarquee"
 import AnimatedHeading from "../components/AnimatedHeading"
-import { headingLines } from "@/app/data/headingLines"
 import AnimatedButton from "../components/AnimatedButton"
 import AnimatedTextLink from "../components/AnimatedTextLink"
 import GrowthSection from "../components/GrowthSection"
 import FeaturedProjects from "../components/FeaturedProjects"
-import { stats } from "../data/projects"
 import FAQSection from "../components/FAQSection"
 import CreativeSolutions from "../components/CreativeSolutions"
 import RevealSection from "../components/RevealSection"
+
+import { headingLines } from "@/app/data/headingLines"
+import { stats } from "../data/projects"
 
 const Home = () => {
   return (

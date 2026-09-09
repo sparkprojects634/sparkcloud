@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Lenis from 'lenis'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 import PageLoader from './PageLoader'
 import WhatsappIcon from './WhatsappIcon'
@@ -16,31 +16,13 @@ export default function AppWrapper({
 }: {
     children: React.ReactNode
 }) {
-    const [loading, setLoading] = useState(true)
-    const lenisRef = useRef<Lenis | null>(null)
     const pathname = usePathname()
 
+    const [loading, setLoading] = useState(true)
+
+    const lenisRef = useRef<Lenis | null>(null)
 
     useEffect(() => {
-        let mounted = true
-        let timeoutId: ReturnType<typeof setTimeout> | null = null
-
-        const image = new window.Image()
-        image.src = '/images/spaceship-banner.avif'
-
-        const finishLoading = () => {
-            if (!mounted) return
-
-            timeoutId = setTimeout(() => {
-                if (mounted) {
-                    setLoading(false)
-                }
-            }, 500)
-        }
-
-        image.onload = finishLoading
-        image.onerror = finishLoading
-
         const lenis = new Lenis({
             autoRaf: false,
             lerp: 0.08,
@@ -48,17 +30,65 @@ export default function AppWrapper({
             allowNestedScroll: true,
         })
 
-        // IMPORTANT
         lenisRef.current = lenis
-
-        lenis.on('scroll', ScrollTrigger.update)
 
         const update = (time: number) => {
             lenis.raf(time * 1000)
         }
 
+        lenis.on('scroll', ScrollTrigger.update)
+
         gsap.ticker.add(update)
         gsap.ticker.lagSmoothing(0)
+
+        // Initial refresh
+        requestAnimationFrame(() => {
+            ScrollTrigger.refresh()
+        })
+
+        return () => {
+            lenis.off('scroll', ScrollTrigger.update)
+
+            gsap.ticker.remove(update)
+
+            lenis.destroy()
+
+            lenisRef.current = null
+        }
+    }, [])
+
+    useEffect(() => {
+        let mounted = true
+        let timeoutId: ReturnType<typeof setTimeout> | null = null
+
+        const image = new window.Image()
+
+        const finishLoading = () => {
+            if (!mounted) return
+
+            if (timeoutId) {
+                clearTimeout(timeoutId)
+            }
+
+            timeoutId = setTimeout(() => {
+                if (!mounted) return
+
+                setLoading(false)
+
+                requestAnimationFrame(() => {
+                    ScrollTrigger.refresh()
+                })
+            }, 500)
+        }
+
+        image.onload = finishLoading
+        image.onerror = finishLoading
+        image.src = '/images/spaceship-banner.avif'
+
+        // Cached image
+        if (image.complete) {
+            finishLoading()
+        }
 
         return () => {
             mounted = false
@@ -69,35 +99,52 @@ export default function AppWrapper({
             if (timeoutId) {
                 clearTimeout(timeoutId)
             }
-
-            lenis.destroy()
-            lenisRef.current = null
-
-            gsap.ticker.remove(update)
         }
     }, [])
 
+    // --------------------------------------------------
+    // ROUTE CHANGE
+    // --------------------------------------------------
+
     useEffect(() => {
-        // Wait until Next.js has rendered the new page
+        let raf1 = 0
+        let raf2 = 0
+        let raf3 = 0
+
         const resetScroll = () => {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'instant',
-            })
+            const lenis = lenisRef.current
 
-            lenisRef.current?.scrollTo(0, {
-                immediate: true,
-            })
+            // Reset Lenis
+            if (lenis) {
+                lenis.scrollTo(0, {
+                    immediate: true,
+                })
+            }
 
+            // Reset native scroll
+            window.scrollTo(0, 0)
+
+            // Reset ScrollTrigger memory
             ScrollTrigger.clearScrollMemory()
 
-            ScrollTrigger.refresh()
+            // Wait until new page DOM is painted
+            raf1 = requestAnimationFrame(() => {
+                raf2 = requestAnimationFrame(() => {
+                    raf3 = requestAnimationFrame(() => {
+                        ScrollTrigger.refresh(true)
+                        ScrollTrigger.update()
+                    })
+                })
+            })
         }
 
-        requestAnimationFrame(() => {
-            requestAnimationFrame(resetScroll)
-        })
+        resetScroll()
+
+        return () => {
+            cancelAnimationFrame(raf1)
+            cancelAnimationFrame(raf2)
+            cancelAnimationFrame(raf3)
+        }
     }, [pathname])
 
     return (
@@ -105,12 +152,14 @@ export default function AppWrapper({
             {loading && <PageLoader />}
 
             <div
-                className={`transition-opacity duration-700 ${loading
+                className={`transition-opacity duration-700 ${
+                    loading
                         ? 'pointer-events-none opacity-0'
                         : 'opacity-100'
-                    }`}
+                }`}
             >
                 <WhatsappIcon />
+
                 {children}
             </div>
         </>

@@ -157,7 +157,7 @@ const WebDesign = () => {
     return (
         <main className="bg-[#040404]">
 
-            <header className="relative z-50 w-full">
+            <header className="z-50 w-full fixed top-0 bg-[#040404] lg:bg-[#040404]/20 backdrop-blur-xl">
                 <div className="mx-auto flex h-25 w-full max-w-350 items-center justify-between px-6 lg:px-10">
 
                     {/* Logo */}
@@ -252,7 +252,7 @@ const WebDesign = () => {
                 </div>
             </header>
 
-            <section className="mx-auto w-full max-w-350 px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16 lg:px-10 lg:pt-20">
+            <section className="mx-auto mt-25 lg:mt-0 w-full max-w-350 px-5 pb-16 pt-10 md:px-8 md:pb-24 md:pt-16 lg:px-10 lg:pt-20">
 
                 <div className="grid items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
 
@@ -522,7 +522,6 @@ const WebDesign = () => {
 
             </section>
 
-
             <section className="w-full bg-[#040404] py-20 text-white md:py-28 lg:py-32">
 
                 <div className="mx-auto w-full max-w-350 px-5 md:px-8 lg:px-10">
@@ -603,7 +602,6 @@ const WebDesign = () => {
                 </div>
 
             </section>
-
 
             <section className="w-full py-5 text-white md:py-28 lg:py-10">
 
@@ -780,12 +778,12 @@ const WebDesign = () => {
                                     Privacy & Policy
                                 </Link>
 
-                                <Link
+                                {/* <Link
                                     href="/disclaimer"
                                     className="transition-colors duration-300 hover:text-white"
                                 >
                                     Disclaimer
-                                </Link>
+                                </Link> */}
 
                                 <Link
                                     href="/terms-conditions"
